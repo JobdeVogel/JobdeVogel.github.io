@@ -1,19 +1,33 @@
-1. Build the project
-    - creating the folder
-    - adding files
-    - connecting files
+1. Build the base
+    - Setup project
+    - Create different blocks
 
 2. Navbar
-    - 2 links and a name
+    - Make the Navbar
 
-3. Portfolio item grid
-    - images
-    - titles
-    - descriptions
-    - animations
-    - javascript
+3. Main intro
+    - Add images
+    - Find how to trim image round corners
 
-4. About pages
-    - images
-    - split column layout
-    - content
+4. Slideshow
+    - Add temp images for Slideshow
+    - Create Slideshow
+
+5. Timeline
+    - Make background image
+    - Dotted line
+    - Add text (make it easy to change in future)
+    - Add links to other websites
+    - Add hover option to get more informaiton
+
+6. Skills page
+    - Create background images
+    - Add text
+    - Hover option with explanation
+
+7. Sketchfab image
+    - Use random model
+    - Add to page
+    - Make own model
+
+8. Bottom navbar
