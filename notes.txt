@@ -1,17 +1,18 @@
-1. Build the base
-    - Setup project
-    - Create different blocks
+1. Build the base \/
+    - Setup project \/
+    - Create different blocks \/
 
-2. Navbar
-    - Make the Navbar
+2. Navbar \/
+    - Make the Navbar \/
 
 3. Main intro
-    - Add images
-    - Find how to trim image round corners
+    - Add images \/
+    - Find how to trim image round corners \/
 
 4. Slideshow
-    - Add temp images for Slideshow
-    - Create Slideshow
+    - Add temp images for Slideshow \/
+    - Create Slideshow \/
+    - Change images to real images
 
 5. Timeline
     - Make background image
@@ -26,8 +27,8 @@
     - Hover option with explanation
 
 7. Sketchfab image
-    - Use random model
-    - Add to page
+    - Use random model \/
+    - Add to page \/
     - Make own model
 
 8. Bottom navbar
