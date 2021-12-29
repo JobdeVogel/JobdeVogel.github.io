@@ -327,23 +327,196 @@ img {
 /* TIMELINE*/
 .timeline{
     height: 2100px;
-    background-color: #333333;    
-}
-
-.timeline-container{
-    display: flex;
-    justify-content: space-around;
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     position: relative;
 }
 
 svg {
     position: absolute;
-    top: 350px;
+    transform: translate(-50%);
+    left:50%;
+    right:50%;
+    top: 400px;
 }
 
 .data-container{
+    grid-column-start: 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 250px 1fr;
+    position: relative;
+    color: seashell;
+}
+
+.education-container{
+    grid-column-start: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-container{
+    grid-column-start: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-title{
+    grid-column-start: 1;
+    position: absolute;
+    font-size: 1.5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    top: 250px;
+    width: 100%;
+}
+
+.experience-title{
+    text-align: right;
+    grid-column-start: 2;
+    position: absolute;
+    font-size: 1.5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    top: 250px;
+    width: 100%;
+}
+
+.education{
+    position: relative;
+    border-radius: 20px;
+    padding:10px;
+    background-color: gray;
+}
+
+.experience{
+    position: relative;
+    border-radius: 20px;
+    padding:10px;
+    background-color: gray;
+}
+
+.education-container > .education > h1{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.experience-container > .experience > h1{
+    font-size: 1em;
+    padding:0;
+    font-weight: 500;
+}
+
+.education-container > .education > h2{
+    font-size: .9em;
+    position: relative;
+    font-weight: 100;
+}
+
+.experience-container > .experience > h2{
+    font-size: .9em;
+    position: relative;
+    font-weight: 100;
+}
+
+.education > h2{
+    position: absolute;
+    bottom: 10px;
+}
+
+.experience > h2{
+    position: absolute;
+    bottom: 10px;
+}
+
+.education-container > .education > button{
+    font-family: "Roboto";
+    font-weight: 100;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px 40px;
+    color: seashell;
+    background-color: #404040;
+    transition:color 1s;
+    transition:background-color .5s;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: -10px;
+}
+
+.experience-container > .experience > button{
+    font-family: "Roboto";
+    font-weight: 100;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px 40px;
+    color: seashell;
+    background-color: #404040;
+    transition:color 1s;
+    transition:background-color .5s;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: -10px;
+}
+
+.education-container > .education > button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #5f5f5f;
+}
+
+.experience-container > .experience > button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #5f5f5f;
+}
+
+.education-container > .n1{
+    position: absolute;
+    top: 490px;
+}
+
+.education-container > .n2{
+    position: absolute;
+    top: 960px;
+}
+
+.education-container > .n3{
+    position: absolute;
+    top: 1130px;
+}
+
+.education-container > .n4{
+    position: absolute;
+    top: 1500px;
+}
+
+.education-container > .n5{
+    position: absolute;
+    top: 1830px;
+}
+
+.experience-container > .n1{
+    position: absolute;
+    top: 670px;
+}
+
+.experience-container > .n2{
+    position: absolute;
+    top: 960px;
+}
+
+.experience-container > .n3{
+    position: absolute;
+    top: 1300px;
 }
 
 /* SKILLS */
@@ -351,8 +524,6 @@ svg {
     height: 200vh;
     background-color: #242424;
 }
-
-
 
 /* WORLD */
 .world{
