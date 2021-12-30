@@ -523,6 +523,204 @@ svg {
 .skills{
     height: 200vh;
     background-color: #242424;
+    position: relative;
+    color: seashell;
+}
+
+.center-text-container{
+    position: relative;
+    display: contents;
+    text-align: center;
+}
+
+.title{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: ;
+}
+
+.skills-title{
+    position: absolute;
+    transform: translate(-50%);
+    top: 10%;
+    left: 50%;
+    color: #C85700;
+    font-size: 4em;
+}
+
+.software-title{
+    position: absolute;
+    transform: translate(-50%);
+    top: 40%;
+    left: 50%;
+    color: #C85700;
+    font-size: 4em;
+}
+
+.center-text-container > h2{
+    position: absolute;
+    background-color: #474747c2;
+    font-weight: 100;
+    transform: translate(-50%);
+    top: 23%;
+    left: 50%;
+    padding: 25px;;
+    border-radius: 25px;
+}
+
+.split-text-container{
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    top: 50%;
+    height: 50%;
+    width: var(--page_width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.experienced-container{
+    position: relative;
+}
+
+.starter-container{
+    position: relative;
+}
+
+.center-align{
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    text-align: center;
+}
+
+.experienced-container > h1{
+    background-color: #747474;
+    padding: 25px;
+    text-transform: uppercase;
+    top: 10%;
+    width: 50%;
+    border-radius: 30px;
+}
+
+.starter-container > h1{
+    background-color: #747474;
+    padding: 25px;
+    text-transform: uppercase;
+    top: 10%;
+    width: 50%;
+    border-radius: 30px;
+}
+
+.experienced-container > h2{
+    background-color: #474747c2;
+    padding: 25px;
+    width: 50%;
+    top: 24%;
+    border-radius: 30px;
+    font-weight: 100
+}
+
+.starter-container > h2{
+    background-color: #474747c2;
+    padding: 25px;
+    width: 50%;
+    top: 24%;
+    border-radius: 30px;
+    font-weight: 100
+}
+
+.mcneel-rhino-3d:hover{
+    background-color: purple;
+}
+
+.grasshopper:hover{
+    background-color: purple;
+}
+
+.python:hover{
+    background-color: purple;
+}
+
+.maya-and-arnold:hover{
+    background-color: purple;
+}
+
+.substance-painter:hover{
+    background-color: purple;
+}
+
+.revit:hover{
+    background-color: purple;
+}
+
+.lumion:hover{
+    background-color: purple;
+}
+
+.photoshop:hover{
+    background-color: purple;
+}
+
+.indesign:hover{
+    background-color: purple;
+}
+
+.illustrator:hover{
+    background-color: purple;
+}
+
+.html-and-css:hover{
+    background-color: purple;
+}
+
+.premiere-pro:hover{
+    background-color: purple;
+}
+
+.after-effects:hover{
+    background-color: purple;
+}
+
+.adobe-xd:hover{
+    background-color: purple;
+}
+
+.fusion-360:hover{
+    background-color: purple;
+}
+
+.arduino:hover{
+    background-color: purple;
+}
+
+.numpy:hover{
+    background-color: purple;
+}
+
+.machine-learning:hover{
+    background-color: purple;
+}
+
+.houdini:hover{
+    background-color: purple;
+}
+
+.sidefx:hover{
+    background-color: purple;
+}
+
+.c:hover{
+    background-color: purple;
+}
+
+.enscape:hover{
+    background-color: purple;
+}
+
+.wordpress:hover{
+    background-color: purple;
 }
 
 /* WORLD */

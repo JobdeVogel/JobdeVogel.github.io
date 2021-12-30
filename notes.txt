@@ -15,15 +15,15 @@
     - Change images to real images
 
 5. Timeline
-    - Make background image
-    - Dotted line
-    - Add text (make it easy to change in future)
-    - Add links to other websites
-    - Add hover option to get more informaiton
+    - Make background image \/
+    - Dotted line \/
+    - Add text (make it easy to change in future) meh \/
+    - Add links to other websites \/
+    - Add hover option to get more information
 
 6. Skills page
-    - Create background images
-    - Add text
+    - Create background images \/
+    - Add text \/
     - Hover option with explanation
 
 7. Sketchfab image
