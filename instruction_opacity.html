@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Portfolio Job</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div id="questions" style="text-align:center">
+        <h1>Button1</h1>
+        <h1>Button2</h1>
+        <h1>Button3</h1>
+        <h1>Button4</h1>
+    </div>
+    <div id="answers">
+        <h1 class="invisible">Button1</h1>
+        <h1 class="invisible">Button2</h1>
+        <h1 class="invisible">Button3</h1>
+        <h1 class="invisible">Button4</h1>
+    </div>
+<script>
+
+    var questions = document.getElementById('questions');
+    var answers = document.getElementById('answers');
+
+    for(let i = 0; i < questions.children.length; i++){
+        questions.children[i].addEventListener("mouseover", function(){
+            answers.children[i].classList.remove('invisible');
+            answers.children[i].classList.add('visible');
+        })
+
+        questions.children[i].addEventListener("mouseout", function(){
+            answers.children[i].classList.remove('visible');
+            answers.children[i].classList.add('invisible');
+        })
+    }
+</script>
+
+</body>
+</html> 
