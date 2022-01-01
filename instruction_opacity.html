@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <title>Portfolio Job</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="instruction_opacity.css">
 </head>
 <body>
     <div id="questions" style="text-align:center">
@@ -21,8 +21,8 @@
     </div>
 <script>
 
-    var questions = document.getElementById('questions');
-    var answers = document.getElementById('answers');
+    const questions = document.getElementById('questions');
+    const answers = document.getElementById('answers');
 
     for(let i = 0; i < questions.children.length; i++){
         questions.children[i].addEventListener("mouseover", function(){
