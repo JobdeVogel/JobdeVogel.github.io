@@ -521,13 +521,13 @@ svg {
 
 /* SKILLS */
 .skills{
-    height: 200vh;
+    height: 1800px;
     background-color: #242424;
     position: relative;
     color: seashell;
 }
 
-.center-text-container{
+.top-container{
     position: relative;
     display: contents;
     text-align: center;
@@ -558,17 +558,150 @@ svg {
     font-size: 4em;
 }
 
-.center-text-container > h2{
+.top-container > h2{
     position: absolute;
     background-color: #474747c2;
     font-weight: 100;
     transform: translate(-50%);
     top: 23%;
     left: 50%;
-    padding: 25px;;
+    padding: 25px;
     border-radius: 25px;
 }
 
+.bottom-container{
+    position: relative;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+}
+
+.bottom-container > .left-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /*background-color: blue;*/
+}
+
+.bottom-container > .right-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    /*background-color: green;*/
+}
+
+.bottom-container > .left-container > .experienced-questions{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-container > .right-container > .starter-questions{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.experienced-questions > .experienced-container{
+    position: absolute;
+    text-align: center;
+    padding-right: 10%;
+    right: 0;
+    top: 10%;
+    /*background-color: red;*/
+}
+
+.starter-questions > .starter-container{
+    position: absolute;
+    text-align: center;
+    padding-left: 10%;
+    top: 10%;
+}
+
+.experienced-container > h1{
+    background-color: #747474;
+    padding: 25px;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+.starter-container > h1{
+    background-color: #747474;
+    padding: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+.categories{
+    top: 10%;
+    background-color: #474747;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 1.5em;
+}
+
+.categories > p{
+    line-height: 50%;
+}
+
+.visible{
+    visibility: visible;
+    position: absolute;
+    bottom: 0;
+    height:70.5%;
+    /*Change width in javascript depending on amount of words*/
+    width: 120%;
+    background-color: rgb(110, 111, 133);
+    text-align: justify;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.experienced-container > .info-categories > .visible{
+    margin-right: 20%;
+    right: 0;
+}
+
+.starter-container > .info-categories > .visible{
+    margin-left: 0%;
+}
+
+.visible > h1{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.visible > p > strong{
+    font-weight: 500;
+}
+
+.invisible{
+    opacity: 0;
+    transition: opacity .5s;
+    text-align: center;
+    display: none;
+}
+
+
+/*
+.starter-answers{
+    position: absolute;
+    right: 0;
+    top: 10%;
+    width: 70%;
+    height: 80%;
+    padding-right: 10%;
+    background-color: white;
+}
+*/
+
+
+/***************************************************/
+
+/*
 .split-text-container{
     position: absolute;
     transform: translate(-50%);
@@ -578,10 +711,12 @@ svg {
     width: var(--page_width);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: red;
 }
 
 .experienced-container{
     position: relative;
+    background-color: rgba(0, 0, 255, 0.301);
 }
 
 .starter-container{
@@ -593,6 +728,7 @@ svg {
     transform: translate(-50%);
     left: 50%;
     text-align: center;
+    background-color: green;
 }
 
 .experienced-container > h1{
@@ -602,6 +738,7 @@ svg {
     top: 10%;
     width: 50%;
     border-radius: 30px;
+    position: absolute;
 }
 
 .starter-container > h1{
@@ -631,98 +768,31 @@ svg {
     font-weight: 100
 }
 
-.mcneel-rhino-3d:hover{
-    background-color: purple;
+.answers-experienced{
+    position:absolute;
+    background-color: rgba(255, 0, 0, 0.377);
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    right: 0;
 }
 
-.grasshopper:hover{
-    background-color: purple;
+.answers-starter{
+    position:absolute;
+    background-color: rgba(0, 0, 255, 0.363);
+    width: 50%;
+    height: 50%;
+    top: 50%;
 }
 
-.python:hover{
-    background-color: purple;
+.text-container{
+    position: absolute;
+    top: 10%;
+    padding: 25px;
+    background-color: green;
+    border-radius: 30px;
 }
-
-.maya-and-arnold:hover{
-    background-color: purple;
-}
-
-.substance-painter:hover{
-    background-color: purple;
-}
-
-.revit:hover{
-    background-color: purple;
-}
-
-.lumion:hover{
-    background-color: purple;
-}
-
-.photoshop:hover{
-    background-color: purple;
-}
-
-.indesign:hover{
-    background-color: purple;
-}
-
-.illustrator:hover{
-    background-color: purple;
-}
-
-.html-and-css:hover{
-    background-color: purple;
-}
-
-.premiere-pro:hover{
-    background-color: purple;
-}
-
-.after-effects:hover{
-    background-color: purple;
-}
-
-.adobe-xd:hover{
-    background-color: purple;
-}
-
-.fusion-360:hover{
-    background-color: purple;
-}
-
-.arduino:hover{
-    background-color: purple;
-}
-
-.numpy:hover{
-    background-color: purple;
-}
-
-.machine-learning:hover{
-    background-color: purple;
-}
-
-.houdini:hover{
-    background-color: purple;
-}
-
-.sidefx:hover{
-    background-color: purple;
-}
-
-.c:hover{
-    background-color: purple;
-}
-
-.enscape:hover{
-    background-color: purple;
-}
-
-.wordpress:hover{
-    background-color: purple;
-}
-
+*/
 /* WORLD */
 .world{
     height: 100vh;
