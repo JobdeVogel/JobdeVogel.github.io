@@ -48,6 +48,8 @@ dots[slideIndex-1].className += " active";
 const questions = document.getElementById('questions');
 const answers = document.getElementById('answers');
 const background = document.getElementById('skillsBackground');
+const widthFactor = 1.5;
+
 var infoVisible = false;
 var tempInfoVisible= false;
 var visibleQuestion;
@@ -55,15 +57,18 @@ var visibleQuestionParent;
 var infoScreen;
 
 // If scroll is at page skills...
-    // Implement here
+    // Example selection    
+
+    // Manual selection
 //
 
-for(let i = 0; i < questions.children.length; i++){        
+// Make a function, one for left bar, with questions input answers input
+for(let i = 0; i < questions.children.length; i++){   
     // If user hovers over software type, show the explanation
     questions.children[i].addEventListener("mouseover", function(){
         if (infoVisible == false){
             const pLength = answers.children[i].innerText.length;
-            const factor = 90 + (Math.max(pLength - 791, 0));
+            const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
 
             answers.children[i].style.width = factor + '%';
             answers.children[i].classList.remove('invisible');
@@ -102,11 +107,11 @@ for(let i = 0; i < questions.children.length; i++){
             visibleQuestion.style.transition = 'font-weight .2s';
             visibleQuestion.style.fontWeight = '100';
 
-            console.log('infoVisible ' + infoVisible);
-            console.log('tempInfoVisible ' + tempInfoVisible);
+            questions.children[i].style.transition = 'font-weight .2s';
+            questions.children[i].style.fontWeight = '500';
 
             const pLength = answers.children[i].innerText.length;
-            const factor = 85 + (Math.max(pLength - 791, 0)) * 0.191;
+            const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
 
             answers.children[i].style.width = factor + '%';
             answers.children[i].classList.remove('invisible');
@@ -135,3 +140,5 @@ for(let i = 0; i < questions.children.length; i++){
         }
     })
 }
+
+// Execute function here, once for experienced and once for starter

@@ -653,8 +653,8 @@ svg {
 
 .visible{
     opacity: 1;
-    transition: color .5s;
-    transition: opacity .5s;
+    transition: color 1s;
+    transition: opacity 1s;
     position: absolute;
     bottom: 0;
     height:70.5%;
@@ -677,7 +677,6 @@ svg {
 
 .visible > h1{
     font-size: 1.2em;
-    text-transform: uppercase;
 }
 
 .visible > p > strong{
