@@ -1,15 +1,13 @@
 .invisible{
     opacity: 0;
-    font-size: 1.9em;
     transition: opacity .5s;
-    transition: font-size .5s;
     text-align: center;
 }
 
 .visible {
     opacity: 1;
-    font-size: 2em;
     transition: opacity .5s;
-    transition: font-size .5s;
     text-align: center;
+    font-size: 5em;
+    transition: font-size 2s;
 }
