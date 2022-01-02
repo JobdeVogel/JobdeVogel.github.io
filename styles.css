@@ -124,6 +124,7 @@ body {
     }
 }
 
+/***************************************************/
 /* MAIN */
 .main{
     display: grid;
@@ -199,6 +200,7 @@ body {
     color: #C85700
 }
 
+/***************************************************/
 /* PORTFOLIO */
 .portfolio{
     height: 100vh;
@@ -324,6 +326,7 @@ img {
     to {opacity: 1}
 }
 
+/***************************************************/
 /* TIMELINE*/
 .timeline{
     height: 2100px;
@@ -519,6 +522,7 @@ svg {
     top: 1300px;
 }
 
+/***************************************************/
 /* SKILLS */
 .skills{
     height: 1800px;
@@ -648,7 +652,9 @@ svg {
 }
 
 .visible{
-    visibility: visible;
+    opacity: 1;
+    transition: color .5s;
+    transition: opacity .5s;
     position: absolute;
     bottom: 0;
     height:70.5%;
@@ -679,120 +685,13 @@ svg {
 }
 
 .invisible{
-    opacity: 0;
-    transition: opacity .5s;
-    text-align: center;
-    display: none;
-}
-
-
-/*
-.starter-answers{
     position: absolute;
-    right: 0;
-    top: 10%;
-    width: 70%;
-    height: 80%;
-    padding-right: 10%;
-    background-color: white;
+    opacity: 0;
+    text-align: center;
 }
-*/
-
 
 /***************************************************/
 
-/*
-.split-text-container{
-    position: absolute;
-    transform: translate(-50%);
-    left: 50%;
-    top: 50%;
-    height: 50%;
-    width: var(--page_width);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: red;
-}
-
-.experienced-container{
-    position: relative;
-    background-color: rgba(0, 0, 255, 0.301);
-}
-
-.starter-container{
-    position: relative;
-}
-
-.center-align{
-    position: absolute;
-    transform: translate(-50%);
-    left: 50%;
-    text-align: center;
-    background-color: green;
-}
-
-.experienced-container > h1{
-    background-color: #747474;
-    padding: 25px;
-    text-transform: uppercase;
-    top: 10%;
-    width: 50%;
-    border-radius: 30px;
-    position: absolute;
-}
-
-.starter-container > h1{
-    background-color: #747474;
-    padding: 25px;
-    text-transform: uppercase;
-    top: 10%;
-    width: 50%;
-    border-radius: 30px;
-}
-
-.experienced-container > h2{
-    background-color: #474747c2;
-    padding: 25px;
-    width: 50%;
-    top: 24%;
-    border-radius: 30px;
-    font-weight: 100
-}
-
-.starter-container > h2{
-    background-color: #474747c2;
-    padding: 25px;
-    width: 50%;
-    top: 24%;
-    border-radius: 30px;
-    font-weight: 100
-}
-
-.answers-experienced{
-    position:absolute;
-    background-color: rgba(255, 0, 0, 0.377);
-    width: 50%;
-    height: 50%;
-    top: 50%;
-    right: 0;
-}
-
-.answers-starter{
-    position:absolute;
-    background-color: rgba(0, 0, 255, 0.363);
-    width: 50%;
-    height: 50%;
-    top: 50%;
-}
-
-.text-container{
-    position: absolute;
-    top: 10%;
-    padding: 25px;
-    background-color: green;
-    border-radius: 30px;
-}
-*/
 /* WORLD */
 .world{
     height: 100vh;
