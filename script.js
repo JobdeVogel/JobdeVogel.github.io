@@ -44,101 +44,109 @@ slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
 
-// Question and answer for software/skills information
-const questions = document.getElementById('questions');
-const answers = document.getElementById('answers');
-const background = document.getElementById('skillsBackground');
-const widthFactor = 1.5;
+addInformation('questions-experienced', 'answers-experienced');
+addInformation('questions-starter', 'answers-starter');
 
-var infoVisible = false;
-var tempInfoVisible= false;
-var visibleQuestion;
-var visibleQuestionParent;
-var infoScreen;
+function addInformation(input, result){
+    console.log('hey')
+    // Question and answer for software/skills information
+    const questions = document.getElementById(input);
+    const answers = document.getElementById(result);
+    const widthFactor = 1.5;
 
-// If scroll is at page skills...
-    // Example selection    
+    var infoVisible = false;
+    var tempInfoVisible= false;
+    var visibleQuestion;
+    var infoScreen;
 
-    // Manual selection
-//
+    // If scroll is at page skills...
+        // Example selection    
 
-// Make a function, one for left bar, with questions input answers input
-for(let i = 0; i < questions.children.length; i++){   
-    // If user hovers over software type, show the explanation
-    questions.children[i].addEventListener("mouseover", function(){
-        if (infoVisible == false){
-            const pLength = answers.children[i].innerText.length;
-            const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
+        // Manual selection
+    //
 
-            answers.children[i].style.width = factor + '%';
-            answers.children[i].classList.remove('invisible');
-            answers.children[i].classList.add('visible');
+    // Make a function, one for left bar, with questions input answers input
+    for(let i = 0; i < questions.children.length; i++){   
+        // If user hovers over software type, show the explanation
+        questions.children[i].addEventListener("mouseover", function(){
+            if (infoVisible == false){
+                const pLength = answers.children[i].innerText.length;
+                const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
 
-            questions.children[i].style.transition = 'font-weight .2s';
-            questions.children[i].style.fontWeight = '500';
+                answers.children[i].style.width = factor + '%';
+                answers.children[i].classList.remove('invisible');
+                answers.children[i].classList.add('visible');
 
-            tempInfoVisible = true;
-        }      
-    })
+                questions.children[i].style.transition = 'font-weight .2s';
+                questions.children[i].style.fontWeight = '500';
+                questions.children[i].style.textDecoration = 'none';
 
-    // If user moves out software type, hide the explanation
-    questions.children[i].addEventListener("mouseout", function(){
-        if (infoVisible == false && tempInfoVisible == true){
-            answers.children[i].classList.remove('visible');
-            answers.children[i].classList.add('invisible');
+                tempInfoVisible = true;
+            }      
+        })
 
-            questions.children[i].style.transition = 'font-weight .2s';
-            questions.children[i].style.fontWeight = '100';
+        // If user moves out software type, hide the explanation
+        questions.children[i].addEventListener("mouseout", function(){
+            if (infoVisible == false && tempInfoVisible == true){
+                answers.children[i].classList.remove('visible');
+                answers.children[i].classList.add('invisible');
 
-            tempInfoVisible = false;
-        }      
-    })
-    
-    // If user clicks on software type, keep the explanation
-    questions.children[i].addEventListener("click", function(){
-        if(infoVisible == true && questions.children[i] == visibleQuestion){
-            infoScreen.classList.remove('visible');
-            infoScreen.classList.add('invisible');
-            visibleQuestion.style.transition = 'font-weight .2s';
-            visibleQuestion.style.fontWeight = '100';
-        }else if(infoVisible == true){
-            infoScreen.classList.remove('visible');
-            infoScreen.classList.add('invisible');
-            visibleQuestion.style.transition = 'font-weight .2s';
-            visibleQuestion.style.fontWeight = '100';
+                questions.children[i].style.transition = 'font-weight .2s';
+                questions.children[i].style.fontWeight = '100';
 
-            questions.children[i].style.transition = 'font-weight .2s';
-            questions.children[i].style.fontWeight = '500';
-
-            const pLength = answers.children[i].innerText.length;
-            const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
-
-            answers.children[i].style.width = factor + '%';
-            answers.children[i].classList.remove('invisible');
-            answers.children[i].classList.add('visible');
-        }
-
-        infoVisible = true;
-        tempInfoVisible = false;
-        infoScreen = answers.children[i];
-        visibleQuestion = questions.children[i];
-    })
-    
-    // If user clicks outside questions, hide the explanation
-    document.addEventListener("click", function(event){
-        if (infoVisible == true){
-            var isClickOnQuestion = visibleQuestion.contains(event.target);
-            
-            if (!isClickOnQuestion){
+                tempInfoVisible = false;
+            }      
+        })
+        
+        // If user clicks on software type, keep the explanation
+        questions.children[i].addEventListener("click", function(){
+            if(infoVisible == true && questions.children[i] == visibleQuestion){
+                infoScreen.classList.remove('visible');
+                infoScreen.classList.add('invisible');
+                visibleQuestion.style.transition = 'font-weight .2s';
+                visibleQuestion.style.fontWeight = '100';
+            }else if(infoVisible == true){
                 infoScreen.classList.remove('visible');
                 infoScreen.classList.add('invisible');
                 visibleQuestion.style.transition = 'font-weight .2s';
                 visibleQuestion.style.fontWeight = '100';
 
-                infoVisible = false;
+                questions.children[i].style.transition = 'font-weight .2s';
+                questions.children[i].style.fontWeight = '500';
+
+                const pLength = answers.children[i].innerText.length;
+                const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
+
+                answers.children[i].style.width = factor + '%';
+                answers.children[i].classList.remove('invisible');
+                answers.children[i].classList.add('visible');
             }
-        }
-    })
+
+            infoVisible = true;
+            tempInfoVisible = false;
+            infoScreen = answers.children[i];
+            visibleQuestion = questions.children[i];
+        })
+        
+        // If user clicks outside questions, hide the explanation
+        document.addEventListener("click", function(event){
+            if (infoVisible == true){
+                var isClickOnQuestion = visibleQuestion.contains(event.target);
+                
+                if (!isClickOnQuestion){
+                    infoScreen.classList.remove('visible');
+                    infoScreen.classList.add('invisible');
+                    visibleQuestion.style.transition = 'font-weight .2s';
+                    visibleQuestion.style.fontWeight = '100';
+
+                    infoVisible = false;
+                }
+            }
+        })
+    }
 }
+
+
+
 
 // Execute function here, once for experienced and once for starter
