@@ -44,11 +44,10 @@ slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
 
-addInformation('questions-experienced', 'answers-experienced');
-addInformation('questions-starter', 'answers-starter');
+addInformation('questions-experienced', 'answers-experienced', 'visible', 'invisible');
+addInformation('questions-starter', 'answers-starter', 'visible', 'invisible');
 
-function addInformation(input, result){
-    console.log('hey')
+function addInformation(input, result, visibleStyle, invisibleStyle){
     // Question and answer for software/skills information
     const questions = document.getElementById(input);
     const answers = document.getElementById(result);
@@ -74,8 +73,8 @@ function addInformation(input, result){
                 const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
 
                 answers.children[i].style.width = factor + '%';
-                answers.children[i].classList.remove('invisible');
-                answers.children[i].classList.add('visible');
+                answers.children[i].classList.remove(invisibleStyle);
+                answers.children[i].classList.add(visibleStyle);
 
                 questions.children[i].style.transition = 'font-weight .2s';
                 questions.children[i].style.fontWeight = '500';
@@ -88,8 +87,8 @@ function addInformation(input, result){
         // If user moves out software type, hide the explanation
         questions.children[i].addEventListener("mouseout", function(){
             if (infoVisible == false && tempInfoVisible == true){
-                answers.children[i].classList.remove('visible');
-                answers.children[i].classList.add('invisible');
+                answers.children[i].classList.remove(visibleStyle);
+                answers.children[i].classList.add(invisibleStyle);
 
                 questions.children[i].style.transition = 'font-weight .2s';
                 questions.children[i].style.fontWeight = '100';
@@ -101,13 +100,13 @@ function addInformation(input, result){
         // If user clicks on software type, keep the explanation
         questions.children[i].addEventListener("click", function(){
             if(infoVisible == true && questions.children[i] == visibleQuestion){
-                infoScreen.classList.remove('visible');
-                infoScreen.classList.add('invisible');
+                infoScreen.classList.remove(visibleStyle);
+                infoScreen.classList.add(invisibleStyle);
                 visibleQuestion.style.transition = 'font-weight .2s';
                 visibleQuestion.style.fontWeight = '100';
             }else if(infoVisible == true){
-                infoScreen.classList.remove('visible');
-                infoScreen.classList.add('invisible');
+                infoScreen.classList.remove(visibleStyle);
+                infoScreen.classList.add(invisibleStyle);
                 visibleQuestion.style.transition = 'font-weight .2s';
                 visibleQuestion.style.fontWeight = '100';
 
@@ -118,8 +117,8 @@ function addInformation(input, result){
                 const factor = 83 + (Math.max(pLength - 791, 0)) * widthFactor;
 
                 answers.children[i].style.width = factor + '%';
-                answers.children[i].classList.remove('invisible');
-                answers.children[i].classList.add('visible');
+                answers.children[i].classList.remove(invisibleStyle);
+                answers.children[i].classList.add(visibleStyle);
             }
 
             infoVisible = true;
@@ -134,8 +133,8 @@ function addInformation(input, result){
                 var isClickOnQuestion = visibleQuestion.contains(event.target);
                 
                 if (!isClickOnQuestion){
-                    infoScreen.classList.remove('visible');
-                    infoScreen.classList.add('invisible');
+                    infoScreen.classList.remove(visibleStyle);
+                    infoScreen.classList.add(invisibleStyle);
                     visibleQuestion.style.transition = 'font-weight .2s';
                     visibleQuestion.style.fontWeight = '100';
 
@@ -145,8 +144,5 @@ function addInformation(input, result){
         })
     }
 }
-
-
-
 
 // Execute function here, once for experienced and once for starter
