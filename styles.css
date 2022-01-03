@@ -337,12 +337,31 @@ img {
     position: relative;
 }
 
-svg {
+.timeline-title{
     position: absolute;
-    transform: translate(-50%);
-    left:50%;
-    right:50%;
+    transform: translateX(-50%) rotate(-90deg);
+    transform-origin: center;
+    height: 217.25px;
+    left: 50%;
+    font-size: 4em;
+    font-weight: 300;
+    text-transform: uppercase;
+    top: 500px;
+    padding-top: 40px;
+    padding-bottom: -40px;
+    color: seashell;    
+}
+
+.timeline-img{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
     top: 400px;
+}
+
+@keyframes anim_timeline {
+    from {}
+    to {transform: translateX(-50%) rotate(-90deg) translateX(-1132px);}
 }
 
 .data-container{
@@ -533,7 +552,7 @@ svg {
 }
 
 .top-container{
-    position: relative;
+    position: absolute;
     display: contents;
     text-align: center;
 }
@@ -542,7 +561,6 @@ svg {
     position: relative;
     text-transform: uppercase;
     font-size: 1.2em;
-    font-weight: ;
 }
 
 .skills-title{
@@ -563,20 +581,83 @@ svg {
     font-size: 4em;
 }
 
-.top-container > h2{
+.top-container > #questions_test{
     position: absolute;
     background-color: #474747c2;
     font-weight: 100;
+    font-size: 1.5em;
+    line-height: 50%;
     transform: translate(-50%);
     top: 23%;
     left: 50%;
-    padding: 25px;
+    width: 250px;
+    padding: 20px;
     border-radius: 25px;
+}
+
+.explanations{
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    width: 100%;
+    height: 50%;
+}
+
+.explanations > .left{
+    grid-column-start: 1;
+    position: relative;
+}
+
+.explanations > .left > div{
+    background-color: rgb(110, 111, 133);
+    position: absolute;
+    width: 50%;
+    right: 0;
+    text-align: left;
+    top: 46%;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.explanations > .left > div > p{
+    text-align: justify;
+}
+
+.explanations > .right{
+    grid-column-start: 3;
+    position: relative;
+}
+
+.explanations > .right > div{
+    background-color: rgb(110, 111, 133);
+    position: absolute;
+    width: 50%;
+    text-align: left;
+    top: 46%;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.explanations > .right > div > p{
+    text-align: justify;
+}
+
+.visible_test{
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.invisible_test{
+    transition: opacity .5s;
+    opacity: 0;
 }
 
 .bottom-container{
     position: relative;
-    top: 50%;
+    top: 0%;
     width: 100%;
     height: 50%;
 }
@@ -611,7 +692,8 @@ svg {
 .experienced-questions > .experienced-container{
     position: absolute;
     text-align: center;
-    padding-right: 10%;
+    /*padding-right: 10%;*/
+    margin-right: 10%;
     right: 0;
     top: 10%;
     /*background-color: red;*/
@@ -641,7 +723,6 @@ svg {
 }
 
 .categories{
-    top: 10%;
     background-color: #474747;
     padding: 15px;
     border-radius: 25px;
@@ -660,20 +741,15 @@ svg {
     bottom: 0;
     height:70.5%;
     /*Change width in javascript depending on amount of words*/
-    width: 120%;
+    width: 208px;;
     background-color: rgb(110, 111, 133);
     text-align: justify;
     border-radius: 25px;
-    padding: 25px;
+    padding: 25.5px;
 }
 
 .experienced-container > .info-categories > .visible{
-    margin-right: 23%;
     right: 0;
-}
-
-.starter-container > .info-categories > .visible{
-    margin-left: 0%;
 }
 
 .visible > h1{
