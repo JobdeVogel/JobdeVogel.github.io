@@ -18,6 +18,71 @@ body {
     height: 100%;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    visibility: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-button{
+    height: 20px;
+}
+
+::-webkit-scrollbar-corner{
+    height: 20px;
+    opacity: 0;
+}
+
+/* ABOUT */
+.about{
+    display: none; /******************************************/
+    z-index: 200;
+    position: absolute;
+    top: 10%;
+    width: 55%;
+    height: 80%;
+    font-size: 2em;
+    left: 50%;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    overflow: scroll;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.about > img{
+    position: relative;
+    width: 75%;
+    height: 75%;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 10%;
+}
+
+.about > p{
+    position: relative;
+}
+
+/* INTERSECTION OBSERVER */
+.intersection{
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 1px;
+    top: 63%;
+}
+
 /* TOP NAVBAR */
 .navbar-top{
     position: fixed;
@@ -439,15 +504,19 @@ img {
 
 .education{
     position: relative;
+    opacity: 0;
     border-radius: 20px;
     padding:10px;
+    transition: opacity 1s;
     background-color: gray;
 }
 
 .experience{
     position: relative;
+    opacity: 0;
     border-radius: 20px;
     padding:10px;
+    transition: opacity 1s;
     background-color: gray;
 }
 
@@ -842,5 +911,32 @@ iframe {
     .timeline{
         grid-template-columns: .1fr 1fr .1fr;
     }
+
+    .experience-title{
+        font-size: 3vw;
+    }
+
+    .education-title{
+        font-size: 3vw;
+    }
+
+    .experience-container > .experience > h2{
+        font-size: 1.5em;
+    }
     
+    .education-container > .education > h2{
+        font-size: 1.5em;
+    }
+
+    .education-container > .n3{
+        top: 1175px;
+    }
+
+    .experience-container > .experience > h1{
+        font-size: 1.5em;
+    }
+
+    .education-container > .education > h1{
+        font-size: 1.5em;
+    }
 }
