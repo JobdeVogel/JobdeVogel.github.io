@@ -4,12 +4,15 @@
     <meta charset='utf-8'>
     <title>Portfolio Job&nbspde&nbspVogel</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="test-styles.css">
 </head>
 <body>
     <!--Overall container-->
     <div class="container">
-        <!--Top navigation bar-->
+
+        <div class=intersectionObserver></div>
+
+        <!--TOP NAVIGATION BAR-->
         <div id = 'nb' class="navbar-top">
             <div id = 'nc' class="nav-container">
                 <div class="left-side">
@@ -52,439 +55,447 @@
                 </div>
             </div>
         </div>
-        
-        <div class="content-wrapper">
-            <div class="main">
-                <div class="main-container">
-                    <div class="image-container">
-                        <div class="main-colored" style="background-image:url(data/images/main_colored.png)" onclick="window.location.href='about.html'"></div>      
-                    </div>
+
+        <!--- MAIN -->
+        <div class="main">
+            <div class="main-container">
+                <div class="image-container">
+                    <div class="main-colored" style="background-image:url(data/images/main_colored.png)" onclick="window.location.href='about.html'"></div>      
                     <div class="main-name">Job de Vogel</div>
-                        <div class="greater-mark">&lt</div>
-                        <div class="main-title">future building <div class=colored>engineer </div>programmer&gt</div>
-                    </div>
+                </div>
+                
+                <div class="title-container">
+                    <div class="main-title">&ltfuture<br>&nbsp&nbspbuilding <div class=colored>&nbsp&nbspengineer</div>&nbsp&nbspprogrammer&gt</div>
+                </div>
+            </div>
+        </div>
+
+        <!--PORTFOLIO-->
+        <div class="portfolio">
+            <div class="portfolio-title">portfolio</div>
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <a href="animation.html">
+                        <img src="data/images/B3D_JobdeVogel_small.png" style="width:100%">
+                    </a>
+                    <div class="text">Animation</div>
                 </div>
             
-            </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <a href="computational.html">
+                        <img src="data/images/random_2.png" style="width:100%">
+                    </a>
+                    <div class="text">Computational Design</div>
+                </div>
             
-            <div class="portfolio">
-                <div class="portfolio-title">portfolio</div>
-
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
-
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade">
-                        <div class="numbertext">1 / 4</div>
-                        <a href="animation.html">
-                            <img src="data/images/B3D_JobdeVogel.png" style="width:100%">
-                        </a>
-                        <div class="text">Animation</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 4</div>
-                        <a href="computational.html">
-                            <img src="data/images/random_2.png" style="width:100%">
-                        </a>
-                        <div class="text">Computational Design</div>
-                    </div>
-                
-                    <div class="mySlides fade">
-                        <div class="numbertext">3 / 4</div>
-                        <a href="programming.html">
-                            <img src="data/images/random_3.jpg" style="width:100%">
-                        </a>
-                        <div class="text">Programming</div>
-                    </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">4 / 4</div>
-                        <a href="literature.html">
-                            <img src="data/images/random_4.jpg" style="width:100%">
-                        </a>
-                        <div class="text">Literature</div>
-                    </div>
-                
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <br>
-                
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <a href="programming.html">
+                        <img src="data/images/random_3.jpg" style="width:100%">
+                    </a>
+                    <div class="text">Programming</div>
                 </div>
 
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <a href="literature.html">
+                        <img src="data/images/random_4.jpg" style="width:100%">
+                    </a>
+                    <div class="text">Literature</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
 
-            <div class="timeline">
-                <!-- Change length of timeline in the future HERE, from top to bottom -->
-                <svg class="timeline-img" id="xax" xmlns="http://www.w3.org/2000/svg" width="217.25" height="1571" viewBox="0 0 217.25 1571">
-                    <rect id="Rectangle_17" data-name="Rectangle 17" width="217" height="1571" rx="76" fill="#fff" opacity="0.16"/>
-                    <text id="_2020" data-name="2020" transform="translate(131.25 303.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2020</tspan></text>
-                    <text id="_2022" data-name="2022" transform="translate(131.25 46.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2022</tspan></text>
-                    <text id="_2019" data-name="2019" transform="translate(131.25 584.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2019</tspan></text>
-                    <text id="_2018" data-name="2018" transform="translate(126.25 932.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2018</tspan></text>
-                    <text id="_2016" data-name="2016" transform="translate(126.25 1195.335)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2016</tspan></text>
-                    <text id="_2010" data-name="2010" transform="translate(126.25 1488)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2010</tspan></text>
-                    <line id="Line_2" data-name="Line 2" y2="1435" transform="translate(108 67.835)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="5"/>
-                    <circle id="Ellipse_1" data-name="Ellipse 1" cx="13.5" cy="13.5" r="13.5" transform="translate(94.5 51.835)" fill="#707070"/>
-                    <circle id="Ellipse_2" data-name="Ellipse 2" cx="13.5" cy="13.5" r="13.5" transform="translate(94.5 1200.335)" fill="#707070"/>
-                    <circle id="Ellipse_3" data-name="Ellipse 3" cx="13.5" cy="13.5" r="13.5" transform="translate(94.5 1493)" fill="#707070"/>
-                </svg>
+        </div>
 
-                <div class="timeline-title">Timeline
-                                         
-                </div>
+        <!-- TIMELINE -->
+        <div class="timeline">
+            <!-- Change length of timeline in the future HERE, from top to bottom -->
+            <svg class="timeline-img" id="xax" xmlns="http://www.w3.org/2000/svg" width="217.25" height="1571" viewBox="0 0 217.25 1571">
+                <rect id="Rectangle_17" data-name="Rectangle 17" width="217" height="1571" rx="76" fill="#fff" opacity="0.16"/>
+                <text id="_2020" data-name="2020" transform="translate(131.25 303.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2020</tspan></text>
+                <text id="_2022" data-name="2022" transform="translate(131.25 46.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2022</tspan></text>
+                <text id="_2019" data-name="2019" transform="translate(131.25 584.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2019</tspan></text>
+                <text id="_2018" data-name="2018" transform="translate(126.25 932.835)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2018</tspan></text>
+                <text id="_2016" data-name="2016" transform="translate(126.25 1195.335)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2016</tspan></text>
+                <text id="_2010" data-name="2010" transform="translate(126.25 1488)" fill="#c6c6c6" font-size="30" font-family="Roboto-LightItalic, Roboto" font-weight="300" font-style="italic"><tspan x="0" y="29">2010</tspan></text>
+                <line id="Line_2" data-name="Line 2" y2="1435" transform="translate(108 67.835)" fill="none" stroke="#707070" stroke-width="1" stroke-dasharray="5"/>
+                <circle id="Ellipse_1" data-name="Ellipse 1" cx="13.5" cy="13.5" r="13.5" transform="translate(94.5 51.835)" fill="#707070"/>
+                <circle id="Ellipse_2" data-name="Ellipse 2" cx="13.5" cy="13.5" r="13.5" transform="translate(94.5 1200.335)" fill="#707070"/>
+                <circle id="Ellipse_3" data-name="Ellipse 3" cx="13.5" cy="13.5" r="13.5" transform="translate(94.5 1493)" fill="#707070"/>
+            </svg>
 
-                <div class="data-container">
-                        <div class="education-title">
-                            <h1>Education</h1>
-                        </div>
+            <div class="timeline-title-fixed">Timeline                
+            </div>
 
-                        <div class="experience-title">
-                                <h1>Experience</h1>
-                        </div>
-                    
-                    <div class="education-container">
-                        <div class="education n1">
-                            <h1>MSc. Building Technology</h1>
-                            <h2>Delft University of Technology, Netherlands, Delft</h2>
-                            <button onclick="window.location.href='https://www.tudelft.nl/en/education/programmes/masters/architecture-urbanism-and-building-sciences/msc-architecture-urbanism-and-building-sciences/master-tracks/building-technology';">Link</button>
-                        </div>
+            <div class="timeline-title-absolute">
+                <div class="timeline-title-top">Timeline </div>
+                <div class="int-box-top"></div>
+                <div class="timeline-title-bottom">Timeline </div>
+                <div class="int-box-bottom"></div>         
+            </div>
 
-                        <div class="education n2">
-                            <h1>Spatial Computing (minor)</h1>
-                            <h2>Delft University of Technology, Netherlands, Delft</h2>
-                            <button onclick="window.location.href='https://www.tudelft.nl/bk/studeren/minoren-en-keuzevakken/spatial-computing-in-architectural-design';">Link</button>
-                        </div>
-
-                        <div class="education n3">
-                            <h1>Archineering (minor)</h1>
-                            <h2>Delft University of Technology, Netherlands, Delft</h2>
-                            <button onclick="window.location.href='https://www.tudelft.nl/bk/studeren/minoren-en-keuzevakken/archineering';">Link</button>
-                        </div>
-
-                        <div class="education n4">
-                            <h1>BSc. Architecture and the<br>Built Environment</h1>
-                            <h2>Delft University of Technology, Netherlands, Delft</h2>
-                            <button onclick="window.location.href='https://www.tudelft.nl/en/education/programmes/bachelors/bk/bachelor-of-architecture-urbanism-and-building-sciences';">Link </button>
-                        </div>
-
-                        <div class="education n5">
-                            <h1>Atheneum Nature & Technology</h1>
-                            <h2>Melanchthon Bergschenhoek</h2>
-                            <button onclick="window.location.href='https://www.melanchthon.nl/bergschenhoek/';">Link</button>
-                        </div>
+            <div class="data-container">
+                    <div class="education-title">
+                        <h1>Education</h1>
                     </div>
 
+                    <div class="experience-title">
+                            <h1>Experience</h1>
+                    </div>
+                
+                <div class="education-container">
+                    <div class="education n1">
+                        <h1>MSc. Building Technology</h1>
+                        <h2>Delft University of Technology, Netherlands, Delft</h2>
+                        <button onclick="window.location.href='https://www.tudelft.nl/en/education/programmes/masters/architecture-urbanism-and-building-sciences/msc-architecture-urbanism-and-building-sciences/master-tracks/building-technology';">Link</button>
+                    </div>
+
+                    <div class="education n2">
+                        <h1>Spatial Computing (minor)</h1>
+                        <h2>Delft University of Technology, Netherlands, Delft</h2>
+                        <button onclick="window.location.href='https://www.tudelft.nl/bk/studeren/minoren-en-keuzevakken/spatial-computing-in-architectural-design';">Link</button>
+                    </div>
+
+                    <div class="education n3">
+                        <h1>Archineering (minor)</h1>
+                        <h2>Delft University of Technology, Netherlands, Delft</h2>
+                        <button onclick="window.location.href='https://www.tudelft.nl/bk/studeren/minoren-en-keuzevakken/archineering';">Link</button>
+                    </div>
+
+                    <div class="education n4">
+                        <h1>BSc. Architecture and the<br>Built Environment</h1>
+                        <h2>Delft University of Technology, Netherlands, Delft</h2>
+                        <button onclick="window.location.href='https://www.tudelft.nl/en/education/programmes/bachelors/bk/bachelor-of-architecture-urbanism-and-building-sciences';">Link </button>
+                    </div>
+
+                    <div class="education n5">
+                        <h1>Atheneum Nature & Technology</h1>
+                        <h2>Melanchthon Bergschenhoek</h2>
+                        <button onclick="window.location.href='https://www.melanchthon.nl/bergschenhoek/';">Link</button>
+                    </div>
+                </div>
+
+                <div class="experience-container">
                     <div class="experience-container">
-                        <div class="experience-container">
-                            <div class="experience n1">
-                                <h1>Teaching Assistant Design Informatics</h1>
-                                <h2>Delft University of Technology, Netherlands, Delft</h2>
-                                <button onclick="window.location.href='https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/architectural-engineering-and-technology/organisation/chairs/design-informatics/';">Link </button>
-                            </div>
+                        <div class="experience n1">
+                            <h1>Teaching Assistant Design Informatics</h1>
+                            <h2>Delft University of Technology, Netherlands, Delft</h2>
+                            <button onclick="window.location.href='https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/architectural-engineering-and-technology/organisation/chairs/design-informatics/';">Link </button>
+                        </div>
 
-                            <div class="experience n2">
-                                <h1>Computer Helpdesk Employee @Hok ICT support</h1>
-                                <h2>Delft University of Technology, Netherlands, Delft</h2>
-                                <button onclick="window.location.href='https://adhok.bk.tudelft.nl/';">Link </button>
-                            </div>
+                        <div class="experience n2">
+                            <h1>Computer Helpdesk Employee @Hok ICT support</h1>
+                            <h2>Delft University of Technology, Netherlands, Delft</h2>
+                            <button onclick="window.location.href='https://adhok.bk.tudelft.nl/';">Link </button>
+                        </div>
 
-                            <div class="experience n3">
-                                <h1>SHS Delft</h1>
-                                <h2>Stichting Herontwikkeling tot Studentenhuisvesting<br><br>Fulltime Chairman<br>Fulltime Secretary</h2>
-                                <button onclick="window.location.href='http://shsdelft.nl/';">Link </button>
-                            </div>
+                        <div class="experience n3">
+                            <h1>SHS Delft</h1>
+                            <h2>Stichting Herontwikkeling tot Studentenhuisvesting<br><br>Fulltime Chairman<br>Fulltime Secretary</h2>
+                            <button onclick="window.location.href='http://shsdelft.nl/';">Link </button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="skills">               
-                <div class="top-container">
-                    <h1 class = "software-title title">Software</h1>
-                    <h1 class = "skills-title title">Skills</h1>
-                    
-                    <div id='questions_test'>
-                        <p>Leadership</p>
-                        <p>Creative</p>
-                        <p>Solution-driven</p>
-                        <p>Computer&nbspEngineering</p>
-                    </div>
-
-                    <div class = 'explanations'>
-                        <div class = 'left' id='answers_test_left'>
-                            <div class='invisible_test'>
-                                <h2>Leadership</h2>
-                                <p> Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                                <p><strong>Time spent: </strong>> 800 hours</p>
-                            </div>
-                        
-                            <div class='invisible_test'>
-                                <h2>Solution-driven</h2>
-                                <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                                <p><strong>Time spent: </strong>> 800 hours</p>
-                            </div>
-                        </div>
-                        
-                        <div class = 'right' id='answers_test_right'>
-                            <div class='invisible_test'>
-                                <h2>Creative</h2>
-                                <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                                <p><strong>Time spent: </strong>> 800 hours</p>
-                            </div>
-
-                            <div class='invisible_test'>
-                                <h2>Computer Engineering</h2>
-                                <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                                <p><strong>Time spent: </strong>> 800 hours</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
+        <!-- SKILLS -->
+        <div class="skills">               
+            <div class="top-container">
+                <h1 class = "software-title title">Software</h1>
+                <h1 class = "skills-title title">Skills</h1>
+                
+                <div id='questions_test'>
+                    <p>Leadership</p>
+                    <p>Creative</p>
+                    <p>Solution-driven</p>
+                    <p>Computer&nbspEngineering</p>
                 </div>
-
-                <div class="bottom-container">
-                    <div class="left-container">                       
-                        <div class="experienced-questions">
-                            <div class="experienced-container">
-                                <h1>Experienced</h1>
-
-                                <div id="questions-experienced" class=categories>
-                                    <p>McNeel&nbspRhino&nbsp3D</p>
-                                    <p style="text-decoration: underline">Grasshopper</p>
-                                    <p>Python</p>
-                                    <p style="text-decoration: underline">Maya&nbsp&&nbspArnold</p>
-                                    <p>Substance&nbspPainter</p>
-                                    <p>Revit</p>
-                                    <p>Lumion</p>
-                                    <p>Enscape</p>
-                                    <p>Photoshop</p>
-                                    <p>InDesign</p>
-                                    <p>Illustrator</p>
-                                    <p style="text-decoration: underline">HTML&nbsp&&nbspCSS</p>
-                                </div>
-                                
-                                <div id="answers-starter" class=info-categories>
-                                    <div class=invisible>
-                                        <h1>Premiere Pro</h1>
-                                        <p>Info coming later. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>After Effects</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Adobe XD</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Fusion 360</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Arduino</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Numpy</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Machine Learning</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Houdini</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>SideFX</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>C++</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Enscape</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Wordpress</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="right-container">
-                        <div class="starter-questions">
-                            <div class="starter-container">
-                                <h1>Starter</h1>
-
-                                <div id="questions-starter" class=categories>
-                                    <p>Premiere&nbspPro</p>
-                                    <p>After&nbspEffects</p>
-                                    <p>Adobe&nbspXD</p>
-                                    <p>Fusion&nbsp360</p>
-                                    <p>Arduino</p>
-                                    <p>Numpy</p>
-                                    <p>Machine&nbspLearning</p>
-                                    <p>Houdini</p>
-                                    <p>SideFX</p>
-                                    <p>C++</p>
-                                    <p>Enscape</p>
-                                    <p>Wordpress</p>
-                                </div>
-
-                                <div id="answers-experienced" class=info-categories>
-                                    <div class=invisible>
-                                        <h1>McNeel Rhino 3D</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Grasshopper</h1>
-                                        <p>In the last five years I spent many hours in Grasshopper. I have developed several projects and tools within Grasshopper, using the visual nodes, or standard Python programming. Furthermore, I have tutored and lectured Grasshopper to bachelor students and developed a new GH study program for TU Delft. You can find this study program in the link down below. I am familiar with most functions and the background principles of Grasshopper. Since it is not possible to work in Grasshopper all the time, I try to stay up-to-date through the McNeel forum. In the future I hope to research alternative parametric modelling software like Maya or Unity as alternative to Grasshopper, specifically to be able to handle and process more data than possible in Grasshopper.</p>
-                                        <p><strong>Time spent: </strong>> 800 hours</p>
-                                        <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Python</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Maya & Arnold</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Substance Painter</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Revit</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Lumion</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Enscape</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Photoshop</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>Indesign</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-                                    
-                                    <div class=invisible>
-                                        <h1>Illustrator</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-
-                                    <div class=invisible>
-                                        <h1>HTML & CSS</h1>
-                                        <p>Info coming later.</p>
-                                        <p><strong>Time spent: </strong>~x hours</p>
-                                        <button class=button>Link</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="world">
                 <!--
-                <div class="sketchfab-embed-wrapper"> <iframe title="earth_core" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
-                    src="https://sketchfab.com/models/8a3f6e66955e41d48762d75725d3ab52/embed?autostart=1&camera=0"></iframe> 
+                <div class = 'explanations'>
+                    <div class = 'left' id='answers_test_left'>
+                        <div class='invisible_test'>
+                            <h2>Leadership</h2>
+                            <p> Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
+                            <p><strong>Time spent: </strong>> 800 hours</p>
+                        </div>
+                    
+                        <div class='invisible_test'>
+                            <h2>Solution-driven</h2>
+                            <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
+                            <p><strong>Time spent: </strong>> 800 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class = 'right' id='answers_test_right'>
+                        <div class='invisible_test'>
+                            <h2>Creative</h2>
+                            <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
+                            <p><strong>Time spent: </strong>> 800 hours</p>
+                        </div>
+
+                        <div class='invisible_test'>
+                            <h2>Computer Engineering</h2>
+                            <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
+                            <p><strong>Time spent: </strong>> 800 hours</p>
+                        </div>
+                    </div>
                 </div>
                 -->
             </div>
+
+            <div class="bottom-container">
+                <div class="left-container">                       
+                    <div class="experienced-questions">
+                        <div class="experienced-container">
+                            <h1>Experienced</h1>
+
+                            <div id="questions-experienced" class=categories>
+                                <p>McNeel&nbspRhino&nbsp3D</p>
+                                <p style="text-decoration: underline">Grasshopper</p>
+                                <p>Python</p>
+                                <p style="text-decoration: underline">Maya&nbsp&&nbspArnold</p>
+                                <p>Substance&nbspPainter</p>
+                                <p>Revit</p>
+                                <p>Lumion</p>
+                                <p>Enscape</p>
+                                <p>Photoshop</p>
+                                <p>InDesign</p>
+                                <p>Illustrator</p>
+                                <p style="text-decoration: underline">HTML&nbsp&&nbspCSS</p>
+                            </div>
+                            
+                            <div id="answers-starter" class=info-categories>
+                                <div class=invisible>
+                                    <h1>Premiere Pro</h1>
+                                    <p>Info coming later. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>After Effects</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Adobe XD</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Fusion 360</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Arduino</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Numpy</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Machine Learning</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Houdini</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>SideFX</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>C++</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Enscape</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Wordpress</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-container">
+                    <div class="starter-questions">
+                        <div class="starter-container">
+                            <h1>Starter</h1>
+
+                            <div id="questions-starter" class=categories>
+                                <p>Premiere&nbspPro</p>
+                                <p>After&nbspEffects</p>
+                                <p>Adobe&nbspXD</p>
+                                <p>Fusion&nbsp360</p>
+                                <p>Arduino</p>
+                                <p>Numpy</p>
+                                <p>Machine&nbspLearning</p>
+                                <p>Houdini</p>
+                                <p>SideFX</p>
+                                <p>C++</p>
+                                <p>Enscape</p>
+                                <p>Wordpress</p>
+                            </div>
+
+                            <div id="answers-experienced" class=info-categories>
+                                <div class=invisible>
+                                    <h1>McNeel Rhino 3D</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Grasshopper</h1>
+                                    <p>In the last five years I spent many hours in Grasshopper. I have developed several projects and tools within Grasshopper, using the visual nodes, or standard Python programming. Furthermore, I have tutored and lectured Grasshopper to bachelor students and developed a new GH study program for TU Delft. You can find this study program in the link down below. I am familiar with most functions and the background principles of Grasshopper. Since it is not possible to work in Grasshopper all the time, I try to stay up-to-date through the McNeel forum. In the future I hope to research alternative parametric modelling software like Maya or Unity as alternative to Grasshopper, specifically to be able to handle and process more data than possible in Grasshopper.</p>
+                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Python</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Maya & Arnold</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Substance Painter</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Revit</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Lumion</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Enscape</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Photoshop</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>Indesign</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+                                
+                                <div class=invisible>
+                                    <h1>Illustrator</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>HTML & CSS</h1>
+                                    <p>Info coming later.</p>
+                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <button class=button>Link</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WORLD -->
+        <div class="world">
+            
+            <div class="sketchfab-embed-wrapper"> <iframe title="earth_core" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
+                src="https://sketchfab.com/models/8a3f6e66955e41d48762d75725d3ab52/embed?autostart=1&camera=0"></iframe> 
+            </div>
+            
         </div>
 
         <!--Bottom navigation bar-->
         <div class="navbar-bottom">
-
+        
         </div>
     </div>
 </body>

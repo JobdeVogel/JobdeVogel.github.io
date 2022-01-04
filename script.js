@@ -1,6 +1,30 @@
 // DEVELOPED BY JOB DE VOGEL
 // Hide navbar background
-function changeBackground(){
+function scrollAnimations(){
+    const intBoxTop = document.querySelector('.int-box-top');
+    const intTop = intBoxTop.getBoundingClientRect().bottom;
+    
+    const intBoxBottom = document.querySelector('.int-box-bottom');
+    const intBottom = intBoxBottom.getBoundingClientRect().top;
+    
+    const timelineTitleFixed = document.querySelector('.timeline-title-fixed');
+    const timeline = timelineTitleFixed.getBoundingClientRect().bottom;
+
+    const timelineTitleTop = document.querySelector('.timeline-title-top');
+    const timelineTitleBottom = document.querySelector('.timeline-title-bottom');
+
+    if ((timeline > intTop) && (timeline < intBottom)){
+        timelineTitleTop.style.visibility = 'hidden';
+        timelineTitleBottom.style.visibility = 'hidden';
+
+        timelineTitleFixed.style.visibility = 'visible';
+    }else{
+        timelineTitleTop.style.visibility = 'visible';
+        timelineTitleBottom.style.visibility = 'visible';
+
+        timelineTitleFixed.style.visibility = 'hidden';
+    }
+
     if(window.scrollY > window.innerHeight / 3){
         document.getElementById('nb').classList.add('change-color');
     }else{
@@ -8,7 +32,7 @@ function changeBackground(){
     }
 }
 
-window.addEventListener('scroll', changeBackground);
+window.addEventListener('scroll', scrollAnimations);
 
 const section = document.querySelector("#_2019");
 
