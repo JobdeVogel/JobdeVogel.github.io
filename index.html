@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_animation.css">
+    <link rel="stylesheet" href="styles_computational.css">
 </head>
 <body>
     <!--Overall container-->
@@ -58,11 +59,11 @@
         </div>
 
         <!-- ANIMATIONS -->
-        <div class="page-container">
+        <div class="anim-page-container">
             <div class="anim-background"></div>
 
             <div class = 'Animation'>
-                <div class="close-button">&#10005;</div>
+                <div class="anim-close-button">&#10005;</div>
 
 
                 <div class="anim-container">
@@ -86,7 +87,7 @@
 
                     <div class="anim-bottom">
                         <div class="anim-video">
-                            <video muted autoplay poster="data/images/video_thumbnail.png" controls>
+                            <video muted autoplay loop poster="data/images/video_thumbnail.png" controls>
                                 <source src="data/videos/intro_animatie.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                             </video>
@@ -113,6 +114,72 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPUTATIONAL DESIGN -->
+        <div class="comp-page-container">
+            <div class="comp-background"></div>
+
+            <div class = 'Computational'>
+                <div class="comp-close-button">&#10005;</div>
+
+                <div class="comp-container">
+                    <div class="comp-top">
+                        <div class='comp-text-1'>
+                            <h1>Hex World</h1>
+                            
+                            <p>One of the main challenges of the COVID-19 lockdown for students in the Netherlands, was sitting behind a desk at home all day long. Corona makes our world smaller, but by sporting outside we can experience the world as a greater and more beautiful place. In this project, we created a planet creation visualization within a McNeel Rhino environment, that stimulates sporting in the physical world.<br><br>
+                                By using the Strava (sport app) API, it was possible to collect live geographical data and numerical data about our sporting activities and converted the data to a 2D map in Rhino using Python and Grasshopper. Next, this 2D data was mapped to a sphere. By developing a recursive algorithm in Python, I was able to create a 3D terrain that indicates the intensity of activities. Smaller objects on the sphere, like bonfires and trees, indicate special achievements, like breaking a record.<br><br>
+                                In theory, this project could be converted to a real app that people use on their phone to track there sporting activities. Unfortunately, this was outside the scope of the project.
+                            </p>
+                        </div>
+
+                        <div class="hex-sphere-img">
+                            <img src="data/images/Sphere_rendered.png">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="comp-center">
+                        <div class="hex-path-img">
+                            <video muted autoplay loop poster="data/images/video_thumbnail.png" controls>
+                                <source src="data/videos/Video7_Hexpath_visualization.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <div class='comp-text-2'>                           
+                            <p>For this project we used several methods and techniques. Personally, I was responsible for guiding the team, because of my prior knowledge in (visual) programming. My main personal contributions are mentioned in the previous paragraph. Other teammates focused on converting our digital model to a fabrication model using Robots, and outputting the data using Arduino. Our project was graded with a 10/10.<br><br>
+                                To visualize this project, we used McNeel Rhino as main interface. The data was collected using IronPython (expecially webscraping libraries). Using the PyFirmata Python 3 package I helped my teammates to convert the output to a physical Arduino output. The video on the left is a visualization of the recursive mountainization algorithm.<br><br>
+                                <i>Name: </i>'Hex World'<br>
+                                <i>Author: </i>Job de Vogel<br>
+                                <i>Co-authors: </i>Jun Wen Loo, Kwan-Lin Wang and Thomas Lindemann<br>
+                                <i>Educational weight: </i>5 ECT (140 hours)<br>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="comp-bottom">
+                        <div class='comp-text-3'>
+                            <h1>Spatial Computing</h1>
+                            
+                            <p>The minor Spatial Computing was my first experience with real optimization based on shortest-path algorithms, dynamic space agents and linear algebra. Our assignment was based on an existing building block in the city center of Rotterdam, the Netherlands. By generating a voxel cloud and analyzing numerical values like sunlight, noise and a program of requirements, we were able to generate a building based on ideal positions for each function.<br><br>
+                                For this project, we used Houdini and the programming language SideFX, C++ and Python. Within the group, I was responsible for the dynamic placement of the program functions. After completing this minor, I rebuilt the A-start path finding algorithm to a Grasshopper implementation, to use in future projects. The final renders were made using Rhino and Lumion.<br><br>
+                                <i>Name: </i>'Urban Green City'<br>
+                                <i>Author: </i>Job de Vogel<br>
+                                <i>Co-authors: </i>Victor Wernet, Ida Bølling Kongsted<br>
+                                <i>Educational weight: </i>10 ECT (280 hours)<br>
+                            </p>
+                        </div>
+
+                        <div class="spatial-img">
+                            <img src="data/images/spatial_computing.png">
+                        </div>
+                    </div>
+                    
+                    <p class="more-info"> For more projects related to Computational Design, please contact me through the contact page.</p>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 /* ANIMATION STYLESHEET*/
-.page-container{
-    visibility: visible;
+.anim-page-container{
+    visibility: hidden;
 }
 
 .anim-background{
@@ -24,7 +24,7 @@
     background-color: #5d5d5dc0;
 }
 
-.close-button{
+.anim-close-button{
     position: absolute;
     cursor: pointer;
     top: 2%;
@@ -34,7 +34,7 @@
     color: rgb(143, 143, 143);
 }
 
-.close-button:hover{
+.anim-close-button:hover{
     opacity: 0.5;
 }
 
@@ -115,6 +115,7 @@
 }
 
 video {
+    visibility: hidden;
     width: 100%;
     border-radius: 30px;
     margin-bottom: 2.5%;
