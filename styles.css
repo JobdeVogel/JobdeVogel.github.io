@@ -18,6 +18,41 @@ body {
     height: 100%;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    visibility: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+::-webkit-scrollbar-button{
+    height: 20px;
+}
+
+::-webkit-scrollbar-corner{
+    height: 20px;
+    opacity: 0;
+}
+
+/* INTERSECTION OBSERVER */
+.intersection{
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 1px;
+    top: 63%;
+}
+
 /* TOP NAVBAR */
 .navbar-top{
     position: fixed;
@@ -233,9 +268,10 @@ img {
     filter: opacity(75%);
 }
 
-.mySlides:hover {
-    filter:opacity(100%)
+.mySlides:hover{
+    filter:opacity(100%);
 }
+
 
 .prev, .next {
     position: absolute;
@@ -439,15 +475,19 @@ img {
 
 .education{
     position: relative;
+    opacity: 0;
     border-radius: 20px;
     padding:10px;
+    transition: opacity 1s;
     background-color: gray;
 }
 
 .experience{
     position: relative;
+    opacity: 0;
     border-radius: 20px;
     padding:10px;
+    transition: opacity 1s;
     background-color: gray;
 }
 
@@ -842,5 +882,32 @@ iframe {
     .timeline{
         grid-template-columns: .1fr 1fr .1fr;
     }
+
+    .experience-title{
+        font-size: 3vw;
+    }
+
+    .education-title{
+        font-size: 3vw;
+    }
+
+    .experience-container > .experience > h2{
+        font-size: 1.5em;
+    }
     
+    .education-container > .education > h2{
+        font-size: 1.5em;
+    }
+
+    .education-container > .n3{
+        top: 1175px;
+    }
+
+    .experience-container > .experience > h1{
+        font-size: 1.5em;
+    }
+
+    .education-container > .education > h1{
+        font-size: 1.5em;
+    }
 }

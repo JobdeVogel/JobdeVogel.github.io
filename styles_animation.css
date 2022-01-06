@@ -1,0 +1,165 @@
+/* ANIMATION STYLESHEET*/
+.page-container{
+    visibility: visible;
+}
+
+.anim-background{
+    z-index: 200;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.Animation{
+    position: fixed;
+    z-index: 200;
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    overflow-y: scroll;
+    background-color: #5d5d5dc0;
+}
+
+.close-button{
+    position: absolute;
+    cursor: pointer;
+    top: 2%;
+    left: 98%;
+    font-weight: 300;
+    font-family: Arial;
+    color: rgb(143, 143, 143);
+}
+
+.close-button:hover{
+    opacity: 0.5;
+}
+
+.anim-container{
+    position: relative;
+    width: 92%;
+    margin: 4%; /* Margin of all data inside panel*/
+    color: seashell;
+}
+
+.anim-container > .anim-top{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0%;
+    margin-bottom: 10%;
+}
+
+.anim-container > .anim-top > .Beyond3D-img{
+    position: relative;
+    grid-column-start: 1;
+    width: 100%;
+}
+
+.anim-container > .anim-top > .anim-text{
+    position: relative;
+    grid-column-start: 2;
+    top: 0;
+    margin-left: 5%;
+    width: 95%;
+}
+
+.anim-container > .anim-top > .Beyond3D-img > img{
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+}
+
+/**** JS event ****/
+.fullscreen-image{
+    position: absolute;
+    cursor: pointer;
+    z-index: 200;
+    border-radius: 20px;
+    height: 200%;
+    width: 200%;
+}
+
+.anim-container > .anim-top > .anim-text > h1{
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3.5em;
+    font-weight: 300;
+    color: #C6C6C6;
+}
+
+.anim-container > .anim-top > .anim-text > p{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding-left:5px;
+    font-size: .9em;
+    text-align: justify;
+    color: #C6C6C6;
+}
+
+.anim-container > .anim-bottom{
+    position: relative;
+    width: 100%;
+    margin: 0%;
+}
+
+.anim-container > .anim-bottom > .anim-video{
+    position: relative;
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 2.5%;
+}
+
+.anim-container > .anim-bottom > h1{
+    all: none;
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: 3.5em;
+    font-weight: 300;
+    color: #C6C6C6;
+}
+
+.anim-container > .anim-bottom > .anim-text-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.anim-container > .anim-bottom > .anim-text-container > .paragraph-1{
+    grid-column-start: 1;
+}
+
+.anim-container > .anim-bottom > .anim-text-container > .paragraph-2{
+    grid-column-start: 2;
+}
+
+.anim-container > .anim-bottom > .anim-text-container > .paragraph-3{
+    grid-column-start: 3;
+}
+
+.p-text{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-left:5px;
+    text-align: justify;
+    font-size: 0.9em;
+    color: #C6C6C6;
+}

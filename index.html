@@ -4,13 +4,14 @@
     <meta charset='utf-8'>
     <title>Portfolio Job&nbspde&nbspVogel</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="test-styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_animation.css">
 </head>
 <body>
     <!--Overall container-->
     <div class="container">
 
-        <div class=intersectionObserver></div>
+        <div class="intersection"></div>
 
         <!--TOP NAVIGATION BAR-->
         <div id = 'nb' class="navbar-top">
@@ -36,7 +37,7 @@
                     </div>
 
                     <div class="nav-link-wrapper">
-                        <button class="button" onclick="window.location.href='cv.html';">
+                        <button class="button" onclick=" window.open('data/pdf/2021_21_04 Curriculum Vitae.pdf', '_blank', rel='noopener noreferrer')">
                             CV
                         </button>
                     </div>
@@ -51,6 +52,66 @@
                 <div class="right-side">
                     <div class="nav-link-wrapper">
                         <a href="contact-page.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANIMATIONS -->
+        <div class="page-container">
+            <div class="anim-background"></div>
+
+            <div class = 'Animation'>
+                <div class="close-button">&#10005;</div>
+
+
+                <div class="anim-container">
+                    <div class="anim-top">
+                        <div class="Beyond3D-img">
+                            <img id="Beyond3D" src="data/images/B3D_JobdeVogel_small.png">
+                        </div>
+                        
+                        <div class='anim-text'>
+                            <h1>Post Apocalypse</h1>
+                            
+                            <p>Since early 2021, I started developing animations and realistic rendering scenes for both educational and personal purposes. For the Master course Beyond3D I created an imaginary post-apocalyptic world, inspired by the .movie Wall-E from Pixar Animation Studios. Nature has been overtaken by garbage, and some of the garbage elements have turned into a small robot, which is trying to cut down all the nature that is left.<br><br>
+                                This design has been made using Autodesk Maya, Arnold render engine, Substance Painter, Materialize Bounding Box Software and Adobe Photoshop. Using Maya instance procedures, it was possible to generate large amount of apparent random garbage, with incredible amounts of polygons. The final render took about 5.5 render hours to complete on a modern PC.<br><br>
+                                <i>Name: </i>'Post-Apocalypse'<br>
+                                <i>Author: </i>Job de Vogel<br>
+                                <i>Educational weight: </i>6 ECT (168 hours)<br>
+                                <i>Render hours: </i>5.5
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="anim-bottom">
+                        <div class="anim-video">
+                            <video muted autoplay poster="data/images/video_thumbnail.png" controls>
+                                <source src="data/videos/intro_animatie.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        
+                        <h1>Movie Intro Animation</h1>
+                        
+                        <div class='anim-text-container'>
+                            <div class="paragraph-1">
+                                <p class="p-text">After finishing my first stationary render using Maya in early 2021, I developed my first animation, based on the 20th Century Fox intro animation. This project took about 6 full-time weeks to complete. The second part of the animation is a stylistic interpretation on a building from 1967; a cinema in the center of Delft, the Netherlands.</p>
+                            </div>
+
+                            <div class="paragraph-2">
+                                <p class="p-text">Although this is just a short animation of 50 seconds, rendering took 680 render hours on a renderfarm. Afterwards, the movie was edited in Adobe After Effects and Premiere Pro. All the geometry and textures visible were created by myself in Autodesk Maya.</p>
+                            </div>
+
+                            <div class="paragraph-3">
+                                <p class="p-text">
+                                    <i>Name: </i>'Lustrumfilm Intro Animation'<br>
+                                    <i>Author: </i>Job de Vogel<br>
+                                    <i>Educational weight: </i>no ECT (240 hours)<br>
+                                    <i>Render hours: </i>680
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,7 +141,7 @@
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 4</div>
-                    <a href="animation.html">
+                    <a>
                         <img src="data/images/B3D_JobdeVogel_small.png" style="width:100%">
                     </a>
                     <div class="text">Animation</div>
@@ -88,26 +149,26 @@
             
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 4</div>
-                    <a href="computational.html">
-                        <img src="data/images/random_2.png" style="width:100%">
+                    <a>
+                        <img src="data/images/Sphere_rendered.png" style="width:100%">
                     </a>
                     <div class="text">Computational Design</div>
                 </div>
             
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 4</div>
-                    <a href="programming.html">
-                        <img src="data/images/random_3.jpg" style="width:100%">
+                    <a>
+                        <img src="data/images/programming.png" style="width:100%">
                     </a>
                     <div class="text">Programming</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">4 / 4</div>
-                    <a href="literature.html">
-                        <img src="data/images/random_4.jpg" style="width:100%">
+                    <a>
+                        <img src="data/images/architecture2.png" style="width:100%">
                     </a>
-                    <div class="text">Literature</div>
+                    <div class="text">Architecture</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -230,37 +291,6 @@
                     <p>Solution-driven</p>
                     <p>Computer&nbspEngineering</p>
                 </div>
-                <!--
-                <div class = 'explanations'>
-                    <div class = 'left' id='answers_test_left'>
-                        <div class='invisible_test'>
-                            <h2>Leadership</h2>
-                            <p> Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                            <p><strong>Time spent: </strong>> 800 hours</p>
-                        </div>
-                    
-                        <div class='invisible_test'>
-                            <h2>Solution-driven</h2>
-                            <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                            <p><strong>Time spent: </strong>> 800 hours</p>
-                        </div>
-                    </div>
-                    
-                    <div class = 'right' id='answers_test_right'>
-                        <div class='invisible_test'>
-                            <h2>Creative</h2>
-                            <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                            <p><strong>Time spent: </strong>> 800 hours</p>
-                        </div>
-
-                        <div class='invisible_test'>
-                            <h2>Computer Engineering</h2>
-                            <p>Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                            <p><strong>Time spent: </strong>> 800 hours</p>
-                        </div>
-                    </div>
-                </div>
-                -->
             </div>
 
             <div class="bottom-container">
@@ -282,6 +312,7 @@
                                 <p>InDesign</p>
                                 <p>Illustrator</p>
                                 <p style="text-decoration: underline">HTML&nbsp&&nbspCSS</p>
+                                <p>RoboDK</p>
                             </div>
                             
                             <div id="answers-starter" class=info-categories>
@@ -396,8 +427,9 @@
                             <div id="answers-experienced" class=info-categories>
                                 <div class=invisible>
                                     <h1>McNeel Rhino 3D</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <p>Rhino is my primary software tool to design in 2D and 3D digitally. Usually I combine the use of Rhino with Grasshopper and render software like Lumion or Enscape. I especially like the use of Rhino because of the versatility to use it in combination with other programs.<br>I have had personal experience in Rhino by using it for many study projects, and personal projects, but I have also tutored Rhino to first year bachelor students of Architecture as Teaching Assistant Design Informatics.</p>
+                                    
+                                    <p><strong>Time spent: </strong>> 800 hours<br><i>Parly focused on Grasshopper</i></p>
                                     <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
                                 </div>
 
@@ -405,76 +437,75 @@
                                     <h1>Grasshopper</h1>
                                     <p>In the last five years I spent many hours in Grasshopper. I have developed several projects and tools within Grasshopper, using the visual nodes, or standard Python programming. Furthermore, I have tutored and lectured Grasshopper to bachelor students and developed a new GH study program for TU Delft. You can find this study program in the link down below. I am familiar with most functions and the background principles of Grasshopper. Since it is not possible to work in Grasshopper all the time, I try to stay up-to-date through the McNeel forum. In the future I hope to research alternative parametric modelling software like Maya or Unity as alternative to Grasshopper, specifically to be able to handle and process more data than possible in Grasshopper.</p>
                                     <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <button class=button onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Python</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>Since late 2020 Python became my main programming language to use for design and programming projects. Since then, I spent several hours in Python a week on average, but in certain periods it can take all my working time. I'm am familiar with libraries like Numpy, Pygame, Pyfirmata and more. Specifically interesting Python projects were my API connection between Grasshopper and RoboDK and the 'Welcome Home' generator I developed for a personal project. Currently, I am slowly trying to switch to other programming languages like C# and JavaScript, to be able to work in more different environments.</p>
+                                    <p><strong>Time spent: </strong>>300 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Maya & Arnold</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>Before the summer of 2021, I followed a master course called Beyond 3D which focused on creating an imaginary world within Maya; professionaly one of the most used 3D animation software. After finishing this project, I spent approximately 6 fulltime weeks on a volutary mission to recreate the 20th Century Fox animation for my Student Association. This taught me throughoutly how to use Maya as animation and the Arnold engine as render tool. In the future I hope to be able to learn Blender, since this is an alternative software which is available for free.</p>
+                                    <p><strong>Time spent: </strong>>300 hours</p>
+                                    <button class=button onclick=" window.open('http://toi.bk.tudelft.nl/?p=ar0771', '_blank', rel='noopener noreferrer')">Link</button>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Substance Painter</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>In combination with Maya I used Substance Painter to enhance the visuals of my renders. Since this is quite a straightforward software, as long as you are able to generate correct texture maps, I placed this software in the 'experienced' category.</p>
+                                    <p><strong>Time spent: </strong>~10 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Revit</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>Autodesk Revit is one of the most used BIM tools in the built environment. Since the beginning of my Architecture studies, I have been working with the software. However, in my daily design process, I try to avoid the use of Revit as much as possible. In my experience Revit limits my creativity because of the expertise that is required to create complex shapes and geometries. Therefore, I usually make my 2d drawing in Rhino, although I am able to make them in Revit.</p>
+                                    <p><strong>Time spent: </strong>>100 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Lumion</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>Lumion is an amazing render package for design software like Rhino and Revit. Several projects you can see in my portfolio, were developed using Lumion. Unfortunately, Lumion requires extremely fast hardware to run, so I only use it when I really want to make a perfect image.</p>
+                                    <p><strong>Time spent: </strong>~15 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Enscape</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>As alternative to Lumion, I am starting to use Enscape. Especially for VR, I think Enscape is a great solution. During my studies however, I have not used Enscape that much. Considering my experience in Lumion, I think switching to Enscape is just a small step.</p>
+                                    <p><strong>Time spent: </strong>&lt5 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Photoshop</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>No project is finished without the use of Photoshop. At least that is the case in my design process. Over the past 6 years I used Photoshop to make posters, renders and enhance images.</p>
+                                    <p><strong>Time spent: </strong>~150 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Indesign</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>Indesign is my main compositing software for documents and portfolio’s. I do not consider myself to be an expert in the software, but I know how to use it for projects related to my studies. Most of the time, I use Indesign in combination with Photoshop and Illustrator.</p>
+                                    <p><strong>Time spent: </strong>~75 hours</p>
                                 </div>
                                 
                                 <div class=invisible>
                                     <h1>Illustrator</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
-                                    <button class=button>Link</button>
+                                    <p>For a long time, I have been trying to avoid the use of Illustrator, since I did not consider it to be a useful addition to Photoshop. However, since it is almost impossible to avoid Illustrator when making vector drawings, I have learned to use it in special cases. Especially in my export process of making 2D construction and building plans, I think it is very useful.</p>
+                                    <p><strong>Time spent: </strong>~20 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>HTML & CSS</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>~x hours</p>
+                                    <p>This website has been developed in HTML, CSS and JavaScript. After using Python for quite a while and a bit of C++, this was my first real experience using other programming languages. I consider HTML and CSS to be relatively easy to learn, if you have a basic understanding of programming.</p>
+                                    <p><strong>Time spent: </strong>~75 hours</p>
+                                    <button class=button onclick=" window.open('https://github.com/JobdeVogel?tab=repositories', '_blank', rel='noopener noreferrer')">Link</button>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>RoboDK</h1>
+                                    <p>Since early 2021 I started using RoboDK to control Robot arms for my projects. Although I do not have a lot of experience in controlling robots in real-life, I did spend a lot of time in the RoboDK software. As extracurriculair assignment to my standard courses, I was asked to develop a Grasshopper-RoboDK interaction script to create brick designs with a robot arm. This project can be found in the link down below.</p>
+                                    <p><strong>Time spent: </strong>~80 hours</p>
                                     <button class=button>Link</button>
                                 </div>
                             </div>
@@ -486,11 +517,9 @@
         
         <!-- WORLD -->
         <div class="world">
-            
             <div class="sketchfab-embed-wrapper"> <iframe title="earth_core" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
                 src="https://sketchfab.com/models/8a3f6e66955e41d48762d75725d3ab52/embed?autostart=1&camera=0"></iframe> 
             </div>
-            
         </div>
 
         <!--Bottom navigation bar-->

@@ -1,6 +1,7 @@
 // DEVELOPED BY JOB DE VOGEL
 // Hide navbar background
 function scrollAnimations(){
+    // Move timeline
     const intBoxTop = document.querySelector('.int-box-top');
     const intTop = intBoxTop.getBoundingClientRect().bottom;
     
@@ -25,6 +26,45 @@ function scrollAnimations(){
         timelineTitleFixed.style.visibility = 'hidden';
     }
 
+    // Let experience and education boxes appear
+    const intersectionLine = document.querySelector('.intersection');
+    const lineBottom = intersectionLine.getBoundingClientRect().bottom;
+
+    const experienceBoxes = document.querySelectorAll('.experience');
+    const educationBoxes = document.querySelectorAll('.education');
+
+    var visibleEdu = 0;
+    var visibleExp = 0;
+
+    var finished = false;
+    
+    if (finished == false){
+        for (var i=0; i<experienceBoxes.length; i++){
+            const experienceBoxTop = experienceBoxes[i].getBoundingClientRect().top;
+
+            if (experienceBoxTop < lineBottom){
+                experienceBoxes[i].style.opacity = '1';
+                visibleExp += 1;
+                console.log('hey');
+            } else{
+                experienceBoxes[i].style.opacity = '0';
+            }
+        }
+
+        for (var i=0; i<educationBoxes.length; i++){
+            const educationBoxTop = educationBoxes[i].getBoundingClientRect().top;
+
+            if (educationBoxTop < lineBottom){
+                educationBoxes[i].style.opacity = '1';
+                visibleEdu += 1;
+            } else{
+                educationBoxes[i].style.opacity = '0';
+            }
+        }
+    }
+    
+
+    // Hide background navbar
     if(window.scrollY > window.innerHeight / 3){
         document.getElementById('nb').classList.add('change-color');
     }else{
@@ -33,28 +73,6 @@ function scrollAnimations(){
 }
 
 window.addEventListener('scroll', scrollAnimations);
-
-const section = document.querySelector("#_2019");
-
-const options = {
-    root: null,
-    treshold: 0.9,
-    rootMargin: "0px"
-
-};
-
-const observer = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting){
-            document.querySelector(".timeline-title").style.animation = "anim_timeline ease-in 8s forwards";
-            observer.unobserve(entry.target);
-            return
-        }
-        
-    });
-}, options);
-
-observer.observe(section);
 
 // Manual carousel credits @w3school
 var slideIndex = 1;
@@ -115,7 +133,7 @@ function addInformation(input, result, visibleStyle, invisibleStyle){
         questions.children[i].addEventListener("mouseover", function(){
             if (infoVisible == false){
                 const pLength = answers.children[i].innerText.length;
-                const factor = 208 + (Math.max(pLength - 519, 0)) * widthFactor;
+                const factor = 220 + (Math.max(pLength - 519, 0)) * widthFactor;
 
                 answers.children[i].style.width = factor + 'px';
                 answers.children[i].classList.remove(invisibleStyle);
@@ -160,7 +178,7 @@ function addInformation(input, result, visibleStyle, invisibleStyle){
 
                 
                 const pLength = answers.children[i].innerText.length;
-                const factor = 208 + (Math.max(pLength - 519, 0)) * widthFactor;
+                const factor = 220 + (Math.max(pLength - 519, 0)) * widthFactor;
 
                 answers.children[i].style.width = factor + 'px';
                 answers.children[i].classList.remove(invisibleStyle);
