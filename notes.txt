@@ -32,3 +32,19 @@
     - Make own model
 
 8. Bottom navbar
+
+Figure out why sidescrolling
+Add an image of timeline title on top
+Add an image of timeline title on Bottom
+Add hidden fixed timeline title
+Try to get skills menu to work, preferably on centered position with scaling
+Add pdf to cv
+Contact page
+About page
+Portfolio pages
+Meta Data
+
+//Back-end for extra pages:
+- Add onclick event for images in slider
+- Close when click on cross
+- Disable scrolling background when in page
