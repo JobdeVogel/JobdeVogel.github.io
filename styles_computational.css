@@ -1,6 +1,6 @@
 /* COMPUTATIONAL STYLESHEET*/
 .comp-page-container{
-    visibility: visible;
+    visibility: hidden;
 }
 
 .comp-background{
@@ -127,7 +127,7 @@
 }
 
 .comp-container > .comp-center > .hex-path-img> video{
-    visibility: visible;
+    visibility: hidden;
     position: relative;
     border-radius: 20px;
     width: 100%;

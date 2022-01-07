@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles_animation.css">
     <link rel="stylesheet" href="styles_computational.css">
+    <link rel="stylesheet" href="styles_programming.css">
 </head>
 <body>
     <!--Overall container-->
@@ -184,6 +185,78 @@
             </div>
         </div>
 
+        <!-- PROGRAMMING -->
+        <div class="prog-page-container">
+            <div class="prog-background"></div>
+
+            <div class = 'Programming'>
+                <div class="prog-close-button">&#10005;</div>
+
+                <div class="prog-container">
+                    
+                    <div class="prog-top">
+                        <div class='prog-text-1'>
+                            <h1>GH ROBODK API</h1>
+                            
+                            <p>After finishing the Computational Design course for my Master Building Technology, I was asked to develop an API to create Robot programs through Rhino and Grasshopper, as extracurricular activity.<br><br>
+                                By using the RoboDK API, Python and Grasshopper, a brick design in Rhino can be converted to CSV. Next this CSV data is interpreted by the RoboDK software and automatically builds a program that can be executed on a real robot arm.<br><br>
+                                Since I built this project for a course that would be given later in 2022 to other students, one of the main challenges was making this project clear, structured and as readable as possible. The complete project is available on my GitHub page.<br><br>
+                            
+                            <i>Name: </i>'RoboDK Grasshopper API'<br>
+                            <i>Author: </i>Job de Vogel<br>
+                            <i>Guiding Tutors: </i>Dr. ir. Serdar Asut and ir. Friso Gouwetor<br>
+                            <i>Educational weight: </i>extracurricular (84 hours)<br>
+                            </p>
+                        </div>
+
+                        <div class="img">
+                            <img src="data/images/robodk.PNG">
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="prog-center">
+                        <div class="img">
+                            <img src="data/images/astar.jpg">
+                        </div>
+
+                        <div class='prog-text-2'>
+                            <h1>A* Algorithm</h1>
+
+                            <p>A* is a well-known path finding algorithm, known for its highly efficient method to find the shortest distance in a graph. After finishing my minor Spatial Computing, in which we were introduced to A*, I wanted to experiment with this algorithm using primarily Python and Grasshopper.<br><br>
+                                Within several weeks of part-time work, I was able to develop a Grasshopper script that could utilize the A* algorithm to find shortest Euclidian paths in a building. One of the main challenges was the fact that Python 3 was not available yet for Grasshopper at that time, so I only had access to Python 2 libraries. This project was my first experience in parallel computing. During this project I really got to know the limits of computational design within Grasshopper, which gave me reason to consider alternative software for these types of projects.<br><br>
+                                <i>Name: </i>'A* Grasshopper Implementation'<br>
+                                <i>Author: </i>Job de Vogel<br>
+                                <i>Educational weight: </i>no ECT<br>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="prog-bottom">
+                        <div class='prog-text-3'>
+                            <h1>Welcome Home!</h1>
+                            
+                            <p>Sometimes you just have the perfect idea for one of the most stupid projects possible. Living together with 8 housemates, I sometimes get a headache of all the 'welcome home' callings from my housemates in our hall. Therefore I decided to build my own 'compliments-generator'.<br><br>
+                                The 'compliments-generator' is able to register housemates coming home, and gives them a welcome message through a screen and speakers. This welcome message is recorded by another housemate on a phone.<br><br>
+                                By using an old laptop, Arduino and a lot of Python, I was able to build this generator.<br><br>
+                                
+                                <i>Name: </i>'Compliment Generator'<br>
+                                <i>Author: </i>Job de Vogel<br>
+                                <i>Co-author: </i>Ruben van den Bos<br>
+                            </p>
+                        </div>
+
+                        <div class="spatial-img">
+                            <img src="data/images/laptop.jpg">
+                        </div>
+                    </div>
+                    
+                    <p class="more-info">The code for most of these projects is available on my GitHub page.</p>
+                    
+                </div>
+            </div>
+        </div>
+
         <!--- MAIN -->
         <div class="main">
             <div class="main-container">
@@ -233,7 +306,7 @@
                 <div class="mySlides fade">
                     <div class="numbertext">4 / 4</div>
                     <a>
-                        <img src="data/images/architecture2.png" style="width:100%">
+                        <img src="data/images/architecture2.png" style="width:100%" onclick="window.location.href='data/literature/literature.pdf';">
                     </a>
                     <div class="text">Architecture</div>
                 </div>
