@@ -73,6 +73,7 @@ function scrollAnimations(){
 
 window.addEventListener('scroll', scrollAnimations);
 
+/**************** CAROUSEL ****************/
 // Manual carousel credits @w3school
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -105,6 +106,71 @@ for (i = 0; i < dots.length; i++) {
 slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
+
+
+
+
+
+/*********** CAROUSEL ON6 *************/
+var slideIndexON6 = 1;
+showSlidesON6(slideIndexON6);
+
+// Next/previous controls
+function plusSlidesON6(n) {
+showSlidesON6(slideIndexON6 += n);
+}
+
+// Thumbnail image controls
+function currentSlideON6(n) {
+showSlidesON6(slideIndexON6 = n);
+}
+
+function showSlidesON6(n) {
+var iON6;
+var slidesON6 = document.getElementsByClassName("mySlides-on6");
+
+if (n > slidesON6.length) {slideIndexON6 = 1};
+if (n < 1) {slideIndexON6 = slidesON6.length};
+
+for (iON6 = 0; iON6 < slidesON6.length; iON6++) {
+    slidesON6[iON6].style.display = "none";
+}
+
+slidesON6[slideIndexON6-1].style.display = "block";
+}
+
+
+/*********** CAROUSEL ON4 *************/
+var slideIndexON4 = 1;
+showSlidesON4(slideIndexON4);
+
+// Next/previous controls
+function plusSlidesON4(n) {
+showSlidesON4(slideIndexON4 += n);
+}
+
+// Thumbnail image controls
+function currentSlideON4(n) {
+showSlidesON4(slideIndexON4 = n);
+}
+
+function showSlidesON4(n) {
+var iON4;
+var slidesON4 = document.getElementsByClassName("mySlides-on4");
+
+if (n > slidesON4.length) {slideIndexON4 = 1};
+if (n < 1) {slideIndexON4 = slidesON4.length};
+
+for (iON4 = 0; iON4 < slidesON4.length; iON4++) {
+    slidesON4[iON4].style.display = "none";
+}
+
+slidesON4[slideIndexON4-1].style.display = "block";
+}
+
+
+
+
 
 addInformation('questions-experienced', 'answers-experienced', 'visible', 'invisible');
 addInformation('questions-starter', 'answers-starter', 'visible', 'invisible');

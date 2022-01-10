@@ -1,0 +1,272 @@
+/* ARCHITECTURE STYLESHEET*/
+.arch-page-container{
+    display: block;
+}
+
+.arch-background{
+    z-index: 200;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.Architecture{
+    position: fixed;
+    z-index: 200;
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    overflow-y: scroll;
+    background-color: #5d5d5dc0;
+}
+
+.arch-close-button{
+    position: absolute;
+    cursor: pointer;
+    top: 2%;
+    left: 98%;
+    font-weight: 300;
+    font-family: Arial;
+    color: rgb(143, 143, 143);
+}
+
+.arch-close-button:hover{
+    opacity: 0.5;
+}
+
+.arch-container{
+    position: relative;
+    width: 92%;
+    margin: 4%; /* Margin of all data inside panel*/
+    color: seashell;
+}
+
+
+
+
+
+
+
+.arch-container > .arch-top{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    margin: 0%;
+    margin-bottom: 2.5%;
+}
+
+.arch-container > .arch-top > .arch-text-1{
+    position: relative;
+    grid-column-start: 1;
+    top: 0;
+    margin-right: 5%;
+    width: 95%;
+}
+
+.arch-container > .arch-top > .hex-sphere-img{
+    position: relative;
+    grid-column-start: 2;
+    margin-left: 5%;
+    width: 95%;
+}
+
+.arch-container > .arch-top > .hex-sphere-img > img{
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.arch-container > .arch-top > .arch-text-1> h1{
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3em;
+    font-weight: 300;
+    color: #C6C6C6;
+}
+
+.arch-container > .arch-top > .arch-text-1 > p{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding-left:5px;
+    font-size: .9em;
+    text-align: justify;
+    color: #C6C6C6;
+}
+
+.paper-reference{
+    position: relative;
+    border-radius: 25px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    background-color: gray;
+}
+
+.paper-reference > p{
+    text-align: center;
+}
+
+.paper-reference > p > a{
+    color:seashell;
+}
+
+.on6-carousel{
+    position: relative;
+    grid-column-start: 2;
+    margin-left: 5%;
+    width: 95%;
+}
+
+.slideshow-container-on6 {
+    position: relative;
+    margin: auto;
+}
+
+.mySlides-on6 > img{
+    border-radius: 25px;
+}
+
+.prev-on6, .next-on6 {
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;    
+    color: #C85700;
+    font-weight: bold;
+    font-size: 2em;
+    transition: 0.6s ease;
+    top: 50%;
+}
+
+.next-on6 {
+    border-radius: 3px 0 0 3px;
+    right: 0;
+}
+
+.prev-on6:hover, .next-on6:hover {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.arch-container > .arch-bottom{
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    margin-bottom: 4.5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.arch-container > .arch-bottom > .arch-text-3{
+    position: relative;
+    grid-column-start: 2;
+    margin-right: 5%;
+    top: 0;
+    width: 95%;
+}
+
+.arch-container > .arch-bottom > .arch-text-3> h1{
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3em;
+    font-weight: 300;
+    color: #C6C6C6;
+}
+
+.arch-container > .arch-bottom > .arch-text-3> p{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding-left:5px;
+    font-size: .9em;
+    text-align: justify;
+    color: #C6C6C6;
+}
+
+.arch-container > .arch-bottom > .spatial-img{
+    position: relative;
+    grid-column-start: 2;
+    width: 100%;
+}
+
+.arch-container > .arch-bottom > .spatial-img > img{
+    position: relative;
+    border-radius: 20px;
+    margin-left: 5%;
+    width: 95%;
+}
+
+.more-info{
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 33%;
+    min-width: 300px;
+    text-align: center;
+    font-weight: 300;
+    padding: 1%;
+    border-radius: 10px;
+    color: #272727;
+    background-color: #8E8E8E;
+}
+
+.on4-carousel{
+    position: relative;
+    grid-column-start: 1;
+    margin-right: 5%;
+    width: 95%;
+}
+
+.slideshow-container-on4 {
+    position: relative;
+    margin: auto;
+}
+
+.mySlides-on4 > img{
+    border-radius: 25px;
+}
+
+.prev-on4, .next-on4 {
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    border-radius: 0 3px 3px 0;    
+    color: #C85700;
+    font-weight: bold;
+    transition: 0.6s ease;
+    top: 50%;
+}
+
+.next-on4 {
+    border-radius: 3px 0 0 3px;
+    right: 0;
+}
+
+.prev-on4:hover, .next-on4:hover {
+    background-color: gray;
+}
