@@ -211,10 +211,10 @@ function addInformation(input, result, visibleStyle, invisibleStyle){
 }
 
 /************** PAGES ***************/
-const pages = ['.about-page-container', '.anim-page-container', '.comp-page-container', '.prog-page-container'];
-const pageOpenButtons = ['about-button', 'anim-button', 'comp-button', 'prog-button'];
-const pageCloseButtons = ['.about-close-button', '.anim-close-button', '.comp-close-button', '.prog-close-button'];
-const aboutBackgrounds = ['.about-background', '.anim-background', '.comp-background', '.prog-background'];
+const pages = ['.about-page-container', '.anim-page-container', '.comp-page-container', '.prog-page-container', '.contact-page-container', '.about-page-container'];
+const pageOpenButtons = ['about-button', 'anim-button', 'comp-button', 'prog-button', 'contact-button', 'image-button'];
+const pageCloseButtons = ['.about-close-button', '.anim-close-button', '.comp-close-button', '.prog-close-button', '.contact-close-button', '.about-close-button'];
+const aboutBackgrounds = ['.about-background', '.anim-background', '.comp-background', '.prog-background', '.contact-background', '.about-background'];
 
 var visiblePage;
 var visibleIndex;
@@ -247,11 +247,12 @@ pages.forEach((page, index) =>{
 const nextPage = document.querySelector('.nextPage');
 const prevPage = document.querySelector('.prevPage');
 
+// Slices are added to skip the last about page, related to my personal image
 nextPage.addEventListener("click", function(){
     visiblePage.style.display = 'none';
-    document.querySelector(pages[(visibleIndex + 1) % pages.length]).style.display = 'block';
-    visiblePage = document.querySelector(pages[(visibleIndex + 1) % pages.length]);
-    visibleIndex = (visibleIndex + 1) % pages.length;
+    document.querySelector(pages.slice(0, -1)[(visibleIndex + 1) % pages.slice(0, -1).length]).style.display = 'block';
+    visiblePage = document.querySelector(pages.slice(0, -1)[(visibleIndex + 1) % pages.slice(0, -1).length]);
+    visibleIndex = (visibleIndex + 1) % pages.slice(0, -1).length;
 });
 
 prevPage.addEventListener("click", function(){
@@ -259,10 +260,10 @@ prevPage.addEventListener("click", function(){
     var tempIndex = visibleIndex - 1;
 
     if (tempIndex < 0){
-        tempIndex = pages.length - 1;
+        tempIndex = pages.slice(0, -1).length - 1;
     }
 
-    document.querySelector(pages[tempIndex]).style.display = 'block';
-    visiblePage = document.querySelector(pages[tempIndex]);
+    document.querySelector(pages.slice(0, -1)[tempIndex]).style.display = 'block';
+    visiblePage = document.querySelector(pages.slice(0, -1)[tempIndex]);
     visibleIndex = tempIndex;
 });
