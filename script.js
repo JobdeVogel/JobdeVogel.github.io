@@ -45,7 +45,6 @@ function scrollAnimations(){
             if (experienceBoxTop < lineBottom){
                 experienceBoxes[i].style.opacity = '1';
                 visibleExp += 1;
-                console.log('hey');
             } else{
                 experienceBoxes[i].style.opacity = '0';
             }
@@ -211,80 +210,59 @@ function addInformation(input, result, visibleStyle, invisibleStyle){
     }
 }
 
-/*
-// Question and answer for software/skills information
-const questions = document.getElementById('questions_test');
-const answers_left = document.getElementById('answers_test_left');
-const answers_right = document.getElementById('answers_test_right')
-const widthFactor = .5;
+/************** PAGES ***************/
+const pages = ['.about-page-container', '.anim-page-container', '.comp-page-container', '.prog-page-container'];
+const pageOpenButtons = ['about-button', 'anim-button', 'comp-button', 'prog-button'];
+const pageCloseButtons = ['.about-close-button', '.anim-close-button', '.comp-close-button', '.prog-close-button'];
+const aboutBackgrounds = ['.about-background', '.anim-background', '.comp-background', '.prog-background'];
 
-var infoVisible = false;
-var tempInfoVisible= false;
-var visibleQuestion;
-var infoScreen;
+var visiblePage;
+var visibleIndex;
 
+pages.forEach((page, index) =>{
+        const pageDiv = document.querySelector(page);
+        const pageOpenButton = document.getElementById(pageOpenButtons[index]);
+        const pageCloseButton = document.querySelector(pageCloseButtons[index]);
+        const pageBackground = document.querySelector(aboutBackgrounds[index]);
+        const pageSwipeButtons = document.getElementById('page-buttons');
 
+        pageOpenButton.addEventListener("click", function(){
+            pageDiv.style.display = 'block';
+            pageSwipeButtons.style.display = 'block';
+            visiblePage = pageDiv;
+            visibleIndex = index;
+        });
 
-// If scroll is at page skills...
-    // Example selection    
+        pageCloseButton.addEventListener("click", function(){
+            pageDiv.style.display = 'none';
+            pageSwipeButtons.style.display = 'none';
+        });
 
-    // Manual selection
-//
+        pageBackground.addEventListener("click", function(){
+            pageDiv.style.display = 'none';
+            pageSwipeButtons.style.display = 'none';
+        });
+});
 
-// Make a function, one for left bar, with questions input answers input
-for(let i = 0; i < questions.children.length; i++){   
-    let j;
-    let answers;
+const nextPage = document.querySelector('.nextPage');
+const prevPage = document.querySelector('.prevPage');
 
-    // If user hovers over software type, show the explanation
-    if (i == 0){
-        answers = answers_left;
-        j = 0
-    } else if (i == 1){
-        answers = answers_right;
-        j = 0
-    } else if (i == 2){
-        answers = answers_left;
-        j = 1
-    } else if (i == 3){
-        answers = answers_right;
-        j = 1
+nextPage.addEventListener("click", function(){
+    visiblePage.style.display = 'none';
+    document.querySelector(pages[(visibleIndex + 1) % pages.length]).style.display = 'block';
+    visiblePage = document.querySelector(pages[(visibleIndex + 1) % pages.length]);
+    visibleIndex = (visibleIndex + 1) % pages.length;
+});
+
+prevPage.addEventListener("click", function(){
+    visiblePage.style.display = 'none';
+    var tempIndex = visibleIndex - 1;
+
+    if (tempIndex < 0){
+        tempIndex = pages.length - 1;
     }
- 
-    questions.children[i].addEventListener("mouseover", function(){
-        if (infoVisible == false){
-            
-            const pLength = answers.children[j].innerText.length;
-            const factor = 208 + (Math.max(pLength - 519, 0)) * widthFactor;
 
-            answers.children[j].style.width = factor + 'px';
-            
-            answers.children[j].classList.remove('invisible_test');
-            answers.children[j].classList.add('visible_test');
-
-            questions.children[i].style.transition = 'font-weight .2s';
-            questions.children[i].style.fontWeight = '500';
-            questions.children[i].style.textDecoration = 'none';
-
-            tempInfoVisible = true;
-        }      
-    })
-    
-    // If user moves out software type, hide the explanation
-    questions.children[i].addEventListener("mouseout", function(){
-        if (infoVisible == false && tempInfoVisible == true){
-            
-            answers.children[j].classList.remove('visible_test');
-            answers.children[j].classList.add('invisible_test');
-            
-            questions.children[i].style.transition = 'font-weight .2s';
-            questions.children[i].style.fontWeight = '100';
-
-            tempInfoVisible = false;
-        }      
-    })   
-}
-
-
-// Execute function here, once for experienced and once for starter
-*/
+    document.querySelector(pages[tempIndex]).style.display = 'block';
+    visiblePage = document.querySelector(pages[tempIndex]);
+    visibleIndex = tempIndex;
+});

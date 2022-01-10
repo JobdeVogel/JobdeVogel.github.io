@@ -15,7 +15,13 @@
     <div class="container">
 
         <div class="intersection"></div>
-
+            
+        <div id="page-buttons">
+            <!-- Next and previous buttons -->
+            <a class="prevPage">&#10094;</a>
+            <a class="nextPage">&#10095;</a>
+        </div>
+        
         <!--TOP NAVIGATION BAR-->
         <div id = 'nb' class="navbar-top">
             <div id = 'nc' class="nav-container">
@@ -45,8 +51,8 @@
                         </button>
                     </div>
 
-                    <div class="nav-link-wrapper">
-                        <button class="button" onclick="window.location.href='about.html';">
+                    <div class="nav-link-wrapper" id="about-button">
+                        <button class="button">
                             About
                         </button>
                     </div>
@@ -62,6 +68,8 @@
 
         <!-- ABOUT -->
         <div class="about-page-container">
+            
+            
             <div class="about-background"></div>
 
             <div class = 'About'>
@@ -130,8 +138,10 @@
 
                     <div class="anim-bottom">
                         <div class="anim-video">
-                            <video muted autoplay loop poster="data/images/video_thumbnail.png" controls>
+                            <video muted autoplay loop <!--poster="data/images/video_thumbnail.png"--></video> controls>
+                                <!--
                                 <source src="data/videos/intro_animatie.mp4" type="video/mp4">
+                                -->
                             Your browser does not support the video tag.
                             </video>
                         </div>
@@ -273,7 +283,7 @@
                             </p>
                         </div>
                     </div>
-                    
+                    <!--
                     <div class="prog-bottom">
                         <div class='prog-text-3'>
                             <h1>Welcome Home!</h1>
@@ -292,8 +302,8 @@
                             <img src="data/images/laptop.jpg">
                         </div>
                     </div>
-                    
-                    <p class="more-info">The code for most of these projects is available on my GitHub page.</p>
+                    -->
+                    <p class="more-info">For more projects related to programming, please take a look at my GitHub page.</p>
                     
                 </div>
             </div>
@@ -303,7 +313,7 @@
         <div class="main">
             <div class="main-container">
                 <div class="image-container">
-                    <div class="main-colored" style="background-image:url(data/images/main_colored.png)" onclick="window.location.href='about.html'"></div>      
+                    <div class="main-colored" style="background-image:url(data/images/main_colored.png)" onclick="window.location.href='data/pdf/2021_21_04 Curriculum Vitae.pdf'"></div>      
                     <div class="main-name">Job de Vogel</div>
                 </div>
                 
@@ -324,7 +334,7 @@
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 4</div>
                     <a>
-                        <img src="data/images/B3D_JobdeVogel_small.png" style="width:100%">
+                        <img id="anim-button" src="data/images/B3D_JobdeVogel_small.png" style="width:100%">
                     </a>
                     <div class="text">Animation</div>
                 </div>
@@ -332,7 +342,7 @@
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 4</div>
                     <a>
-                        <img src="data/images/Sphere_rendered.png" style="width:100%">
+                        <img id="comp-button" src="data/images/Sphere_rendered.png" style="width:100%">
                     </a>
                     <div class="text">Computational Design</div>
                 </div>
@@ -340,7 +350,7 @@
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 4</div>
                     <a>
-                        <img src="data/images/programming.png" style="width:100%">
+                        <img id="prog-button" src="data/images/programming.png" style="width:100%">
                     </a>
                     <div class="text">Programming</div>
                 </div>
@@ -348,7 +358,7 @@
                 <div class="mySlides fade">
                     <div class="numbertext">4 / 4</div>
                     <a>
-                        <img src="data/images/architecture2.png" style="width:100%" onclick="window.location.href='data/literature/literature.pdf';">
+                        <img id="arch-button" src="data/images/architecture2.png" style="width:100%">
                     </a>
                     <div class="text">Architecture</div>
                 </div>
@@ -699,9 +709,12 @@
         
         <!-- WORLD -->
         <div class="world">
+            <!--
             <div class="sketchfab-embed-wrapper"> <iframe title="earth_core" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
                 src="https://sketchfab.com/models/8a3f6e66955e41d48762d75725d3ab52/embed?autostart=1&camera=0"></iframe> 
             </div>
+            -->
+            
         </div>
 
         <!--Bottom navigation bar-->
