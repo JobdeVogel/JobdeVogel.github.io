@@ -57,11 +57,10 @@
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     text-transform: uppercase;
-    text-decoration: none;
     font-size: 2em;
     font-weight: 300;
     border-radius: 25px;
-    transition: color 2s ease;
+    transition: color 1s ease;
     transition: background-color 2s ease;
     color: seashell;
     background-color: gray;
@@ -75,4 +74,12 @@
 .contact-container > p > b > a{
     font-weight: 500;
     color: seashell;
+}
+
+@media only screen and (max-width: 1100px) {
+    .Contact{
+        transform: translateX(-50%) translateY(-50%);
+        height: 25%;
+        top: 50%;
+    }
 }

@@ -1,6 +1,6 @@
 /* COMPUTATIONAL STYLESHEET*/
 .prog-page-container{
-    visibility: hidden;
+    display: none;
 }
 
 .prog-background{
@@ -12,7 +12,7 @@
 }
 
 .Programming{
-    position: absolute;
+    position: fixed;
     z-index: 200;
     width: 80%;
     height: 80%;
@@ -22,6 +22,10 @@
     border-radius: 30px;
     overflow-y: scroll;
     background-color: #5d5d5dc0;
+}
+
+.Programming::-webkit-scrollbar-button{
+    height: 20px;
 }
 
 .prog-close-button{
@@ -58,7 +62,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0%;
-    margin-bottom: 10%;
+    margin-bottom: 2.5%;
 }
 
 .prog-container > .prog-top > .prog-text-1{
@@ -102,19 +106,11 @@
     color: #C6C6C6;
 }
 
-
-
-
-
-
-
-
-
 .prog-container > .prog-center{
     position: relative;
     width: 100%;
     margin: 0%;
-    margin-bottom: 10%;
+    margin-bottom: 2.5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -159,12 +155,6 @@
     text-align: justify;
     color: #C6C6C6;
 }
-
-
-
-
-
-
 
 .prog-container > .prog-bottom{
     position: relative;
@@ -228,4 +218,12 @@
     border-radius: 10px;
     color: #272727;
     background-color: #8E8E8E;
+}
+
+@media only screen and (max-width: 1100px) {
+    .Programming{
+        transform: translateX(-50%) translateY(-50%);
+        height: auto;
+        top: 50%;
+    }
 }

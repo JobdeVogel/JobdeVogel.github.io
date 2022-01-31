@@ -1,6 +1,6 @@
 /* ARCHITECTURE STYLESHEET*/
 .arch-page-container{
-    display: block;
+    display: none;
 }
 
 .arch-background{
@@ -22,6 +22,10 @@
     border-radius: 30px;
     overflow-y: scroll;
     background-color: #5d5d5dc0;
+}
+
+.Architecture::-webkit-scrollbar-button{
+    height: 20px;
 }
 
 .arch-close-button{
@@ -157,27 +161,16 @@
     background-color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .arch-container > .arch-bottom{
     position: relative;
     width: 100%;
     margin: 0%;
     margin-bottom: 4.5%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.8fr 1.2fr;
 }
 
-.arch-container > .arch-bottom > .arch-text-3{
+.arch-container > .arch-bottom > .arch-text-2{
     position: relative;
     grid-column-start: 2;
     margin-right: 5%;
@@ -185,7 +178,7 @@
     width: 95%;
 }
 
-.arch-container > .arch-bottom > .arch-text-3> h1{
+.arch-container > .arch-bottom > .arch-text-2> h1{
     position: relative;
     width: 100%;
     text-transform: uppercase;
@@ -195,7 +188,7 @@
     color: #C6C6C6;
 }
 
-.arch-container > .arch-bottom > .arch-text-3> p{
+.arch-container > .arch-bottom > .arch-text-2> p{
     position: relative;
     width: 100%;
     margin: 0;
@@ -257,6 +250,7 @@
     padding: 16px;
     border-radius: 0 3px 3px 0;    
     color: #C85700;
+    font-size: 2em;
     font-weight: bold;
     transition: 0.6s ease;
     top: 50%;
@@ -269,4 +263,12 @@
 
 .prev-on4:hover, .next-on4:hover {
     background-color: gray;
+}
+
+@media only screen and (max-width: 1100px) {
+    .Architecture{
+        transform: translateX(-50%) translateY(-50%);
+        height: auto;
+        top: 50%;
+    }
 }

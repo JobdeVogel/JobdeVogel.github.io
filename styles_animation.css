@@ -1,6 +1,6 @@
 /* ANIMATION STYLESHEET*/
 .anim-page-container{
-    visibility: hidden;
+    display: none;
 }
 
 .anim-background{
@@ -24,6 +24,10 @@
     background-color: #5d5d5dc0;
 }
 
+.Animation::-webkit-scrollbar-button{
+    height: 20px;
+}
+
 .anim-close-button{
     position: absolute;
     cursor: pointer;
@@ -40,8 +44,12 @@
 
 .anim-container{
     position: relative;
+    transform: translateY(-50%); /*temp*/
     width: 92%;
-    margin: 4%; /* Margin of all data inside panel*/
+    top: 50%; /*temp*/
+    /* margin: 4%; */
+    margin-left: 4%; /*temp*/
+    margin-right: 4%; /*temp*/
     color: seashell;
 }
 
@@ -50,7 +58,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .anim-container > .anim-top > .Beyond3D-img{
@@ -69,6 +77,7 @@
 
 .anim-container > .anim-top > .Beyond3D-img > img{
     position: relative;
+    z-index: 100;
     border-radius: 20px;
     width: 100%;
 }
@@ -97,7 +106,6 @@
     position: relative;
     width: 100%;
     margin: 0;
-    padding-left:5px;
     font-size: .9em;
     text-align: justify;
     color: #C6C6C6;
@@ -115,7 +123,6 @@
 }
 
 video {
-    visibility: hidden;
     width: 100%;
     border-radius: 30px;
     margin-bottom: 2.5%;
@@ -137,8 +144,9 @@ video {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5%;
+    grid-gap: 2.5%;
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -161,6 +169,21 @@ video {
     padding: 0;
     padding-left:5px;
     text-align: justify;
-    font-size: 0.9em;
     color: #C6C6C6;
+}
+
+.paragraph-3 > p{
+    text-align: left;
+}
+
+.p-text{
+    font-size: 0.9em;
+}
+
+@media only screen and (max-width: 1100px) {
+    .Animation{
+        transform: translateX(-50%) translateY(-50%);
+        height: auto;
+        top: 50%;
+    }
 }

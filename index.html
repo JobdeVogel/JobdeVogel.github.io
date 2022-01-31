@@ -2,21 +2,20 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>Portfolio Job&nbspde&nbspVogel</title>
+    <meta name="description" content="Portfolio Building Technology by Job de Vogel. Future building engineer and programmer. Master studet Building Technology at TU Delft University of Technology.">
+    <meta name="keywords" content="Building Technology, Architecture, TU Delft, Job de Vogel, Programming, Animation">
+    <meta name="author" content="Job de Vogel">
+    <meta http-equiv="Cache-control" content="public">
+    <title>Portfolio Job de Vogel</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles_about.css">
-    <link rel="stylesheet" href="styles_contact.css">
-    <link rel="stylesheet" href="styles_animation.css">
-    <link rel="stylesheet" href="styles_computational.css">
-    <link rel="stylesheet" href="styles_programming.css">
-    <link rel="stylesheet" href="styles_archictecture.css">
+    <link rel="stylesheet" href="styles_minified.css">
 </head>
-<body>
+<body> 
     <!--Overall container-->
-    <div class="container">
-
+    <div id="scroller" class="container">
         <div class="intersection"></div>
+
+        <div class="fullscreen-img" onclick="fullscreenImage('')"></div>
             
         <div id="page-buttons">
             <!-- Next and previous buttons -->
@@ -29,7 +28,7 @@
             <div id = 'nc' class="nav-container">
                 <div class="left-side">
                     <div class="nav-link-wrapper">
-                        <a href="index.html">Portfolio Job&nbspde&nbspVogel</a>
+                        <a href="index.html">Portfolio Job de Vogel</a>
                     </div>
                 </div>
 
@@ -66,6 +65,31 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- LIGHT MODE SWITCH -->
+        <div class="switch" onclick="lightMode()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="30" viewBox="0 0 60 30">
+                <rect id="Rectangle_35" data-name="Rectangle 35" width="30" height="60" rx="15" transform="translate(0 30) rotate(-90)" fill="gray"/>
+                <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="4.626" cy="4.702" rx="4.626" ry="4.702" transform="translate(8.494 19.353) rotate(-90)" fill="#383838"/>
+                <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="6.219" cy="6.219" rx="6.219" ry="6.219" transform="translate(41.232 9.701) rotate(-8)" fill="#383838"/>
+                <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="6.219" cy="6.219" rx="6.219" ry="6.219" transform="translate(45.952 9.526) rotate(-8)" fill="gray"/>
+                <rect id="Rectangle_36" data-name="Rectangle 36" width="0.758" height="2.427" rx="0.379" transform="translate(13.076 22.542) rotate(-180)" fill="#383838"/>
+                <rect id="Rectangle_43" data-name="Rectangle 43" width="0.679" height="2.426" rx="0.34" transform="translate(19.716 18.517) rotate(120)" fill="#383838"/>
+                <rect id="Rectangle_47" data-name="Rectangle 47" width="0.679" height="2.426" rx="0.34" transform="translate(16.938 21.407) rotate(150)" fill="#383838"/>
+                <rect id="Rectangle_39" data-name="Rectangle 39" width="0.758" height="2.427" rx="0.379" transform="translate(20.592 14.621) rotate(90)" fill="#383838"/>
+                <rect id="Rectangle_41" data-name="Rectangle 41" width="0.679" height="2.426" rx="0.34" transform="translate(16.35 8.29) rotate(30)" fill="#383838"/>
+                <rect id="Rectangle_45" data-name="Rectangle 45" width="0.679" height="2.426" rx="0.34" transform="translate(19.376 10.931) rotate(60)" fill="#383838"/>
+                <rect id="Rectangle_37" data-name="Rectangle 37" width="0.758" height="2.427" rx="0.379" transform="translate(13.076 9.885) rotate(-180)" fill="#383838"/>
+                <rect id="Rectangle_42" data-name="Rectangle 42" width="0.679" height="2.426" rx="0.34" transform="translate(8.312 12.144) rotate(120)" fill="#383838"/>
+                <rect id="Rectangle_46" data-name="Rectangle 46" width="0.679" height="2.426" rx="0.34" transform="translate(10.531 10.39) rotate(150)" fill="#383838"/>
+                <rect id="Rectangle_38" data-name="Rectangle 38" width="0.758" height="2.427" rx="0.379" transform="translate(7.432 14.621) rotate(90)" fill="#383838"/>
+                <rect id="Rectangle_40" data-name="Rectangle 40" width="0.679" height="2.426" rx="0.34" transform="translate(9.943 19.307) rotate(30)" fill="#383838"/>
+                <rect id="Rectangle_44" data-name="Rectangle 44" width="0.679" height="2.426" rx="0.34" transform="translate(7.972 17.304) rotate(60)" fill="#383838"/>
+            </svg>
+              
+            
+            <div class="switch-button"></div>
         </div>
 
         <!-- CONTACT -->
@@ -123,7 +147,7 @@
                         </div>
                         
                         <div class="personal-img">
-                            <img id="me" src="data/images/me_bw.JPG">
+                            <img id="me" src="data/images/about_photo_web.jpg">
                         </div>
                     </div>
                 </div>
@@ -141,7 +165,7 @@
                 <div class="anim-container">
                     <div class="anim-top">
                         <div class="Beyond3D-img">
-                            <img id="Beyond3D" src="data/images/B3D_JobdeVogel_small.png">
+                            <img id="Beyond3D" onclick="fullscreenImage('data/images/b3d_web.jpg')" style="cursor:pointer" src="data/images/b3d_web.jpg">
                         </div>
                         
                         <div class='anim-text'>
@@ -157,9 +181,9 @@
                         </div>
                     </div>
 
-                    <div class="anim-bottom">
+                    <!-- <div class="anim-bottom">                       
                         <div class="anim-video">
-                            <video muted autoplay poster="data/images/video_thumbnail.png" controls>
+                            <video muted preload="none" loop poster="data/images/movie_intro_thumbnail_web.jpg" controls>
                                 <source src="data/videos/intro_animatie.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                             </video>
@@ -169,7 +193,7 @@
                         
                         <div class='anim-text-container'>
                             <div class="paragraph-1">
-                                <p class="p-text">After finishing my first stationary render using Maya in early 2021, I developed my first animation, based on the 20th Century Fox intro animation. This project took about 6 full-time weeks to complete. The second part of the animation is a stylistic interpretation on a building from 1967; a cinema in the center of Delft, the Netherlands.</p>
+                                <p class="p-text">Coming soon</p>
                             </div>
 
                             <div class="paragraph-2">
@@ -185,7 +209,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -208,16 +232,16 @@
                             </p>
                         </div>
 
-                        <div class="hex-sphere-img">
-                            <img src="data/images/Sphere_rendered.png">
+                        <div class="hex-sphere-img" style="cursor:pointer" onclick="fullscreenImage('data/images/sphere_rendered_web.jpg')">
+                            <img src="data/images/sphere_rendered_web.jpg">
                         </div>
                         
                     </div>
                     
                     <div class="comp-center">
                         <div class="hex-path-img">
-                            <video muted autoplay loop poster="data/images/video_thumbnail.png" controls>
-                                <source src="data/videos/Video7_Hexpath_visualization.mp4" type="video/mp4">
+                            <video muted preload="none" loop controls>
+                                <source src="data/videos/Hexpath Visualization web.mp4" poster="data/images/hex_visualization_web.jpg" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -246,8 +270,8 @@
                             </p>
                         </div>
 
-                        <div class="spatial-img">
-                            <img src="data/images/spatial_computing.png">
+                        <div class="spatial-img" style="cursor:pointer" onclick="fullscreenImage('data/images/spatial_computing_web.jpg')">
+                            <img src="data/images/spatial_computing_web.jpg">
                         </div>
                     </div>
                     
@@ -280,15 +304,15 @@
                             </p>
                         </div>
 
-                        <div class="img">
-                            <img src="data/images/robodk.PNG">
+                        <div class="img" style="cursor:pointer" onclick="fullscreenImage('data/images/robodk_web.jpg')">
+                            <img src="data/images/robodk_web.jpg">
                         </div>
                         
                     </div>
                     
                     <div class="prog-center">
-                        <div class="img">
-                            <img src="data/images/astar.jpg">
+                        <div class="img" style="cursor:pointer" onclick="fullscreenImage('data/images/astar_web.jpg')">
+                            <img src="data/images/astar_web.jpg">
                         </div>
 
                         <div class='prog-text-2'>
@@ -302,26 +326,6 @@
                             </p>
                         </div>
                     </div>
-                    <!--
-                    <div class="prog-bottom">
-                        <div class='prog-text-3'>
-                            <h1>Welcome Home!</h1>
-                            
-                            <p>Sometimes you just have the perfect idea for one of the most stupid projects possible. Living together with 8 housemates, I sometimes get a headache of all the 'welcome home' callings from my housemates in our hall. Therefore I decided to build my own 'compliments-generator'.<br><br>
-                                The 'compliments-generator' is able to register housemates coming home, and gives them a welcome message through a screen and speakers. This welcome message is recorded by another housemate on a phone.<br><br>
-                                By using an old laptop, Arduino and a lot of Python, I was able to build this generator.<br><br>
-                                
-                                <i>Name: </i>'Compliment Generator'<br>
-                                <i>Author: </i>Job de Vogel<br>
-                                <i>Co-author: </i>Ruben van den Bos<br>
-                            </p>
-                        </div>
-
-                        <div class="spatial-img">
-                            <img src="data/images/laptop.jpg">
-                        </div>
-                    </div>
-                    -->
                     <p class="more-info">For more projects related to programming, please take a look at my GitHub page.</p>
                     
                 </div>
@@ -363,15 +367,15 @@
 
                                 <!-- Full-width images with number and caption text -->
                                 <div class="mySlides-on6 fade">
-                                    <img id="anim-button" src="data/images/on6_1_small.png" style="width:100%">
+                                    <img src="data/images/on6_1_web.jpg" style="width:100%;">
                                 </div>
                             
                                 <div class="mySlides-on6 fade">
-                                    <img id="comp-button" src="data/images/on6_2_small.png" style="width:100%">
+                                    <img src="data/images/on6_2_web.jpg" style="width:100%">
                                 </div>
                             
                                 <div class="mySlides-on6 fade">
-                                    <img id="prog-button" src="data/images/on6_3_small.png" style="width:100%">
+                                    <img src="data/images/on6_3_web.jpg" style="width:100%6"">
                                 </div>
                             
                                 <!-- Next and previous buttons -->
@@ -389,15 +393,15 @@
 
                                 <!-- Full-width images with number and caption text -->
                                 <div class="mySlides-on4 fade">
-                                    <img id="anim-button" src="data/images/on4_1_small.png" style="width:100%">
+                                    <img src="data/images/on4_1_web.jpg" style="width:100%">
                                 </div>
                             
                                 <div class="mySlides-on4 fade">
-                                    <img id="comp-button" src="data/images/on4_2_small.png" style="width:100%">
+                                    <img src="data/images/on4_2_web.jpg" style="width:100%">
                                 </div>
                             
                                 <div class="mySlides-on4 fade">
-                                    <img id="prog-button" src="data/images/on4_3_small.png" style="width:100%">
+                                    <img src="data/images/on4_3_webl.jpg" style="width:100%">
                                 </div>
                             
                                 <!-- Next and previous buttons -->
@@ -406,7 +410,7 @@
                             </div>
                         </div>
                         
-                        <div class='arch-text-3'>
+                        <div class='arch-text-2'>
                             <h1>RENOVATION</h1>
                             
                             <p>Combining different types of people in one building project can be difficult, especially in renovation projects. In my second year of my Bachelor of Architecture, I re-designed a building block in Amsterdam.<br><br>
@@ -428,12 +432,12 @@
         <div class="main">
             <div class="main-container">
                 <div class="image-container" id="image-button">
-                    <div class="main-colored" style="background-image:url(data/images/main_colored.png)"></div>      
+                    <div class="main-colored" style="background-image:url(data/images/personal_image_web.jpg)"></div>      
                     <div class="main-name">Job de Vogel</div>
                 </div>
                 
                 <div class="title-container">
-                    <div class="main-title">&ltfuture<br>&nbsp&nbspbuilding <div class=colored>&nbsp&nbspengineer</div>&nbsp&nbspprogrammer&gt</div>
+                    <div class="main-title">future<br>building <div class=colored>engineer</div>programmer</div>
                 </div>
             </div>
         </div>
@@ -447,41 +451,36 @@
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                    <div class="numbertext">1 / 5</div>
                     <a>
-                        <img id="anim-button" src="data/images/B3D_JobdeVogel_small.png" style="width:100%">
+                        <img id="anim-button" src="data/images/b3d_web.jpg" style="width:100%" loading='lazy'>
                     </a>
                     <div class="text">Animation</div>
                 </div>
-            
+                
                 <div class="mySlides fade">
-                    <div class="numbertext">2 / 5</div>
                     <a>
-                        <img id="comp-button" src="data/images/Sphere_rendered.png" style="width:100%">
+                        <img id="comp-button" src="data/images/sphere_rendered_web.jpg" style="width:100%; filter: brightness(80%);" loading='lazy'>
                     </a>
                     <div class="text">Computational Design</div>
                 </div>
             
                 <div class="mySlides fade">
-                    <div class="numbertext">3 / 5</div>
                     <a>
-                        <img id="prog-button" src="data/images/programming.png" style="width:100%">
+                        <img id="prog-button" src="data/images/programming_web.jpg" style="width:100%" loading='lazy'>
                     </a>
                     <div class="text">Programming</div>
                 </div>
 
                 <div class="mySlides fade">
-                    <div class="numbertext">4 / 5</div>
                     <a>
-                        <img id="arch-button" src="data/images/architecture2.png" style="width:100%">
+                        <img id="arch-button" src="data/images/on6_1_web.jpg" style="width:100%" loading='lazy'>
                     </a>
-                    <div class="text">Architecture</div>
+                    <div class="text" style="color:black">Architecture</div>
                 </div>
 
                 <div class="mySlides fade">
-                    <div class="numbertext">5 / 5</div>
                     <a href="data/literature/literature.pdf">
-                        <img src="data/images/random_4.jpg" style="width:100%">
+                        <img src="data/images/soundwall_web.jpg" style="width:100%; display:none" loading='lazy'>
                     </a>
                     <div class="text">Literature</div>
                 </div>
@@ -498,6 +497,7 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
 
         </div>
@@ -601,9 +601,9 @@
                 <h1 class = "skills-title title">Skills</h1>
                 
                 <div id='questions_test'>
-                    <p>Leadership</p>
                     <p>Creative</p>
-                    <p>Solution-driven</p>
+                    <p>Leadership</p>
+                    <p>Life conversations</p>
                     <p>Computer&nbspEngineering</p>
                 </div>
             </div>
@@ -622,97 +622,141 @@
                                 <p>Substance&nbspPainter</p>
                                 <p>Revit</p>
                                 <p>Lumion</p>
-                                <p>Enscape</p>
+                                <p>GitHub</p>
                                 <p>Photoshop</p>
                                 <p>InDesign</p>
                                 <p>Illustrator</p>
-                                <p style="text-decoration: underline">HTML&nbsp&&nbspCSS</p>
                                 <p>RoboDK</p>
                             </div>
                             
                             <div id="answers-starter" class=info-categories>
                                 <div class=invisible>
                                     <h1>Premiere Pro</h1>
-                                    <p>Info coming later. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt. Dit is een test om te zien of de tekst op de goede manier uitgelijnd wordt.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Edit a basic video;</li>
+                                        <li>Cutting, adding music;</li>
+                                        <li>Basic transitions and effects.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>> 25 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>After Effects</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Add basic effects to Premiere Pro videos;</li>
+                                        <li>Follow videos online to create a certain effect.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>> 15 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Adobe XD</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Design a website or app using Adobe XD;</li>
+                                        <li>Explain when to use Adobe XD within the design process.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>> 5 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Fusion 360</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Understand the advantages of using Fusion 360;</li>
+                                        <li>Creating basic 2D construction drawings;</li>
+                                        <li>Generate basic 3D volumes.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>~10 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Arduino</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
-                                </div>
-
-                                <div class=invisible>
-                                    <h1>Numpy</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <ul>
+                                        <li>Read and write basic Arduino code;</li>
+                                        <li>Control Arduino hardware through Python;</li>
+                                        <li>Control Arduino hardware through Grasshopper;</li>
+                                        <li>Build basic Arduino circuits: potentiometers, buttons, lights, LCD screens etc.;</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>> 20 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Machine Learning</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Explain the difference between Artificial Intelligence and Machine Learning;</li>
+                                        <li>Have a discussion about the implementation of the different subfields of Machine Learning within the built environment;</li>
+                                        <li>Understand basic Linear Algebra used for Machine Learning.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>~20 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Houdini</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Explain the advantages of using Houdini as parametric design tool;</li>
+                                        <li>Implement a basic semi-dynamic algorithm using visual scripting;</li>
+                                        <li>Use external CSV data to be used in an adaptive design.</li>
+                                    </ul>
+                                    <i>Since it has been a while since I used this software, I can not guarantee I immediately have the skills mentioned above.</i>
+                                    <p><strong>Time spent: </strong>>150 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>SideFX</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Read and understand the SideFX programming language;</li>
+                                        <li>Write very basic scripts.</li>
+                                    </ul>
+                                    <i>Since it has been a while since I used this software, I can not guarantee I immediately have the skills mentioned above.</i>
+                                    <p><strong>Time spent: </strong>~20 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>C++</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Roughly understand the C++ programming language;</li>
+                                        <li>Discuss the advantages of C++ over Python in the built environment.</li>
+                                    </ul>
+                                    <i>Since it has been a while since I used this software, I can not guarantee I immediately have the skills mentioned above.</i>
+                                    <p><strong>Time spent: </strong>~80 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Enscape</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <ul>
+                                        <li>Use Enscape for my design process;</li>
+                                        <li>Explain the advanteges of using Enscape over other rendering software;</li>
+                                        <li>Figure out how to use Enscape for a 3D render or VR scene.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>~ 3 hours</p>
+                                </div>
+
+                                <div class=invisible>
+                                    <h1>HTML & CSS & JavaScript</h1>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Build and publish a website;</li>
+                                        <li>Create animations using JavaScript;</li>
+                                        <li>Properly organize the code behind a website;</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>>100 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Wordpress</h1>
-                                    <p>Info coming later.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <ul>
+                                        <li>Manage Wordpress websites of different organizations;</li>
+                                        <li>Rebuild a website in Wordpress;</li>
+                                        <li>Implement HTML script within Wordpress.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>>100 hours</p>
                                 </div>
                             </div>
                         </div>
@@ -730,98 +774,171 @@
                                 <p>Adobe&nbspXD</p>
                                 <p>Fusion&nbsp360</p>
                                 <p>Arduino</p>
-                                <p>Numpy</p>
                                 <p>Machine&nbspLearning</p>
                                 <p>Houdini</p>
                                 <p>SideFX</p>
                                 <p>C++</p>
                                 <p>Enscape</p>
+                                <p style="text-decoration: underline">HTML&nbsp&&nbspCSS & JS</p>
                                 <p>Wordpress</p>
                             </div>
 
                             <div id="answers-experienced" class=info-categories>
                                 <div class=invisible>
-                                    <h1>McNeel Rhino 3D</h1>
-                                    <p>Rhino is my primary software tool to design in 2D and 3D digitally. Usually I combine the use of Rhino with Grasshopper and render software like Lumion or Enscape. I especially like the use of Rhino because of the versatility to use it in combination with other programs.<br>I have had personal experience in Rhino by using it for many study projects, and personal projects, but I have also tutored Rhino to first year bachelor students of Architecture as Teaching Assistant Design Informatics.</p>
-                                    
-                                    <p><strong>Time spent: </strong>> 800 hours<br><i>Parly focused on Grasshopper</i></p>
-                                    <button class=button  onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <h1>McNeel Rhino</h1>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Teach Rhino to Bachelor students;</li>
+                                        <li>Use Rhino as my main digitial design tool;</li>
+                                        <li>Develop 2D and 3D (construction) drawings for diffent types of projects;</li>
+                                        <li>Use Rhino in combination with Lumion and Enscape;</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>>800 hours (in combination with Grasshopper)</p>                                
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Grasshopper</h1>
-                                    <p>In the last five years I spent many hours in Grasshopper. I have developed several projects and tools within Grasshopper, using the visual nodes, or standard Python programming. Furthermore, I have tutored and lectured Grasshopper to bachelor students and developed a new GH study program for TU Delft. You can find this study program in the link down below. I am familiar with most functions and the background principles of Grasshopper. Since it is not possible to work in Grasshopper all the time, I try to stay up-to-date through the McNeel forum. In the future I hope to research alternative parametric modelling software like Maya or Unity as alternative to Grasshopper, specifically to be able to handle and process more data than possible in Grasshopper.</p>
-                                    <p><strong>Time spent: </strong>> 800 hours</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Teach Grasshopper to Bachelor students;</li>
+                                        <li>Develop Grasshopper study material for TU Delft students (see link, developed by me in 2020-2021);</li>
+                                        <li>Use most functions in Grasshopper;</li>
+                                        <li>Build complex visual scripts;</li>
+                                        <li>Combine visual scripting with Python programming;</li>
+                                        <li>Help other people on the Grasshopper McNeel forum.</li>
+                                    </ul>
+
+                                    <p><strong>Time spent: </strong>>800 hours</p>
                                     <button class=button onclick=" window.open('http://wiki.bk.tudelft.nl/toi-pedia/Grasshopper', '_blank', rel='noopener noreferrer')">Link</button>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Python</h1>
-                                    <p>Since late 2020 Python became my main programming language to use for design and programming projects. Since then, I spent several hours in Python a week on average, but in certain periods it can take all my working time. I'm am familiar with libraries like Numpy, Pygame, Pyfirmata and more. Specifically interesting Python projects were my API connection between Grasshopper and RoboDK and the 'Welcome Home' generator I developed for a personal project. Currently, I am slowly trying to switch to other programming languages like C# and JavaScript, to be able to work in more different environments.</p>
-                                    <p><strong>Time spent: </strong>>300 hours</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Implement dynamic programming algorithms using memoization;</li>
+                                        <li>Understand and use basic Object Oriented Programming;</li>
+                                        <li>Use Numpy;</li>
+                                        <li>Build an app for Android in Python;</li>
+                                        <li>Control Arduino using Python;</li>
+                                        <li>Structure a script according to PEP8 rules;</li>
+                                        <li>Copy, reference and paste code of other people;</li>
+                                        <li>Have a conversation about (dis)advantages of Python.</li>
+                                    </ul>
+                                    
+                                    <p><strong>Time spent: </strong>>400 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Maya & Arnold</h1>
-                                    <p>Before the summer of 2021, I followed a master course called Beyond 3D which focused on creating an imaginary world within Maya; professionaly one of the most used 3D animation software. After finishing this project, I spent approximately 6 fulltime weeks on a volutary mission to recreate the 20th Century Fox animation for my Student Association. This taught me throughoutly how to use Maya as animation and the Arnold engine as render tool. In the future I hope to be able to learn Blender, since this is an alternative software which is available for free.</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Develop a highly realistic stationary scene;</li>
+                                        <li>Work with large amounts of polygons using instancing;</li>
+                                        <li>Develop a 3D realistic animation;</li>
+                                        <li>Model objects in Maya;</li>
+                                        <li>UV map textures on an object in Maya;</li>
+                                        <li>Optimize Arnold settings for speed;</li>
+                                        <li>Make use of the TU Delft renderfarm.</li>
+                                    </ul>
+                                    
                                     <p><strong>Time spent: </strong>>300 hours</p>
                                     <button class=button onclick=" window.open('http://toi.bk.tudelft.nl/?p=ar0771', '_blank', rel='noopener noreferrer')">Link</button>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Substance Painter</h1>
-                                    <p>In combination with Maya I used Substance Painter to enhance the visuals of my renders. Since this is quite a straightforward software, as long as you are able to generate correct texture maps, I placed this software in the 'experienced' category.</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Create my own materials in Substance;</li>
+                                        <li>Render an object with materials in Substance;</li>
+                                        <li>Integrate UV maps from Maya into Substance;</li>
+                                    </ul>
+                                    
                                     <p><strong>Time spent: </strong>~10 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Revit</h1>
-                                    <p>Autodesk Revit is one of the most used BIM tools in the built environment. Since the beginning of my Architecture studies, I have been working with the software. However, in my daily design process, I try to avoid the use of Revit as much as possible. In my experience Revit limits my creativity because of the expertise that is required to create complex shapes and geometries. Therefore, I usually make my 2d drawing in Rhino, although I am able to make them in Revit.</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Give a practical lecture about the use of Revit to Bachelor students.</li>
+                                        <li>Develop a standard building in Revit;</li>
+                                        <li>Create my own family objects in Revit;</li>
+                                        <li>Render projects using the cloud service;</li>
+                                        <li>Draw technically correct details.</li>
+                                    </ul>
+                                    <i>Since it has been a while since I used this software, I can not guarantee I immediately have the skills mentioned above.</i>
                                     <p><strong>Time spent: </strong>>100 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Lumion</h1>
-                                    <p>Lumion is an amazing render package for design software like Rhino and Revit. Several projects you can see in my portfolio, were developed using Lumion. Unfortunately, Lumion requires extremely fast hardware to run, so I only use it when I really want to make a perfect image.</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Render a photorealistic scene;</li>
+                                        <li>Use live-sync between Revit/Rhino and Lumion;</li>
+                                        <li>Create a stylistic image of a building.</li>
+                                    </ul>
                                     <p><strong>Time spent: </strong>~15 hours</p>
                                 </div>
 
                                 <div class=invisible>
-                                    <h1>Enscape</h1>
-                                    <p>As alternative to Lumion, I am starting to use Enscape. Especially for VR, I think Enscape is a great solution. During my studies however, I have not used Enscape that much. Considering my experience in Lumion, I think switching to Enscape is just a small step.</p>
-                                    <p><strong>Time spent: </strong>&lt5 hours</p>
+                                    <h1>GitHub</h1>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Init a new project;</li>
+                                        <li>Commit and push using the Windows command prompt;</li>
+                                        <li>Work with GitHub in Visual Studio Code.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>unknown</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Photoshop</h1>
-                                    <p>No project is finished without the use of Photoshop. At least that is the case in my design process. Over the past 6 years I used Photoshop to make posters, renders and enhance images.</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Finetune a render from other software;</li>
+                                        <li>Tweak images, add filters;</li>
+                                        <li>Erase parts of an image without making it visible;</li>
+                                        <li>Integrate Photoshop in my daily design workflow;</li>
+                                    </ul>
                                     <p><strong>Time spent: </strong>~150 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>Indesign</h1>
-                                    <p>Indesign is my main compositing software for documents and portfolio’s. I do not consider myself to be an expert in the software, but I know how to use it for projects related to my studies. Most of the time, I use Indesign in combination with Photoshop and Illustrator.</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Use InDesign to make a final document;</li>
+                                        <li>Create my own preset styles;</li>
+                                        <li>Use InDesign with embedded Illustrator and Photoshop files.</li>
+                                    </ul>
                                     <p><strong>Time spent: </strong>~75 hours</p>
                                 </div>
                                 
                                 <div class=invisible>
                                     <h1>Illustrator</h1>
-                                    <p>For a long time, I have been trying to avoid the use of Illustrator, since I did not consider it to be a useful addition to Photoshop. However, since it is almost impossible to avoid Illustrator when making vector drawings, I have learned to use it in special cases. Especially in my export process of making 2D construction and building plans, I think it is very useful.</p>
-                                    <p><strong>Time spent: </strong>~20 hours</p>
-                                </div>
-
-                                <div class=invisible>
-                                    <h1>HTML & CSS</h1>
-                                    <p>This website has been developed in HTML, CSS and JavaScript. After using Python for quite a while and a bit of C++, this was my first real experience using other programming languages. I consider HTML and CSS to be relatively easy to learn, if you have a basic understanding of programming.</p>
-                                    <p><strong>Time spent: </strong>~75 hours</p>
-                                    <button class=button onclick=" window.open('https://github.com/JobdeVogel?tab=repositories', '_blank', rel='noopener noreferrer')">Link</button>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Make basic vector drawings;</li>
+                                        <li>Transform an external image to a vector drawing;</li>
+                                        <li>Edit Rhino drawings in Illustrator in the final drawing stage.</li>
+                                    </ul>
+                                    <p><strong>Time spent: </strong>>25 hours</p>
                                 </div>
 
                                 <div class=invisible>
                                     <h1>RoboDK</h1>
-                                    <p>Since early 2021 I started using RoboDK to control Robot arms for my projects. Although I do not have a lot of experience in controlling robots in real-life, I did spend a lot of time in the RoboDK software. As extracurriculair assignment to my standard courses, I was asked to develop a Grasshopper-RoboDK interaction script to create brick designs with a robot arm. This project can be found in the link down below.</p>
+                                    <p>Able to:</p>
+                                    <ul>
+                                        <li>Control a Robot from Grasshopper;</li>
+                                        <li>Control a Robot from RoboDK;</li>
+                                        <li>Build a robot program;</li>
+                                        <li>Create a robot collision map;</li>
+                                        <li>Use the Python API.</li>
+                                    </ul>
                                     <p><strong>Time spent: </strong>~80 hours</p>
-                                    <button class=button>Link</button>
                                 </div>
                             </div>
                         </div>
@@ -832,19 +949,19 @@
         
         <!-- WORLD -->
         <div class="world">
-            <!--
-            <div class="sketchfab-embed-wrapper"> <iframe title="earth_core" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
-                src="https://sketchfab.com/models/8a3f6e66955e41d48762d75725d3ab52/embed?autostart=1&camera=0"></iframe> 
+            <div class="sketchfab-embed-wrapper"> 
+                <iframe title="earth_core" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"; fullscreen="true"; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
+                src="https://sketchfab.com/models/673ff04e51074a0981a9286827c9c02d/embed?autostart=0&camera=0" loading="lazy">
+                </iframe> 
             </div>
-            -->
-            
         </div>
 
         <!--Bottom navigation bar-->
-        <div class="navbar-bottom">
-        
-        </div>
+        <footer>
+            &copy; <script>document.write(new Date().getFullYear())</script> Job de Vogel<br>
+            All works licensed under Attribution-NonCommercial-ShareAlike CC BY-NC-SA 4.0
+        </footer>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="script.js" type="text/javascript"></script>
 </html>
