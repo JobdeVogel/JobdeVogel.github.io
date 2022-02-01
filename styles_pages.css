@@ -1,9 +1,49 @@
 :root {
     --page_width: calc(0.5 * (100vw - (100vw - 100%)));
-    --headerColor: #242424;
-    --backgroundColorBase: seashell;
-    --backgroundColorAlternative: #333333;
-    --textColorBase: #C6C6C6;
-    --textColorAlternative: #1C1C1C;
-    --buttonColor: #333333;
-  }
+    --headerColor: rgb(14, 14, 14);
+    --backgroundColorBase:rgb(31, 31, 31);
+    --backgroundColorAlternative: rgb(181, 181, 181);
+    --textColorBase: rgb(181, 181, 181);
+    --textColorAlternative: rgb(43, 43, 43);
+    --buttonColor: rgb(47, 47, 47);
+}
+
+body {
+    margin: 0px;
+}
+
+#container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    overflow-x: hidden;
+}
+
+#header{
+    position: relative;
+    font-family: "Roboto";
+    background-color: rgb(58, 0, 255);
+    height: 370px;
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#pageTitle{
+    position: relative;
+    grid-column-start: 2;
+}
+
+#pageTitle > p{
+    all: unset;
+    position: absolute;
+    margin: 0;
+    padding-left: 0;
+    font-size: 18rem;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    top: 50%;
+    font-weight: bold;
+    opacity: 15%;
+}
