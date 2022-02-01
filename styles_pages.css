@@ -1,0 +1,9 @@
+:root {
+    --page_width: calc(0.5 * (100vw - (100vw - 100%)));
+    --headerColor: #242424;
+    --backgroundColorBase: seashell;
+    --backgroundColorAlternative: #333333;
+    --textColorBase: #C6C6C6;
+    --textColorAlternative: #1C1C1C;
+    --buttonColor: #333333;
+  }
