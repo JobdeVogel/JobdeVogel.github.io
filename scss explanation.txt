@@ -1,0 +1,54 @@
+Write in scss, this willbe automaticall converted to css
+Including arguments of all browsers
+
+---------------------------------------
+Variable:
+$backgroundColor: rgb(255, 255, 255);
+
+----------------------------------------
+Nested css:
+div {
+    background-color: $backgroundColor;
+
+    button {
+        color: red;
+
+        &:hover{
+            color: blue;
+        }
+
+        &::after{
+            content: "hi";
+        }
+    }
+}
+
+-----------------------------------------
+Create short specific style sheet:
+Use the following name: _someName.scss
+
+Make import sheet for all style sheets:
+@import "./someName";
+
+-----------------------------------------
+Make a globally usable style:
+@mixin globalTextStyle() {
+    background-color: $backgroundColor;
+}
+
+Use global style in style:
+@include: globalTextStyle();
+
+Use globally usable style with parameters
+@ mixin globalTextStyle($par1, $par2){
+    color: $par1;
+    background-color: $par2;
+}
+
+Use global style with parameters
+@include: globalTextStyle(parValue1, parValue2);
+
+-----------------------------------------
+Use styles of another style:
+
+@extend .className;
