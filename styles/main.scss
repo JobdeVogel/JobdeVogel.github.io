@@ -1,3 +1,24 @@
-//Import all other files here in the right order
-//Do not add _
-//@import 'abstracts';
+//Abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+//Components
+@import "./components/buttons";
+@import "./components/carousels";
+@import "./components/details";
+@import "./components/scrollbar";
+@import "./components/typography";
+
+//Base style
+@import "./base/base";
+
+//Main elements
+@import "./layout";
+@import "./header";
+@import "./footer";
+
+//Specific project styles
+@import "./projects/project1";
+@import "./projects/project2";
+@import "./projects/project3";
+@import "./projects/project4";

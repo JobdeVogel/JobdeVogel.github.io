@@ -1,0 +1,353 @@
+button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: .9em;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+  color: seashell;
+  background-color: #404040;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #5f5f5f;
+}
+
+details {
+  padding-bottom: 60px;
+}
+
+details summary {
+  list-style: none;
+}
+
+details summary:before {
+  cursor: pointer;
+  position: absolute;
+  margin: 0;
+  content: "\276F";
+  font-size: 2em;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translateX(-50%) rotate(90deg);
+          transform: translateX(-50%) rotate(90deg);
+  left: 50%;
+  bottom: 0;
+  color: #b5b5b5;
+}
+
+details[open] summary:before {
+  -webkit-transform: translateX(-50%) rotate(-90deg);
+          transform: translateX(-50%) rotate(-90deg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: 0%;
+  background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-button {
+  height: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  height: 20px;
+  opacity: 0;
+}
+
+#pageTitle p {
+  font-weight: bold;
+  font-size: 18rem !important;
+  text-transform: uppercase;
+  opacity: 10%;
+}
+
+.projectTitle {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.projectTitle h1, .projectTitle h2 {
+  margin: 0;
+}
+
+.projectTitle h1 {
+  text-transform: uppercase;
+  font-size: 5em;
+}
+
+.projectTitle h2 {
+  font-weight: 500;
+  color: #7a7a7a;
+}
+
+.projectDescription {
+  font-weight: 300;
+  font-size: .9vw;
+  line-height: 1.1em;
+  color: #7a7a7a;
+}
+
+.projectDescription p {
+  margin: 5px;
+}
+
+.projectDescription .descriptionTitle {
+  color: #b5b5b5;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.projectDescription ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+}
+
+.additionalTitle {
+  margin: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.additionalInformation {
+  font-weight: 300;
+  font-size: 1.5em;
+  color: #7a7a7a;
+}
+
+footer {
+  font-size: .8em;
+  font-weight: 300;
+  color: #b5b5b5;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  position: relative;
+  margin: 0px;
+  overflow-y: -100px;
+  color: #b5b5b5;
+}
+
+body #container {
+  font-family: "Roboto";
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #1f1f1f;
+  overflow-x: hidden;
+}
+
+#contentContainer {
+  padding: 0;
+  margin: 0;
+  color: #b5b5b5;
+}
+
+#contentContainer .project {
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+#contentContainer .project .projectContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .75fr 2fr .75fr;
+      grid-template-columns: .75fr 2fr .75fr;
+}
+
+#contentContainer .project .projectContainer .contentMiddle {
+  position: relative;
+  height: 100%;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .projectTitle {
+  position: relative;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .75fr .25fr;
+      grid-template-columns: .75fr .25fr;
+  margin-top: 20px;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent img {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription {
+  position: relative;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  padding-left: 10px;
+  width: 100%;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .bottomContent {
+  position: relative;
+  margin-top: 20px;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .bottomContent .moreInfoButton {
+  position: relative;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .bottomContent .moreInfoButton button {
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+}
+
+#header {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: inherit;
+  background-color: #0e0e0e;
+  height: 370px;
+}
+
+#header #pageTitle {
+  position: relative;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+#header #pageTitle p {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+footer {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  pointer-events: none;
+  text-align: center;
+  background-color: #1f1f1f;
+}
+
+#project-1 {
+  padding-top: 145px;
+}
+
+#project-1 .projectDescription {
+  max-height: 100%;
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+#project-2 {
+  color: #2b2b2b;
+  background-color: #b5b5b5;
+  padding-top: 100px;
+}
+
+#project-2 .projectTitle {
+  text-align: right;
+}
+
+#project-2 .topContent {
+  -ms-grid-columns: .25fr .75fr !important;
+      grid-template-columns: .25fr .75fr !important;
+}
+
+#project-2 .topContent img {
+  -ms-grid-column: 2 !important;
+      grid-column-start: 2 !important;
+}
+
+#project-2 .topContent .projectDescription {
+  -ms-grid-column: 1 !important;
+      grid-column-start: 1 !important;
+}
+
+#project-2 .topContent .projectDescription .descriptionTitle {
+  color: #2b2b2b;
+}
+
+#project-2 .bottomContent details {
+  color: #2b2b2b;
+}
+
+#project-2 .bottomContent details summary:before {
+  color: #2b2b2b;
+}
+
+#project-3 {
+  display: none !important;
+}
+
+#project-4 {
+  display: none !important;
+}
+
+#project-4 .topContent {
+  -ms-grid-columns: .25fr .75fr !important;
+      grid-template-columns: .25fr .75fr !important;
+}
+
+#project-4 .topContent img {
+  -ms-grid-column: 2 !important;
+      grid-column-start: 2 !important;
+}
+
+#project-4 .topContent .projectDescription {
+  -ms-grid-column: 1 !important;
+      grid-column-start: 1 !important;
+}
+/*# sourceMappingURL=main.css.map */

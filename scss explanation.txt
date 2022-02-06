@@ -1,4 +1,4 @@
-Write in scss, this willbe automaticall converted to css
+Write in scss, this will be automaticall converted to css
 Including arguments of all browsers
 
 ---------------------------------------

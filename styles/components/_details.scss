@@ -1,0 +1,25 @@
+
+details{
+    padding-bottom: 60px;
+
+    summary{
+        list-style: none;
+
+        &:before {
+            cursor: pointer;
+            position: absolute;
+            margin: 0;
+            content: "\276F";
+            font-size: 2em;
+            transform-origin: center;
+            transform: translateX(-50%) rotate(90deg);
+            left: 50%;
+            bottom: 0;
+            color: $textColorBase;
+        }
+    }
+}
+
+details[open] summary:before{
+    transform: translateX(-50%) rotate(-90deg);
+}

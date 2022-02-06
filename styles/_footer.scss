@@ -1,1 +1,9 @@
 //Footer styles
+footer{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    pointer-events: none;
+    text-align: center;
+    background-color: $backgroundColorBase;
+}

@@ -1,0 +1,20 @@
+//General layout of page
+html{
+    font-size: 1em;
+}
+
+body {
+    position: relative;
+    margin: 0px;
+    overflow-y: -100px;
+    color: $textColorBase;
+
+    #container{
+        font-family: "Roboto";
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: $backgroundColorBase;
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,21 @@
+#header{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: inherit;
+    background-color: $headerColor;
+    height: $headerHeight;
+    
+    #pageTitle{
+        position: relative;
+        grid-column-start: 2;
+
+        p{
+            @include unselectableText;
+            position: absolute;
+            margin: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+// MAKE SURE TO ALSO CHANGE THE ORDER OF ELEMENTS IN HTML
+
+#project-2{
+    color: $textColorAlternative;
+    background-color: $backgroundColorAlternative;
+    padding-top: 100px;
+    
+    .projectTitle{
+        text-align: right;
+    }
+
+    .topContent{
+        grid-template-columns: .25fr .75fr !important;
+
+        img{
+            grid-column-start: 2 !important;
+        }
+
+        .projectDescription{
+            grid-column-start: 1 !important;
+
+            .descriptionTitle{
+                color: $textColorAlternative;
+            }
+        }
+    }
+
+    .bottomContent{
+        details{
+            color: $textColorAlternative;
+
+            summary{
+                &:before {
+                    color: $textColorAlternative;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+button{
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: .9em;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    transition:color 1s;
+    transition:background-color .5s;
+    color: $buttonTextColor;
+    background-color: $buttonColor;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $buttonHoverColor;
+    }
+}

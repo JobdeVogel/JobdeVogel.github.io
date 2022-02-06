@@ -1,1 +1,9 @@
-// Style changes specific for project 1
+#project-1{
+    padding-top: 0.5 * $headerHeight - 40px;
+
+    .projectDescription{
+        max-height: 100%;
+        position: absolute !important;
+        bottom: 0 !important;
+    }
+}

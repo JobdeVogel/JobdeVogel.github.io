@@ -1,0 +1,17 @@
+// MAKE SURE TO ALSO CHANGE THE ORDER OF ELEMENTS IN HTML
+
+#project-4{
+    display: none !important;
+
+    .topContent{
+        grid-template-columns: .25fr .75fr !important;
+
+        img{
+            grid-column-start: 2 !important;
+        }
+
+        .projectDescription{
+            grid-column-start: 1 !important;
+        }
+    }
+}

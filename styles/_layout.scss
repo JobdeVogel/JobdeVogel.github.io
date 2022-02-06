@@ -1,1 +1,62 @@
-//General layout of page
+//General layout of projects
+#contentContainer{
+    padding: 0;
+    margin: 0;
+    color: $textColorBase;
+
+    .project{
+        display: block;
+        position: relative;
+        padding-bottom: 100px;
+
+        .projectContainer{
+            display: grid;
+            grid-template-columns: .75fr 2fr .75fr;
+
+            .contentMiddle{
+                position: relative;
+                height: 100%;
+                grid-column-start: 2;
+
+                .projectTitle{
+                    position: relative;
+                }
+
+                .topContent{
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: .75fr .25fr;
+                    margin-top: 20px;
+
+                    img{
+                        grid-column-start: 1;
+                        width: 100%;
+                        @include fullDivImage;
+                    }
+                    
+                    .projectDescription{
+                        position: relative;
+                        grid-column-start: 2;
+                        padding-left: 10px;
+                        width: 100%;
+                    }
+                }
+
+                .bottomContent{
+                    position: relative;
+                    margin-top: 20px;
+
+                    .moreInfoButton{
+                    position: relative;
+                    
+                        button{
+                            position: absolute;
+                            transform: translateX(-50%);
+                            left: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
