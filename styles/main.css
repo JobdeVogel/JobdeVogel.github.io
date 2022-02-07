@@ -72,6 +72,14 @@ details[open] summary:before {
   opacity: 0;
 }
 
+#tempSliderButton {
+  position: absolute;
+  z-index: 100;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
 #pageTitle p {
   font-weight: bold;
   font-size: 18rem !important;
