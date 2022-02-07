@@ -1,0 +1,6 @@
+TO ADD INFORMATION TO A PAGE:
+- Find the page in the pages section of the pages.html
+- Search for the correct topic (animation, computation etc.)
+- Use the project 3 or 4 template to add a project
+- Change the display style of the project in the html
+- Update the styles in the _project3.scss and _project4.scss for the specific topic

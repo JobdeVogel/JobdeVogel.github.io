@@ -335,27 +335,4 @@ footer {
 #project-2 .bottomContent details summary:before {
   color: #2b2b2b;
 }
-
-#project-3 {
-  display: none !important;
-}
-
-#project-4 {
-  display: none !important;
-}
-
-#project-4 .topContent {
-  -ms-grid-columns: .25fr .75fr !important;
-      grid-template-columns: .25fr .75fr !important;
-}
-
-#project-4 .topContent img {
-  -ms-grid-column: 2 !important;
-      grid-column-start: 2 !important;
-}
-
-#project-4 .topContent .projectDescription {
-  -ms-grid-column: 1 !important;
-      grid-column-start: 1 !important;
-}
 /*# sourceMappingURL=main.css.map */
