@@ -7,28 +7,31 @@
     <meta name="author" content="Job de Vogel">
     <meta http-equiv="Cache-control" content="public">
     <title>Portfolio Job de Vogel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload" as="font">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div id="container">
-        <div id="tempSliderButton">hey</div>
+        <div id="page-buttons">
+            <div id="prevPage" onclick="ShowPreviousPage()">&#10094;</div>
+            <div id="nextPage" onclick="ShowNextPage()">&#10095;</div>
+        </div>
 
         <div id="navbar"></div>
         <div id="header">
-            <div id="pageTitle">
-                <p id="animTitle" style="display: none;">Animation</p>
-                <p id="compTitle">Computational&nbspDesign</p>
-                <p id="progTitle" style="display: none;">Programming</p>
-                <p id="archTitle" style="display: none;">Architecture</p>
-                <p id="btTitle" style="display: none;">Building&nbspTechnology</p>
-                <p id="aboutTitle" style="display: none;">About</p>
-                <p id="contactTitle" style="display: none;">Contact</p>
+            <div id="pageTitleContainer">
+                <p class="pageTitle" style="display: none;">Animation</p>
+                <p class="pageTitle" style="display: none;">Computational&nbspDesign</p>
+                <p class="pageTitle" style="display: none;">Programming</p>
+                <p class="pageTitle" style="display: none;">Architecture</p>
+                <p class="pageTitle" style="display: none;">Building&nbspTechnology</p>
+                <p class="pageTitle" style="display: none;">About</p>
+                <p class="pageTitle" style="display: none;">Contact</p>
             </div>
         </div>
         <div id="contentContainer">
             <!------------------------------------------------------------------------------>
-            <div #Animation style="display: none;">
+            <div id='Animation' class='page' style="display: none;">
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
@@ -58,7 +61,7 @@
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">Since early 2021, I started developing animations and realistic rendering scenes for both educational and personal purposes. For the Master course Beyond3D I created an imaginary post-apocalyptic world, inspired by the .movie Wall-E from Pixar Animation Studios. Nature has been overtaken by garbage, and some of the garbage elements have turned into a small robot, which is trying to cut down all the nature that is left.</summary>
+                                    <summary class="textAdditionalInformation">Since early 2021, I started developing animations and realistic rendering scenes for both educational and personal purposes. For the Master course Beyond3D I created an imaginary post-apocalyptic world, inspired by the .movie Wall-E from Pixar Animation Studios. Nature has been overtaken by garbage, and some of the garbage elements have turned into a small robot, which is trying to cut down all the nature that is left.<br><br>This design has been made using Autodesk Maya, Arnold render engine, Substance Painter, Materialize Bounding Box Software and Adobe Photoshop. Using Maya instance procedures, it was possible to generate large amount of apparent random garbage, with incredible amounts of polygons. The final render took about 5.5 render hours to complete on a modern PC.</summary>
                                     <p class="textAdditionalInformation">This design has been made using Autodesk Maya, Arnold render engine, Substance Painter, Materialize Bounding Box Software and Adobe Photoshop. Using Maya instance procedures, it was possible to generate large amount of apparent random garbage, with incredible amounts of polygons. The final render took about 5.5 render hours to complete on a modern PC.</p>
                                 </details>
                                 <div class="moreInfoButton">
@@ -199,7 +202,7 @@
                 </div>
             </div>
             <!------------------------------------------------------------------------------>
-            <div #Computational style="display: none;">
+            <div id='Computational' class='page' style="display: none;">
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
@@ -378,7 +381,7 @@
                 </div>
             </div>
             <!------------------------------------------------------------------------------>
-            <div #Programming style="display: none;">
+            <div id='Programming' class='page' style="display: none;">
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
@@ -408,8 +411,7 @@
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">A* is a well-known path finding algorithm, known for its highly efficient method to find the shortest distance in a graph. After finishing my minor Spatial Computing, in which we were introduced to A*, I challenged myself to experiment with this algorithm using primarily Python and Grasshopper.</summary>
-                                    <p class="textAdditionalInformation">Within several weeks of part-time work, I was able to develop a Grasshopper script that could utilize the A* algorithm to find shortest Euclidian paths in a building. One of the main challenges was the fact that Python 3 was not available yet for Grasshopper at that time, so I only had access to Python 2 libraries. This project was my first experience in parallel computing. During this project I really got to know the limits of computational design within Grasshopper, which gave me reason to consider alternative software for these types of projects.</p>
+                                    <summary class="textAdditionalInformation">A* is a well-known path finding algorithm, known for its highly efficient method to find the shortest distance in a graph. After finishing my minor Spatial Computing, in which we were introduced to A*, I challenged myself to experiment with this algorithm using primarily Python and Grasshopper.<br><br>Within several weeks of part-time work, I was able to develop a Grasshopper script that could utilize the A* algorithm to find shortest Euclidian paths in a building. One of the main challenges was the fact that Python 3 was not available yet for Grasshopper at that time, so I only had access to Python 2 libraries. This project was my first experience in parallel computing. During this project I really got to know the limits of computational design within Grasshopper, which gave me reason to consider alternative software for these types of projects.</summary>
                                 </details>
                                 <div class="moreInfoButton">
                                     <button onclick=" window.open('https://github.com/JobdeVogel/Grasshopper-A-Star-Implementation', '_blank', rel='noopener noreferrer')">Code</button>
@@ -489,8 +491,7 @@
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">Additional Information
-                                    <summary class="textAdditionalInformation">M.O.E.S.O.E. is an Android app that functions as a helpful decision tree. By giving some answers to simple questions, the app advises you what to do in a certain situation. This project was made after I noticed that friends had some problems making relatively simple choices.</summary>
-                                    <p class="textAdditionalInformation">This project was developed using the Kivy package for Python 3. Since I build this project in a very short period of time, the code was build quite unstructured. It was a nice experience in building a static app for Android and I know feel comfortable making a more serious app in the future.</p>
+                                    <summary class="textAdditionalInformation">M.O.E.S.O.E. is an Android app that functions as a helpful decision tree. By giving some answers to simple questions, the app advises you what to do in a certain situation. This project was made after I noticed that friends had some problems making relatively simple choices.<br><br>This project was developed using the Kivy package for Python 3. Since I build this project in a very short period of time, the code was build quite unstructured. It was a nice experience in building a static app for Android and I know feel comfortable making a more serious app in the future.</summary>
                                 </details>
                                 <div class="moreInfoButton">
                                     <button>Code</button>
@@ -545,45 +546,41 @@
                 </div>
             </div>
             <!------------------------------------------------------------------------------>
-            <div #Architecture>
+            <div id='Architecture' class='page' style="display: none;">
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
                                 <h1>Circularity</h1>
-                                <h2></h2>
+                                <h2>Design for a sport school with high circularity ambitions</h2>
                             </div>
                             <div class="topContent">
-                                <img src="data/images/sphere_poster.jpg" alt="">
+                                <img src="data/images/on6_1_web.jpg" alt="">
                                 <div class="projectDescription">
                                     <p class="descriptionTitle">Name</p>
-                                    <p>Hex World</p><br>
+                                    <p>Circulair 010</p><br>
                                     <p class="descriptionTitle">Author</p>
                                     <ul>
                                         <li class="Author">Job de Vogel</li>
-                                        <li class="Author">Jun Wen Loo</li>
-                                        <li class="Author">Kwan-Lin Wang</li>
-                                        <li class="Author">Thomas Lindemann</li>
                                     </ul><br>
                                     <p class="descriptionTitle">Year</p>
-                                    <p class="Year">2021</p><br>
+                                    <p class="Year">2020</p><br>
                                     <p class="descriptionTitle">Educational weight</p>
-                                    <p class="ECT">5 ECT (140 hours)</p><br>
+                                    <p class="ECT">10 ECT (280 hours)</p><br>
                                     <p class="descriptionTitle" style="display: none;">Render hours</p>
                                     <p class="renderHours" style="display: none;">999<br></p>
                                     <p class="descriptionTitle">Software</p>
-                                    <p class="software">Strava, McNeel Rhino, Python, Grasshopper, Arduino</p>
+                                    <p class="software">McNeel Rhino, Grasshopper, Photoshop</p>
                                 </div>
                             </div>
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">One of the main challenges of the COVID-19 lockdown for students in the Netherlands, was sitting behind a desk at home all day long. Corona makes our world smaller, but by sporting outside we can experience the world as a greater and more beautiful place. In this project, we created a planet creation visualization within a McNeel Rhino environment, that stimulates sporting in the physical world. <br><br>By using the Strava (sport app) API, it was possible to collect live geographical data and numerical data about our sporting activities and converted the data to a 2D map in Rhino using Python and Grasshopper. Next, this 2D data was mapped to a sphere. By developing a recursive algorithm in Python, I was able to create a 3D terrain that indicates the intensity of activities. Smaller objects on the sphere, like bonfires and trees, indicate special achievements, like breaking a record.</summary>
-                                    <p class="textAdditionalInformation">For this project we used several methods and techniques. Personally, I was responsible for guiding the team, because of my prior knowledge in (visual) programming. My main personal contributions are mentioned in the previous paragraph. Other teammates focused on converting our digital model to a fabrication model using Robots, and outputting the data using Arduino. Our project was graded with a 10/10.<br><br>
-                                        To visualize this project, we used McNeel Rhino as main interface. The data was collected using IronPython (expecially webscraping libraries). Using the PyFirmata Python 3 package I helped my teammates to convert the output to a physical Arduino output. The video on the left is a visualization of the recursive mountainization algorithm.</p>
+                                    <summary class="textAdditionalInformation">As final Bachelor of Architecture project, I was asked to make an integrated design for a sporting school in Rotterdam. Although there was little space for personal choice in location or building type, I was allowed to decide to fully focus this project on circularity.<br><br>Circularity is an abstract term that needs a very specific definition before implemented. By first analyzing the concept and then trying to implement it in my design, I was able to reach for the limitation of circularity.</summary>
+                                    <p class="textAdditionalInformation">For this project I used McNeel Rhino as main design tool. The construction of this project was modelled parametrically in Grasshopper. Details of the building construction were made using Rhino, Illustrator and Photoshop. The renders visible on the posters are created using Google Earth, Lumion and Photoshop.<br><br>Although I have decided to focus my Master on Building Technology, and therefore not so much on architectural design, I think this project is a good representation of some of the design skill I have gained over the years.</p>
                                 </details>
                                 <div class="moreInfoButton">
-                                    <button onclick=" window.open('https://sketchfab.com/3d-models/the-hex-world-673ff04e51074a0981a9286827c9c02d', '_blank', rel='noopener noreferrer')">Display in VR</button>
+                                    <button onclick=" window.open('data/literature/literature.pdf', '_blank', rel='noopener noreferrer')">Circularity Literature</button>
                                 </div>
                             </div>
                             
@@ -594,47 +591,41 @@
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
-                                <h1>Spatial Computing</h1>
-                                <h2>Optimized building based on dynamic space agents</h2>
+                                <h1>Renovation</h1>
+                                <h2>Redevelopment of a building block in Amsterdam</h2>
                             </div>
                             
                             <div class="topContent">
                                 <div class="projectDescription">
                                     <p class="descriptionTitle">Name</p>
-                                    <p>Urban Green City</p><br>
+                                    <p>Osdorp Omarmd</p><br>
                                     <p class="descriptionTitle">Author</p>
                                     <ul>
                                         <li class="Author">Job de Vogel</li>
-                                        <li class="Author">Victor Wernet</li>
-                                        <li class="Author">Ida Bølling Konsted</li>
-                                        <li class="Author" style="display: none;">Author4</li>
                                     </ul><br>
                                     <p class="descriptionTitle">Year</p>
-                                    <p class="Year">2019</p>
+                                    <p class="Year">2018</p>
                                     <p class="descriptionTitle">Educational weight</p>
                                     <p class="ECT">10 ECT (280 hours)</p><br>
                                     <p class="descriptionTitle" style="display: none;">Render hours</p>
                                     <p class="renderHours" style="display: none;">999<br></p>
                                     <p class="descriptionTitle">Software</p>
-                                    <p class="software">Houdini, SideFX, Python, C++, McNeel Rhino, Lumion,<br>Photoshop</p>
+                                    <p class="software">Autodesk Revit, Photoshop</p>
                                 </div>
 
-                                <img src="data/images/spatial_computing_web.jpg" alt="">
+                                <img src="data/images/on4_1_web.jpg" alt="">
                             </div>
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">The minor Spatial Computing was my first experience with real optimization based on shortest-path algorithms, dynamic space agents and linear algebra. Our assignment was based on an existing building block in the city center of Rotterdam, the Netherlands. By generating a voxel cloud and analyzing numerical values like sunlight, noise and a program of requirements, we were able to generate a building based on ideal positions for each function.</summary>
-                                    <p class="textAdditionalInformation">For this project, we used Houdini and the programming language SideFX, C++ and Python. Within the group, I was responsible for the dynamic placement of the program functions. After completing this minor, I rebuilt the A-start path finding algorithm to a Grasshopper implementation, to use in future projects. The final renders were made using Rhino and Lumion.</p>
+                                    <summary class="textAdditionalInformation">Combining different types of people in one building project can be difficult, especially in renovation projects. In my second year of my Bachelor of Architecture, I re-designed a building block in Amsterdam.<br><br>After finishing this project, I decided to spend one year on working for the student board of 'Stichting Herontwikkeling tot Studentenhuisvesting'. Within this year, I really leaned the ins and outs of designing and especially managing buildings with diverse groups of people living in it.</summary>
+                                    <p class="textAdditionalInformation">This project is my best example of working in Autodesk Revit. I completely built this project in 3D first in Revit and afterwards used Photoshop to give it an artistic interpretation.</p>
                                 </details>
-                                <div class="moreInfoButton">
-                                    <button>Code</button>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="project-3" class="project">
+                <div id="project-3" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -677,7 +668,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-4" class="project">
+                <div id="project-4" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -722,7 +713,7 @@
                 </div>
             </div>
             <!------------------------------------------------------------------------------>
-            <div #Building Technology" style="display: none;">
+            <div id='BuildingTechnology' class='page' style="display: none;">
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
@@ -901,52 +892,52 @@
                 </div>
             </div>
             <!------------------------------------------------------------------------------>
-            <div #About style="display: none;">
+            <div id='About' class='page' style="display: none;">
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
-                                <h1>Hex World</h1>
-                                <h2>Stimulate outdoor activities through a virtual world</h2>
+                                <h1>Nice to meet you!</h1>
+                                <h2>About me: Job de Vogel</h2>
                             </div>
                             <div class="topContent">
-                                <img src="data/images/sphere_poster.jpg" alt="">
+                                <img src="data/images/about_photo_web.jpg" alt="">
                                 <div class="projectDescription">
                                     <p class="descriptionTitle">Name</p>
-                                    <p>Hex World</p><br>
-                                    <p class="descriptionTitle">Author</p>
+                                    <p>Job de Vogel</p><br>
+                                    <p class="descriptionTitle">Study</p>
                                     <ul>
-                                        <li class="Author">Job de Vogel</li>
-                                        <li class="Author">Jun Wen Loo</li>
-                                        <li class="Author">Kwan-Lin Wang</li>
-                                        <li class="Author">Thomas Lindemann</li>
+                                        <li class="Author">MSc Building Technology</li>
+                                        <li class="Author">Architecture and the Built Environment</li>
+                                        <li class="Author">TU Delft</li>
                                     </ul><br>
-                                    <p class="descriptionTitle">Year</p>
-                                    <p class="Year">2021</p><br>
-                                    <p class="descriptionTitle">Educational weight</p>
-                                    <p class="ECT">5 ECT (140 hours)</p><br>
+                                    <p class="descriptionTitle">Date of birth</p>
+                                    <p class="Year">22-11-1997</p><br>
+                                    <p class="descriptionTitle">Wake me in the morning for:</p>
+                                    <p class="ECT">Coffee</p><br>
                                     <p class="descriptionTitle" style="display: none;">Render hours</p>
                                     <p class="renderHours" style="display: none;">999<br></p>
-                                    <p class="descriptionTitle">Software</p>
-                                    <p class="software">Strava, McNeel Rhino, Python, Grasshopper, Arduino</p>
+                                    <p class="descriptionTitle">Looking for work?</p>
+                                    <p class="software">No, currently I am focusing on my study, but feel free to contact me!</p>
                                 </div>
                             </div>
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">One of the main challenges of the COVID-19 lockdown for students in the Netherlands, was sitting behind a desk at home all day long. Corona makes our world smaller, but by sporting outside we can experience the world as a greater and more beautiful place. In this project, we created a planet creation visualization within a McNeel Rhino environment, that stimulates sporting in the physical world. <br><br>By using the Strava (sport app) API, it was possible to collect live geographical data and numerical data about our sporting activities and converted the data to a 2D map in Rhino using Python and Grasshopper. Next, this 2D data was mapped to a sphere. By developing a recursive algorithm in Python, I was able to create a 3D terrain that indicates the intensity of activities. Smaller objects on the sphere, like bonfires and trees, indicate special achievements, like breaking a record.</summary>
-                                    <p class="textAdditionalInformation">For this project we used several methods and techniques. Personally, I was responsible for guiding the team, because of my prior knowledge in (visual) programming. My main personal contributions are mentioned in the previous paragraph. Other teammates focused on converting our digital model to a fabrication model using Robots, and outputting the data using Arduino. Our project was graded with a 10/10.<br><br>
-                                        To visualize this project, we used McNeel Rhino as main interface. The data was collected using IronPython (expecially webscraping libraries). Using the PyFirmata Python 3 package I helped my teammates to convert the output to a physical Arduino output. The video on the left is a visualization of the recursive mountainization algorithm.</p>
+                                    <summary class="textAdditionalInformation">My name is Job, I am 24 year young, living in Delft, the Netherlands. Since 2016 I have been studying to become a <b style='font-size: 1.2em'>Building Engineer</b>. Within the building environment, I belief there still is a lot of potential to implement complex state-of-the-art techniques, like big data, Artificial Intelligence, evaluation and optimization to solve social problems and increase sustainability.<br><br>In the future, I hope to become an engineer that makes a <b style='font-size: 1.2em'>difference</b>. By using the skills and talents that have been given to me, I am striving to become someone that makes this world a happier place for everyone.</summary>
+                                    <p class="textAdditionalInformation">In my free time outside of studying, I enjoy making music (playing the saxophone and piano), skating, spending time with friends, discussing higher life questions, and sometimes work on <b style='font-size: 1.2em'>ridiculously stupid projects</b> that take way too much time, but always give people a smile on their faces.<br><br>
+                                        As <b style='font-size: 1.2em'>Christian</b>, I am a follower of Jesus Christ. I belief we have a father in heaven who cares about us and loves us. He gave us a mission to take care of this world, and although we may fail doing that again and again, we can always come back to him.<br><br>
+                                        In holidays, I love to spend time doing <b style='font-size: 1.2em'>voluntary work</b> on campings and in the neighborhood, spending time with children sporting and playing, challenging them to think deeper about life and their convictions, and telling them about my own. In autumn 2021, I have been team member of the Student Alpha Team in Delft.</p>
                                 </details>
                                 <div class="moreInfoButton">
-                                    <button onclick=" window.open('https://sketchfab.com/3d-models/the-hex-world-673ff04e51074a0981a9286827c9c02d', '_blank', rel='noopener noreferrer')">Display in VR</button>
+                                    <button onclick=" window.open('data/pdf/2021_21_04 Curriculum Vitae.pdf', '_blank', rel='noopener noreferrer')">Curriculum Vitae</button>
                                 </div>
                             </div>
                             
                         </div>
                     </div>
                 </div>
-                <div id="project-2" class="project">
+                <div id="project-2" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -990,7 +981,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-3" class="project">
+                <div id="project-3" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -1033,7 +1024,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-4" class="project">
+                <div id="project-4" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -1078,52 +1069,27 @@
                 </div>
             </div>
             <!------------------------------------------------------------------------------>
-            <div #Contact style="display: none;">
+            <div id='Contact' class='page' style="display: none;">
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
-                                <h1>Hex World</h1>
-                                <h2>Stimulate outdoor activities through a virtual world</h2>
-                            </div>
-                            <div class="topContent">
-                                <img src="data/images/sphere_poster.jpg" alt="">
-                                <div class="projectDescription">
-                                    <p class="descriptionTitle">Name</p>
-                                    <p>Hex World</p><br>
-                                    <p class="descriptionTitle">Author</p>
-                                    <ul>
-                                        <li class="Author">Job de Vogel</li>
-                                        <li class="Author">Jun Wen Loo</li>
-                                        <li class="Author">Kwan-Lin Wang</li>
-                                        <li class="Author">Thomas Lindemann</li>
-                                    </ul><br>
-                                    <p class="descriptionTitle">Year</p>
-                                    <p class="Year">2021</p><br>
-                                    <p class="descriptionTitle">Educational weight</p>
-                                    <p class="ECT">5 ECT (140 hours)</p><br>
-                                    <p class="descriptionTitle" style="display: none;">Render hours</p>
-                                    <p class="renderHours" style="display: none;">999<br></p>
-                                    <p class="descriptionTitle">Software</p>
-                                    <p class="software">Strava, McNeel Rhino, Python, Grasshopper, Arduino</p>
-                                </div>
+                                <h1>Contact</h1>
+                                <h2>Contact me through email or LinkedIn</h2>
                             </div>
                             <div class="bottomContent">
-                                <p class="additionalTitle">Additional Information</p>
-                                <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">One of the main challenges of the COVID-19 lockdown for students in the Netherlands, was sitting behind a desk at home all day long. Corona makes our world smaller, but by sporting outside we can experience the world as a greater and more beautiful place. In this project, we created a planet creation visualization within a McNeel Rhino environment, that stimulates sporting in the physical world. <br><br>By using the Strava (sport app) API, it was possible to collect live geographical data and numerical data about our sporting activities and converted the data to a 2D map in Rhino using Python and Grasshopper. Next, this 2D data was mapped to a sphere. By developing a recursive algorithm in Python, I was able to create a 3D terrain that indicates the intensity of activities. Smaller objects on the sphere, like bonfires and trees, indicate special achievements, like breaking a record.</summary>
-                                    <p class="textAdditionalInformation">For this project we used several methods and techniques. Personally, I was responsible for guiding the team, because of my prior knowledge in (visual) programming. My main personal contributions are mentioned in the previous paragraph. Other teammates focused on converting our digital model to a fabrication model using Robots, and outputting the data using Arduino. Our project was graded with a 10/10.<br><br>
-                                        To visualize this project, we used McNeel Rhino as main interface. The data was collected using IronPython (expecially webscraping libraries). Using the PyFirmata Python 3 package I helped my teammates to convert the output to a physical Arduino output. The video on the left is a visualization of the recursive mountainization algorithm.</p>
-                                </details>
+                                <p class="additionalTitle">Get in touch</p>
+                                <p>Nice to hear that you would like to get in contact with me!<br><br><b>Email:</b> jobdevogel@jobdevogel.com<br>Or contact me through <b><a href='https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en'>LinkedIn</a>.</b><br><br>
+                                    I usually respond within 2 days: Monday - Friday.
+                                </p>
                                 <div class="moreInfoButton">
-                                    <button onclick=" window.open('https://sketchfab.com/3d-models/the-hex-world-673ff04e51074a0981a9286827c9c02d', '_blank', rel='noopener noreferrer')">Display in VR</button>
+                                    <a href="mailto:pm-jdvogel@gmail.com">Contact Mail</a>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
-                <div id="project-2" class="project">
+                <div id="project-2" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -1167,7 +1133,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-3" class="project">
+                <div id="project-3" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -1210,7 +1176,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="project-4" class="project">
+                <div id="project-4" class="project" style="display: none;">
                     <div class="projectContainer">
                         <div class="contentMiddle">
                             <div class="projectTitle">
@@ -1263,4 +1229,9 @@
         </footer>
     </div>
 </body>
+<script src="./scripts/pageButtons.js"></script>
+<script>
+    console.log(window.screen.width);
+    console.log(window.screen.height);
+</script>
 </html>

@@ -1,8 +1,6 @@
 // MAKE SURE TO ALSO CHANGE THE ORDER OF ELEMENTS IN HTML
 
-#project-2{
-    color: $textColorAlternative;
-    background-color: $backgroundColorAlternative;
+.project-2-layout{
     padding-top: 100px;
     
     .projectTitle{
@@ -18,20 +16,15 @@
 
         .projectDescription{
             grid-column-start: 1 !important;
-
-            .descriptionTitle{
-                color: $textColorAlternative;
-            }
+            padding-left: 0;
         }
     }
 
     .bottomContent{
         details{
-            color: $textColorAlternative;
-
             summary{
-                &:before {
-                    color: $textColorAlternative;
+                &:hover:after{
+                    color: #C85700;
                 }
             }
         }

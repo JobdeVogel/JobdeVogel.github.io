@@ -5,7 +5,7 @@ details{
     summary{
         list-style: none;
 
-        &:before {
+        &:after {
             cursor: pointer;
             position: absolute;
             margin: 0;
@@ -15,11 +15,16 @@ details{
             transform: translateX(-50%) rotate(90deg);
             left: 50%;
             bottom: 0;
+            transition: 0.5s ease;
             color: $textColorBase;
+        }
+
+        &:hover:after{
+            color: #C85700;
         }
     }
 }
 
-details[open] summary:before{
+details[open] summary:after{
     transform: translateX(-50%) rotate(-90deg);
 }

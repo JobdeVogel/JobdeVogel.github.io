@@ -1,0 +1,45 @@
+#Programming{
+    // Move top project down
+    #project-1{
+        @extend .project-1-layout;
+
+        // Remove the extension button
+        details{
+            summary{
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    #project-2{
+        @extend .project-2-layout;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .contentMiddle{
+            border-style: solid;
+            padding: 5px;
+            padding-bottom: 20px;
+            border-width: 1px;
+            border-color: rgba(255, 245, 238, 0.116)
+        }
+    }
+
+    #project-3{
+        padding-top: 50px;
+
+        @extend .project-3-layout;
+
+        // Remove the extension button
+        details{
+            summary{
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+}

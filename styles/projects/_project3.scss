@@ -1,0 +1,9 @@
+.project-3-layout{
+    padding-top: 0.5 * $headerHeight - 40px !important;
+
+    .projectDescription{
+        max-height: 100%;
+        position: absolute !important;
+        bottom: 0 !important;
+    }
+}

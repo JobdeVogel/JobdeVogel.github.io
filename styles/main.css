@@ -29,7 +29,7 @@ details summary {
   list-style: none;
 }
 
-details summary:before {
+details summary:after {
   cursor: pointer;
   position: absolute;
   margin: 0;
@@ -41,10 +41,16 @@ details summary:before {
           transform: translateX(-50%) rotate(90deg);
   left: 50%;
   bottom: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   color: #b5b5b5;
 }
 
-details[open] summary:before {
+details summary:hover:after {
+  color: #C85700;
+}
+
+details[open] summary:after {
   -webkit-transform: translateX(-50%) rotate(-90deg);
           transform: translateX(-50%) rotate(-90deg);
 }
@@ -72,15 +78,51 @@ details[open] summary:before {
   opacity: 0;
 }
 
-#tempSliderButton {
-  position: absolute;
-  z-index: 100;
-  width: 100px;
-  height: 100px;
-  background-color: red;
+#page-buttons {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 500;
 }
 
-#pageTitle p {
+#page-buttons #prevPage, #page-buttons #nextPage {
+  visibility: visible;
+  position: absolute;
+  cursor: pointer;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  border-radius: 0 10px 10px 0;
+  color: seashell;
+  font-weight: bold;
+  font-size: 2em;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  top: 50%;
+  opacity: 20%;
+}
+
+#page-buttons #prevPage:hover, #page-buttons #nextPage:hover {
+  background-color: rgba(255, 255, 255, 0.212);
+}
+
+#page-buttons #prevPage:hover {
+  color: #C85700;
+  opacity: 100%;
+}
+
+#page-buttons #nextPage {
+  border-radius: 3px 0 0 3px;
+  right: 0;
+}
+
+#page-buttons #nextPage:hover {
+  color: #C85700;
+  opacity: 100%;
+}
+
+#pageTitleContainer p {
   font-weight: bold;
   font-size: 18rem !important;
   text-transform: uppercase;
@@ -108,13 +150,13 @@ details[open] summary:before {
 }
 
 .projectTitle h2 {
-  font-weight: 500;
+  font-weight: 400;
   color: #7a7a7a;
 }
 
 .projectDescription {
   font-weight: 300;
-  font-size: .9vw;
+  font-size: 1.1em;
   line-height: 1.1em;
   color: #7a7a7a;
 }
@@ -146,7 +188,7 @@ details[open] summary:before {
 
 .additionalInformation {
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: #7a7a7a;
 }
 
@@ -258,13 +300,13 @@ body #container {
   height: 370px;
 }
 
-#header #pageTitle {
+#header #pageTitleContainer {
   position: relative;
   -ms-grid-column: 2;
       grid-column-start: 2;
 }
 
-#header #pageTitle p {
+#header #pageTitleContainer p {
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -289,50 +331,85 @@ footer {
   background-color: #1f1f1f;
 }
 
-#project-1 {
-  padding-top: 145px;
+.project-1-layout, #Animation #project-1, #Computational #project-1, #Programming #project-1 {
+  padding-top: 145px !important;
 }
 
-#project-1 .projectDescription {
+.project-1-layout .projectDescription, #Animation #project-1 .projectDescription, #Computational #project-1 .projectDescription, #Programming #project-1 .projectDescription {
   max-height: 100%;
   position: absolute !important;
   bottom: 0 !important;
 }
 
-#project-2 {
-  color: #2b2b2b;
-  background-color: #b5b5b5;
+.project-2-layout, #Computational #project-2, #Programming #project-2 {
   padding-top: 100px;
 }
 
-#project-2 .projectTitle {
+.project-2-layout .projectTitle, #Computational #project-2 .projectTitle, #Programming #project-2 .projectTitle {
   text-align: right;
 }
 
-#project-2 .topContent {
+.project-2-layout .topContent, #Computational #project-2 .topContent, #Programming #project-2 .topContent {
   -ms-grid-columns: .25fr .75fr !important;
       grid-template-columns: .25fr .75fr !important;
 }
 
-#project-2 .topContent img {
+.project-2-layout .topContent img, #Computational #project-2 .topContent img, #Programming #project-2 .topContent img {
   -ms-grid-column: 2 !important;
       grid-column-start: 2 !important;
 }
 
-#project-2 .topContent .projectDescription {
+.project-2-layout .topContent .projectDescription, #Computational #project-2 .topContent .projectDescription, #Programming #project-2 .topContent .projectDescription {
   -ms-grid-column: 1 !important;
       grid-column-start: 1 !important;
+  padding-left: 0;
 }
 
-#project-2 .topContent .projectDescription .descriptionTitle {
-  color: #2b2b2b;
+.project-2-layout .bottomContent details summary:hover:after, #Computational #project-2 .bottomContent details summary:hover:after, #Programming #project-2 .bottomContent details summary:hover:after {
+  color: #C85700;
 }
 
-#project-2 .bottomContent details {
-  color: #2b2b2b;
+.project-3-layout, #Programming #project-3 {
+  padding-top: 145px !important;
 }
 
-#project-2 .bottomContent details summary:before {
-  color: #2b2b2b;
+.project-3-layout .projectDescription, #Programming #project-3 .projectDescription {
+  max-height: 100%;
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+#Animation details summary:after {
+  display: none;
+}
+
+#Computational #project-2 {
+  color: #2b2b2b !important;
+  background-color: #b5b5b5 !important;
+}
+
+#Programming #project-1 details summary:after {
+  display: none;
+}
+
+#Programming #project-2 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#Programming #project-2 .contentMiddle {
+  border-style: solid;
+  padding: 5px;
+  padding-bottom: 20px;
+  border-width: 1px;
+  border-color: rgba(255, 245, 238, 0.116);
+}
+
+#Programming #project-3 {
+  padding-top: 50px;
+}
+
+#Programming #project-3 details summary:after {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

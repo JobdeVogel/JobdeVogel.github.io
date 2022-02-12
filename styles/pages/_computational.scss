@@ -1,0 +1,15 @@
+#Computational{
+    // Move top project down
+    #project-1{
+        @extend .project-1-layout;
+
+    }
+    
+    #project-2{
+        @extend .project-2-layout;
+
+        color: $textColorAlternative !important;
+        background-color: $backgroundColorAlternative !important;
+    }
+    
+}

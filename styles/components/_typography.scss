@@ -1,4 +1,4 @@
-#pageTitle{
+#pageTitleContainer{
     p {
         font-weight: bold;
         font-size: 18rem !important;
@@ -20,14 +20,14 @@
     }
 
     h2{
-        font-weight: 500;
+        font-weight: 400;
         color: $textColorAlternativeLight;
     }
 }
 
 .projectDescription{
     font-weight: 300;
-    font-size: .9vw;
+    font-size: 1.1em;
     line-height: 1.1em;
     color: $textColorAlternativeLight;
 
@@ -59,7 +59,7 @@
 
 .additionalInformation{
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: $textColorAlternativeLight;
 }
 

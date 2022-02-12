@@ -1,0 +1,1 @@
+For all images, make a div that keeps the same size, so that the additional information is easier to scale.

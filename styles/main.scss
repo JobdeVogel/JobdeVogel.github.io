@@ -7,7 +7,7 @@
 @import "./components/carousels";
 @import "./components/details";
 @import "./components/scrollbar";
-@import "./components/sliderButtons";
+@import "./components/pageButtons";
 @import "./components/typography";
 
 //Base style
@@ -22,4 +22,11 @@
 @import "./projects/project1";
 @import "./projects/project2";
 @import "./projects/project3";
-@import "./projects/project4";
+// @import "./pages/project4";
+
+
+//Specific page styles
+@import "./pages/animation";
+@import "./pages/computational";
+@import "./pages/programming";
+@import "./pages/buildingTechnology";
