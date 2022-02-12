@@ -26,16 +26,17 @@ function Exeptions(carouselName, n){
     // Change the text if carouselName 'personalProgramming'
 }
 
-// MANUAL OVERRIDE
-// Add new carousels here!
-var slideIndices = {
-    'personalProgramming': 1,
-    'buckylab': 1,
-    'on4': 1,
-    'on6': 1,
-};
+// Dict that saves carousel indices
+var slideIndices = [];
 
-showSlide('personalProgramming', slideIndices['personalProgramming']);
-showSlide('buckylab', slideIndices['buckylab']);
-showSlide('on4', slideIndices['on4']);
-showSlide('on6', slideIndices['on6']);
+// Get all carousel names
+var carousels = document.getElementsByClassName("carousel");
+
+// For each carousel, add index to slideIndices dict
+// and display first image using showSlide
+for (i = 0; i < carousels.length; i++){
+    carouselName = carousels[i].id;
+
+    slideIndices[carouselName] = 1;
+    showSlide(carouselName, slideIndices[carouselName]);
+}
