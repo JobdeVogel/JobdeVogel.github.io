@@ -12,6 +12,9 @@ function ShowPage(pageIndex){
     currentPageIndex = pageIndex;
     pageArray[pageIndex].style.display = 'block';
     titleArray[pageIndex].style.display = 'block';
+
+    // See bottom of script
+    Exceptions(pageIndex);
 }
 
 function ShowNextPage(){
@@ -32,4 +35,19 @@ function ShowPreviousPage(){
     ShowPage(currentPageIndex);
 }
 
-ShowPage(2);
+
+// Exceptions
+// If the page is the contactpage, make the footer absolute and put on the bottom of viewport
+function Exceptions(pageIndex){
+    if (pageIndex == titleArray.length - 1){
+        document.querySelector('footer').style.position = 'absolute';
+        document.querySelector('footer').style.right = '5px';
+        document.querySelector('footer').style.bottom = '1px';
+    } else {
+        document.querySelector('footer').style.position = 'relative';
+        document.querySelector('footer').style.right = '0px';
+        document.querySelector('footer').style.bottom = '0px';
+    }
+}
+
+ShowPage(0);

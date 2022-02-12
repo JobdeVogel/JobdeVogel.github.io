@@ -1,1 +1,39 @@
-//
+.carousel{
+    position: relative;
+
+    .slide {
+        cursor: pointer;
+        display: none;
+        transition: 1s ease;
+        filter: opacity(75%);
+
+        &:hover{
+            filter:opacity(100%);
+        }
+    }
+
+    .prev, .next {
+        position: absolute;
+        cursor: pointer;
+        user-select: none;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        border-radius: 0 5px 5px 0;    
+        color: $textColorAlternative;
+        font-weight: bold;
+        font-size: 30px;
+        transition: 0.6s ease;
+        top: 50%;
+
+        &:hover{
+            color: $markerColor;
+            background-color: $buttonColor;
+        }
+    }
+
+    .next {
+        border-radius: 5px 0 0 5px;
+        right: 0;
+    }
+}

@@ -1,0 +1,19 @@
+#About{
+    // Move top project down
+    #project-1{
+        @extend .project-1-layout;
+
+        .projectDescription{
+            top: 100px !important;
+        }
+
+        // Remove the extension button
+        details{
+            summary{
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

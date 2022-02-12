@@ -20,11 +20,11 @@ details{
         }
 
         &:hover:after{
-            color: #C85700;
+            color: $markerColor;
         }
     }
 }
 
 details[open] summary:after{
-    transform: translateX(-50%) rotate(-90deg);
+    content: "\276E";
 }

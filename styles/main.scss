@@ -4,7 +4,6 @@
 
 //Components
 @import "./components/buttons";
-@import "./components/carousels";
 @import "./components/details";
 @import "./components/scrollbar";
 @import "./components/pageButtons";
@@ -29,4 +28,9 @@
 @import "./pages/animation";
 @import "./pages/computational";
 @import "./pages/programming";
+@import "./pages/architecture";
 @import "./pages/buildingTechnology";
+@import "./pages/about";
+@import "./pages/contact";
+
+@import "./components/carousels";

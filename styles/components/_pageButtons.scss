@@ -13,7 +13,7 @@
         margin-top: -22px;
         padding: 16px;
         border-radius: 0 10px 10px 0;    
-        color: seashell;
+        color: $textColorBase;
         font-weight: bold;
         font-size: 2em;
         transition: 0.5s ease;
@@ -21,23 +21,23 @@
         opacity: 20%;
 
         &:hover{
-            background-color: rgba(255, 255, 255, 0.212);
+            background-color: $buttonColor;
         }
     }
 
     #prevPage{
         &:hover{
-            color: #C85700;
+            color: $markerColor;
             opacity: 100%;
         }
     }
 
     #nextPage{
-        border-radius: 3px 0 0 3px;
+        border-radius: 10px 0 0 10px;
         right: 0;
 
         &:hover{
-            color: #C85700;
+            color: $markerColor;
             opacity: 100%;
         }
     }

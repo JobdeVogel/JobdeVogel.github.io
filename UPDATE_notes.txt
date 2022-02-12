@@ -4,3 +4,19 @@ TO ADD INFORMATION TO A PAGE:
 - Use the project 3 or 4 template to add a project
 - Change the display style of the project in the html
 - Update the styles in the _project3.scss and _project4.scss for the specific topic
+
+ADD A CAROUSEL
+    HTML:
+        - Copy the carousel section code to the location
+        - Change the id in the first line
+        - Change the image sources
+        - Change the id in the onclick function arguments
+
+    JS:
+        - Open the slideButtons.js
+        - Add the carousel id to the dictionary in line 27
+        - Execute the ShowSlide function for this carousel with the correct id
+
+ADD IMAGE TO CAROUSEL:
+    HTML:
+        - Add a slide div with new sourcefile to the carousel div

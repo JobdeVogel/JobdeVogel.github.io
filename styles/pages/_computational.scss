@@ -10,6 +10,27 @@
 
         color: $textColorAlternative !important;
         background-color: $backgroundColorAlternative !important;
-    }
+
+        .projectTitle{
+            h2{
+                color: $textColorAlternative;
+            }
+        }
     
+        .descriptionTitle{
+            color: $textColorAlternative;
+        }
+    
+        details{
+            summary{
+                &:after {
+                    color: $textColorAlternative;
+                }
+    
+                &:hover:after{
+                    color: #C85700;
+                }
+            }
+        }
+    }
 }

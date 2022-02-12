@@ -7,7 +7,7 @@
     <meta name="author" content="Job de Vogel">
     <meta http-equiv="Cache-control" content="public">
     <title>Portfolio Job de Vogel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -470,7 +470,24 @@
                                 <h2>Some of my personal, less serious, programming projects</h2>
                             </div>
                             <div class="topContent">
-                                <img src="data/images/moesoe_web.jpg" alt="">
+                                <div class="carousel" id="personalProgramming">    
+                                    <div class="slide">
+                                        <img src="data/images/moesoe_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/screen_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/diesgame_web.jpg">
+                                    </div>
+                                    
+                                    <div>
+                                        <a class="prev" onclick="changeSlide('personalProgramming', -1)">&#10094;</a>
+                                        <a class="next" onclick="changeSlide('personalProgramming', 1)">&#10095;</a>
+                                    </div>
+                                </div>
                                 <div class="projectDescription">
                                     <p class="descriptionTitle">Name</p>
                                     <p>Choice generator</p><br>
@@ -490,7 +507,7 @@
                             </div>
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
-                                <details class="additionalInformation">Additional Information
+                                <details class="additionalInformation">
                                     <summary class="textAdditionalInformation">M.O.E.S.O.E. is an Android app that functions as a helpful decision tree. By giving some answers to simple questions, the app advises you what to do in a certain situation. This project was made after I noticed that friends had some problems making relatively simple choices.<br><br>This project was developed using the Kivy package for Python 3. Since I build this project in a very short period of time, the code was build quite unstructured. It was a nice experience in building a static app for Android and I know feel comfortable making a more serious app in the future.</summary>
                                 </details>
                                 <div class="moreInfoButton">
@@ -555,7 +572,25 @@
                                 <h2>Design for a sport school with high circularity ambitions</h2>
                             </div>
                             <div class="topContent">
-                                <img src="data/images/on6_1_web.jpg" alt="">
+                                <div class="carousel" id="on6">    
+                                    <div class="slide">
+                                        <img src="data/images/on6_1_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/on6_2_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/on6_3_web.jpg">
+                                    </div>
+                                    
+                                    <div>
+                                        <a class="prev" onclick="changeSlide('on6', -1)">&#10094;</a>
+                                        <a class="next" onclick="changeSlide('on6', 1)">&#10095;</a>
+                                    </div>
+                                </div>
+                                
                                 <div class="projectDescription">
                                     <p class="descriptionTitle">Name</p>
                                     <p>Circulair 010</p><br>
@@ -613,13 +648,29 @@
                                     <p class="software">Autodesk Revit, Photoshop</p>
                                 </div>
 
-                                <img src="data/images/on4_1_web.jpg" alt="">
+                                <div class="carousel" id="on4">    
+                                    <div class="slide">
+                                        <img src="data/images/on4_1_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/on4_2_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/on4_3_web.jpg">
+                                    </div>
+                                    
+                                    <div>
+                                        <a class="prev" onclick="changeSlide('on4', -1)">&#10094;</a>
+                                        <a class="next" onclick="changeSlide('on4', 1)">&#10095;</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">Combining different types of people in one building project can be difficult, especially in renovation projects. In my second year of my Bachelor of Architecture, I re-designed a building block in Amsterdam.<br><br>After finishing this project, I decided to spend one year on working for the student board of 'Stichting Herontwikkeling tot Studentenhuisvesting'. Within this year, I really leaned the ins and outs of designing and especially managing buildings with diverse groups of people living in it.</summary>
-                                    <p class="textAdditionalInformation">This project is my best example of working in Autodesk Revit. I completely built this project in 3D first in Revit and afterwards used Photoshop to give it an artistic interpretation.</p>
+                                    <summary class="textAdditionalInformation">Combining different types of people in one building project can be difficult, especially in renovation projects. In my second year of my Bachelor of Architecture, I re-designed a building block in Amsterdam.<br><br>After finishing this project, I decided to spend one year on working for the student board of 'Stichting Herontwikkeling tot Studentenhuisvesting'. Within this year, I really leaned the ins and outs of designing and especially managing buildings with diverse groups of people living in it.<br><br>This project is my best example of working in Autodesk Revit. I completely built this project in 3D first in Revit and afterwards used Photoshop to give it an artistic interpretation.</summary>
                                 </details>
                             </div>
                         </div>
@@ -722,7 +773,25 @@
                                 <h2>Design for a sun shading double curved facades</h2>
                             </div>
                             <div class="topContent">
-                                <img src="data/images/sun_shading_web.jpg" alt="">
+                                <div class="carousel" id="buckylab">    
+                                    <div class="slide">
+                                        <img src="data/images/sun_shading_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/on4_2_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/on4_3_web.jpg">
+                                    </div>
+                                    
+                                    <div>
+                                        <a class="prev" onclick="changeSlide('buckylab', -1)">&#10094;</a>
+                                        <a class="next" onclick="changeSlide('buckylab', 1)">&#10095;</a>
+                                    </div>
+                                </div>
+
                                 <div class="projectDescription">
                                     <p class="descriptionTitle">Name</p>
                                     <p>LEAF Sun Shading</p><br>
@@ -924,10 +993,10 @@
                             <div class="bottomContent">
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
-                                    <summary class="textAdditionalInformation">My name is Job, I am 24 year young, living in Delft, the Netherlands. Since 2016 I have been studying to become a <b style='font-size: 1.2em'>Building Engineer</b>. Within the building environment, I belief there still is a lot of potential to implement complex state-of-the-art techniques, like big data, Artificial Intelligence, evaluation and optimization to solve social problems and increase sustainability.<br><br>In the future, I hope to become an engineer that makes a <b style='font-size: 1.2em'>difference</b>. By using the skills and talents that have been given to me, I am striving to become someone that makes this world a happier place for everyone.</summary>
-                                    <p class="textAdditionalInformation">In my free time outside of studying, I enjoy making music (playing the saxophone and piano), skating, spending time with friends, discussing higher life questions, and sometimes work on <b style='font-size: 1.2em'>ridiculously stupid projects</b> that take way too much time, but always give people a smile on their faces.<br><br>
+                                    <summary class="textAdditionalInformation">My name is Job, I am 24 year young, living in Delft, the Netherlands. Since 2016 I have been studying to become a <b style='font-size: 1.2em'>Building Engineer</b>. Within the building environment, I belief there still is a lot of potential to implement complex state-of-the-art techniques, like big data, Artificial Intelligence, evaluation and optimization to solve social problems and increase sustainability.<br><br>In the future, I hope to become an engineer that makes a <b style='font-size: 1.2em'>difference</b>. By using the skills and talents that have been given to me, I am striving to become someone that makes this world a happier place for everyone.<br><br>In my free time outside of studying, I enjoy making music (playing the saxophone and piano), skating, spending time with friends, discussing higher life questions, and sometimes work on <b style='font-size: 1.2em'>ridiculously stupid projects</b> that take way too much time, but always give people a smile on their faces.<br><br>
                                         As <b style='font-size: 1.2em'>Christian</b>, I am a follower of Jesus Christ. I belief we have a father in heaven who cares about us and loves us. He gave us a mission to take care of this world, and although we may fail doing that again and again, we can always come back to him.<br><br>
-                                        In holidays, I love to spend time doing <b style='font-size: 1.2em'>voluntary work</b> on campings and in the neighborhood, spending time with children sporting and playing, challenging them to think deeper about life and their convictions, and telling them about my own. In autumn 2021, I have been team member of the Student Alpha Team in Delft.</p>
+                                        In holidays, I love to spend time doing <b style='font-size: 1.2em'>voluntary work</b> on campings and in the neighborhood, spending time with children sporting and playing, challenging them to think deeper about life and their convictions, and telling them about my own. In autumn 2021, I have been team member of the Student Alpha Team in Delft.</p></summary>
+                                
                                 </details>
                                 <div class="moreInfoButton">
                                     <button onclick=" window.open('data/pdf/2021_21_04 Curriculum Vitae.pdf', '_blank', rel='noopener noreferrer')">Curriculum Vitae</button>
@@ -1230,6 +1299,7 @@
     </div>
 </body>
 <script src="./scripts/pageButtons.js"></script>
+<script src="./scripts/slideButtons.js"></script>
 <script>
     console.log(window.screen.width);
     console.log(window.screen.height);
