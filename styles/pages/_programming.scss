@@ -40,6 +40,51 @@
                 }
             }
         }
-    }
+
+        // .projectDescription{
+        //     .name{
+        //         @include replaceText('Compliments Generator');
+        //     }
     
+        //     .software{
+        //         @include replaceText('Python, Arduino');
+        //     }
+        // }
+    
+        // .textAdditionalInformation{
+        //     @include replaceText('Hi');
+        // }
+    }
+}
+
+.personal-project-2{
+    .projectDescription{
+        .name{
+            @include replaceText('Compliments Generator');
+        }
+
+        .software{
+            @include replaceText('Python, Arduino');
+        }
+    }
+
+    .textAdditionalInformation{
+        @include replaceText('Hi');
+    }
+}
+
+.personal-project-3{
+    .projectDescription{
+        .name{
+            @include replaceText('Compliments Generator');
+        }
+
+        .software{
+            @include replaceText('Python, Arduino');
+        }
+    }
+
+    .textAdditionalInformation{
+        @include replaceText('Hi');
+    }
 }

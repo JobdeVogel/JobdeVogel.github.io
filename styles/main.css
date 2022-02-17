@@ -169,13 +169,12 @@ details[open] summary:after {
   margin-top: -22px;
   padding: 16px;
   border-radius: 0 10px 10px 0;
-  color: #b5b5b5;
+  color: seashell;
   font-weight: bold;
   font-size: 2em;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   top: 50%;
-  opacity: 20%;
 }
 
 #page-buttons #prevPage:hover, #page-buttons #nextPage:hover {
@@ -501,6 +500,78 @@ footer {
 
 #Programming #project-3 details summary:after {
   display: none;
+}
+
+.personal-project-2 .projectDescription .name {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-2 .projectDescription .name::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  content: "Compliments Generator";
+}
+
+.personal-project-2 .projectDescription .software {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-2 .projectDescription .software::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  content: "Python, Arduino";
+}
+
+.personal-project-2 .textAdditionalInformation {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-2 .textAdditionalInformation::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  content: "Hi";
+}
+
+.personal-project-3 .projectDescription .name {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-3 .projectDescription .name::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  content: "Compliments Generator";
+}
+
+.personal-project-3 .projectDescription .software {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-3 .projectDescription .software::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  content: "Python, Arduino";
+}
+
+.personal-project-3 .textAdditionalInformation {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-3 .textAdditionalInformation::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  content: "Hi";
 }
 
 #Architecture #project-1 .projectDescription {

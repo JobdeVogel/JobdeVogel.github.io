@@ -22,3 +22,15 @@
     display: grid;
     grid-template-columns: $fractions;
 }
+
+@mixin replaceText($text) {
+    visibility: hidden;
+    position: relative;
+    
+    &::before{
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        content: $text;
+    }
+}
