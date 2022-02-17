@@ -8,13 +8,15 @@ const titleArray = document.getElementById("pageTitleContainer").querySelectorAl
 var currentPageIndex = 0;
 
 function ShowPage(pageIndex){
-    window.scrollTo(0, 0);
+    pageArray[currentPageIndex].style.display = 'none';
+    titleArray[currentPageIndex].style.display = 'none';
     currentPageIndex = pageIndex;
     pageArray[pageIndex].style.display = 'block';
     titleArray[pageIndex].style.display = 'block';
 
     // See bottom of script
     Exceptions(pageIndex);
+    window.scrollTo(0, 0);
 }
 
 function ShowNextPage(){
@@ -49,5 +51,6 @@ function Exceptions(pageIndex){
         document.querySelector('footer').style.bottom = '0px';
     }
 }
+
 
 ShowPage(0);

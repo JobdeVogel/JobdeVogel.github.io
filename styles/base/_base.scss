@@ -4,17 +4,15 @@ html{
 }
 
 body {
-    position: relative;
+    // position: relative;
     margin: 0px;
-    overflow-y: -100px;
     color: $textColorBase;
+    height: 100%;
+    background-color: $backgroundColorBase;
+    overflow-x: hidden;
 
     #container{
         font-family: "Roboto";
         position: relative;
-        height: 100vh;
-        width: 100vw;
-        background-color: $backgroundColorBase;
-        overflow-x: hidden;
     }
 }

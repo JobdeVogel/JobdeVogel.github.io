@@ -1,15 +1,14 @@
 #header{
     position: absolute;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: inherit;
     background-color: $headerColor;
     height: $headerHeight;
     
     #pageTitleContainer{
         position: relative;
         grid-column-start: 2;
-
         p{
             @include unselectableText;
             position: absolute;

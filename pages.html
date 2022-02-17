@@ -7,7 +7,7 @@
     <meta name="author" content="Job de Vogel">
     <meta http-equiv="Cache-control" content="public">
     <title>Portfolio Job de Vogel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload" as="style">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -17,7 +17,49 @@
             <div id="nextPage" onclick="ShowNextPage()">&#10095;</div>
         </div>
 
-        <div id="navbar"></div>
+        <div id = 'nb' class="navbar-top">
+            <div id = 'nc' class="nav-container">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Portfolio Job de Vogel</a>
+                    </div>
+                </div>
+
+                <div class="center-side">
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en', '_blank', rel='noopener noreferrer')">
+                            LinkedIn
+                        </button>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('https://github.com/JobdeVogel', '_blank', rel='noopener noreferrer')">
+                            Github
+                        </button>
+                        
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('data/pdf/2021_21_04 Curriculum Vitae.pdf', '_blank', rel='noopener noreferrer')">
+                            CV
+                        </button>
+                    </div>
+
+                    <div class="nav-link-wrapper" id="about-button">
+                        <button class="button" onclick="ShowPage(5)">
+                            About
+                        </button>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <div class="nav-link-wrapper" id="contact-button">
+                        <a onclick="ShowPage(6)">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="header">
             <div id="pageTitleContainer">
                 <p class="pageTitle" style="display: none;">Animation</p>
@@ -31,7 +73,8 @@
         </div>
         <div id="contentContainer">
             <!------------------------------------------------------------------------------>
-            <div id='Animation' class='page' style="display: none;">
+            <div id='Animation' class='page' style="display: none;">        
+
                 <div id="project-1" class="project">
                     <div class="projectContainer">
                         <div class="contentMiddle">
@@ -1299,6 +1342,7 @@
     </div>
 </body>
 <script src="./scripts/pageButtons.js"></script>
+<script src="./scripts/navbar.js"></script>
 <script src="./scripts/slideButtons.js"></script>
 <script>
     console.log(window.screen.width);
