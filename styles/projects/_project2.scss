@@ -8,14 +8,17 @@
     }
 
     .topContent{
-        grid-template-columns: .25fr .75fr !important;
+        grid-template-columns: var(--gridDistributionAlternative) !important;
+        grid-template-rows: var(--rowDistributionAlternative);
 
         img{
-            grid-column-start: 2 !important;
+            grid-column-start: var(--imageColumn) !important;
+            grid-row-start: 1;
         }
 
         .projectDescription{
             grid-column-start: 1 !important;
+            grid-row-start: var(--descriptionRow);
             padding-left: 0;
         }
     }

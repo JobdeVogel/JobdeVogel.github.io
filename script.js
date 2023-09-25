@@ -105,63 +105,6 @@ slides[slideIndex-1].style.display = "block";
 dots[slideIndex-1].className += " active";
 }
 
-/*********** CAROUSEL ON6 *************/
-var slideIndexON6 = 1;
-showSlidesON6(slideIndexON6);
-
-// Next/previous controls
-function plusSlidesON6(n) {
-showSlidesON6(slideIndexON6 += n);
-}
-
-// Thumbnail image controls
-function currentSlideON6(n) {
-showSlidesON6(slideIndexON6 = n);
-}
-
-function showSlidesON6(n) {
-var iON6;
-var slidesON6 = document.getElementsByClassName("mySlides-on6");
-
-if (n > slidesON6.length) {slideIndexON6 = 1};
-if (n < 1) {slideIndexON6 = slidesON6.length};
-
-for (iON6 = 0; iON6 < slidesON6.length; iON6++) {
-    slidesON6[iON6].style.display = "none";
-}
-
-slidesON6[slideIndexON6-1].style.display = "block";
-}
-
-
-/*********** CAROUSEL ON4 *************/
-var slideIndexON4 = 1;
-showSlidesON4(slideIndexON4);
-
-// Next/previous controls
-function plusSlidesON4(n) {
-showSlidesON4(slideIndexON4 += n);
-}
-
-// Thumbnail image controls
-function currentSlideON4(n) {
-showSlidesON4(slideIndexON4 = n);
-}
-
-function showSlidesON4(n) {
-var iON4;
-var slidesON4 = document.getElementsByClassName("mySlides-on4");
-
-if (n > slidesON4.length) {slideIndexON4 = 1};
-if (n < 1) {slideIndexON4 = slidesON4.length};
-
-for (iON4 = 0; iON4 < slidesON4.length; iON4++) {
-    slidesON4[iON4].style.display = "none";
-}
-
-slidesON4[slideIndexON4-1].style.display = "block";
-}
-
 /********** SHOW SOFTWARE INFORMATION ***********/
 addInformation('questions-experienced', 'answers-experienced', 'visible', 'invisible');
 addInformation('questions-starter', 'answers-starter', 'visible', 'invisible');
@@ -189,7 +132,7 @@ function addInformation(input, result, visibleStyle, invisibleStyle){
                 answers.children[i].classList.remove(invisibleStyle);
                 answers.children[i].classList.add(visibleStyle);
 
-                questions.children[i].style.transition = 'font-weight .2s';
+                questions.children[i].style.transition = 'font-weight .5s';
                 questions.children[i].style.fontWeight = '500';
                 questions.children[i].style.textDecoration = 'none';
 
@@ -203,7 +146,7 @@ function addInformation(input, result, visibleStyle, invisibleStyle){
                 answers.children[i].classList.remove(visibleStyle);
                 answers.children[i].classList.add(invisibleStyle);
 
-                questions.children[i].style.transition = 'font-weight .2s';
+                questions.children[i].style.transition = 'font-weight .5s';
                 questions.children[i].style.fontWeight = '100';
 
                 tempInfoVisible = false;
@@ -261,94 +204,7 @@ function addInformation(input, result, visibleStyle, invisibleStyle){
             }
         })
     }
-}
-
-/************** PAGES ***************/
-const pages = ['.about-page-container', '.anim-page-container', '.comp-page-container', '.prog-page-container', '.arch-page-container', '.contact-page-container', '.about-page-container'];
-const pageOpenButtons = ['about-button', 'anim-button', 'comp-button', 'prog-button', 'arch-button', 'contact-button', 'image-button'];
-const pageCloseButtons = ['.about-close-button', '.anim-close-button', '.comp-close-button', '.prog-close-button', '.arch-close-button', '.contact-close-button', '.about-close-button'];
-const aboutBackgrounds = ['.about-background', '.anim-background', '.comp-background', '.prog-background', '.arch-background', '.contact-background', '.about-background'];
-
-var visiblePage;
-var visibleIndex;
-
-pages.forEach((page, index) =>{
-    const pageDiv = document.querySelector(page);
-    const pageOpenButton = document.getElementById(pageOpenButtons[index]);
-    const pageCloseButton = document.querySelector(pageCloseButtons[index]);
-    const pageBackground = document.querySelector(aboutBackgrounds[index]);
-    const pageSwipeButtons = document.getElementById('page-buttons');
-    const backgroundScroll = document.querySelector('.container');
-
-    pageOpenButton.addEventListener("click", function(){
-        pageDiv.style.display = 'block';
-        pageSwipeButtons.style.display = 'block';
-        visiblePage = pageDiv;
-        visibleIndex = index;
-
-        // Disable scroll of background page
-        backgroundScroll.style.overflow = 'hidden';
-    });
-
-    pageCloseButton.addEventListener("click", function(){
-        pageDiv.style.display = 'none';
-        pageSwipeButtons.style.display = 'none';
-
-        // Enable scroll of background page
-        backgroundScroll.style.overflow = 'initial';
-    });
-
-    pageBackground.addEventListener("click", function(){
-        pageDiv.style.display = 'none';
-        pageSwipeButtons.style.display = 'none';
-
-        // Enable scroll of background page
-        backgroundScroll.style.overflow = 'initial';
-    });
-});
-
-/********** NEXT/PREVIOUS PAGE ************ */
-const nextPage = document.querySelector('.nextPage');
-const prevPage = document.querySelector('.prevPage');
-
-// Slices are added to skip the last about page, related to my personal image
-nextPage.addEventListener("click", function(){
-    visiblePage.style.display = 'none';
-    document.querySelector(pages.slice(0, -1)[(visibleIndex + 1) % pages.slice(0, -1).length]).style.display = 'block';
-    visiblePage = document.querySelector(pages.slice(0, -1)[(visibleIndex + 1) % pages.slice(0, -1).length]);
-    visibleIndex = (visibleIndex + 1) % pages.slice(0, -1).length;
-});
-
-prevPage.addEventListener("click", function(){
-    visiblePage.style.display = 'none';
-    var tempIndex = visibleIndex - 1;
-
-    if (tempIndex < 0){
-        tempIndex = pages.slice(0, -1).length - 1;
-    }
-
-    document.querySelector(pages.slice(0, -1)[tempIndex]).style.display = 'block';
-    visiblePage = document.querySelector(pages.slice(0, -1)[tempIndex]);
-    visibleIndex = tempIndex;
-});
-
-/**********************/
-var fullscreen = false;
-function fullscreenImage(image, position='fixed'){
-    background = document.querySelector(".fullscreen-img");
-    var im = image;
-
-    if(fullscreen == false){
-        background.style.backgroundImage = 'url(' + im + ')';
-        background.style.display =  'block';
-        background.style.position = position;
-        fullscreen = true;
-    } else{
-        background.style.backgroundImage = 'none';
-        background.style.display = 'none';
-        fullscreen = false;
-    }
-};
+} 
 
 /**********************/
 function setCookie(name,value,days) {
@@ -377,29 +233,56 @@ function lightMode(){
     const switchButton = document.querySelector('.switch-button');
 
     let darkMode = getCookie('darkMode');
-    // darkMode = 'true';
+
+    /* DARK VALUES COLORS */
+    dark_backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_backgroundColor');
+    dark_mainTextColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_mainTextColor');
+    dark_navbarColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_navbarColor');
+    dark_portfolioBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_portfolioBackgroundColor');
+    dark_timelineBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_timelineBackgroundColor');
+    dark_softwareBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_softwareBackgroundColor');
+    dark_buttonTextColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_buttonTextColor');
+    dark_buttonBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--dark_buttonBackgroundColor');
+
+    /* LIGHT VALUES COLORS */
+    light_backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light_backgroundColor');
+    light_mainTextColor = getComputedStyle(document.documentElement).getPropertyValue('--light_mainTextColor');
+    light_navbarColor = getComputedStyle(document.documentElement).getPropertyValue('--light_navbarColor');
+    light_portfolioBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light_portfolioBackgroundColor');
+    light_timelineBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light_timelineBackgroundColor');
+    light_softwareBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light_softwareBackgroundColor');
+    light_buttonTextColor = getComputedStyle(document.documentElement).getPropertyValue('--light_buttonTextColor');
+    light_buttonBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--light_buttonBackgroundColor');
 
     if (darkMode == 'true'){
         // Set to light modus
         switchButton.style.transform = "translateX(0%)";
-        document.documentElement.style.setProperty('--color1', '#EAEAEA'); //main background color
-        document.documentElement.style.setProperty('--color2', '#2C2C2C'); //main text color
-        document.documentElement.style.setProperty('--color3', '#2C2C2C'); //navbar text color
-        document.documentElement.style.setProperty('--color4', '#DFDDDD'); //portfolio background color
-        document.documentElement.style.setProperty('--color5', '#B5B4B4'); //timeline background color
-        document.documentElement.style.setProperty('--color6', 'rgb(110, 111, 133)'); //software explanations background color
+
+        // CHANGE THE COLORS HERE TO LIGHT
+        document.documentElement.style.setProperty('--backgroundColor', light_backgroundColor);
+        document.documentElement.style.setProperty('--mainTextColor', light_mainTextColor);
+        document.documentElement.style.setProperty('--navbarColor', light_navbarColor);
+        document.documentElement.style.setProperty('--portfolioBackgroundColor', light_portfolioBackgroundColor);
+        document.documentElement.style.setProperty('--timelineBackgroundColor', light_softwareBackgroundColor);
+        document.documentElement.style.setProperty('--softwareBackgroundColor', light_buttonTextColor);
+        document.documentElement.style.setProperty('--buttonTextColor', light_buttonTextColor);
+        document.documentElement.style.setProperty('--buttonBackgroundColor', light_buttonBackgroundColor);
         
         // Light modus is on, dark modus is off
         setCookie('darkMode', 'false', 1)
     }else{
         // Set to dark modus
         switchButton.style.transform = "translateX(122%)";
-        document.documentElement.style.setProperty('--color1', '#242424');
-        document.documentElement.style.setProperty('--color2', 'seashell');
-        document.documentElement.style.setProperty('--color3', '#C6C6C6');
-        document.documentElement.style.setProperty('--color4', '#1C1C1C');
-        document.documentElement.style.setProperty('--color5', '#333333');
-        document.documentElement.style.setProperty('--color6', 'rgb(110, 111, 133)');
+
+        //CHANGE THE COLORS HERE TO DARK
+        document.documentElement.style.setProperty('--backgroundColor', dark_backgroundColor);
+        document.documentElement.style.setProperty('--mainTextColor', dark_mainTextColor);
+        document.documentElement.style.setProperty('--navbarColor', dark_navbarColor);
+        document.documentElement.style.setProperty('--portfolioBackgroundColor', dark_portfolioBackgroundColor);
+        document.documentElement.style.setProperty('--timelineBackgroundColor', dark_timelineBackgroundColor);
+        document.documentElement.style.setProperty('--softwareBackgroundColor', dark_softwareBackgroundColor);
+        document.documentElement.style.setProperty('--buttonTextColor', dark_buttonTextColor);
+        document.documentElement.style.setProperty('--buttonBackgroundColor', dark_buttonBackgroundColor);
         
         // Light modus is off, dark modus is on
         setCookie('darkMode', 'true', 1)
@@ -418,3 +301,4 @@ if(darkMode == 'false'){
     lightMode();
 }
 
+setCookie('page', '1', 1)

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="description" content="Portfolio Building Technology by Job de Vogel. Future building engineer and programmer. Master studet Building Technology at TU Delft University of Technology.">
+    <meta name="keywords" content="Building Technology, Architecture, TU Delft, Job de Vogel, Programming, Animation">
+    <meta name="author" content="Job de Vogel">
+    <meta http-equiv="Cache-control" content="public">
+    <title>Portfolio Job de Vogel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload" as="style">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>  
+    <div id="container">
+        <div id="page-buttons">
+            <div id="prevPage" onclick="window.location.href='animation.html';">&#10094;</div>
+            <div id="nextPage" onclick="window.location.href='programming.html';">&#10095;</div>
+        </div>
+
+        <div id = 'nb' class="navbar-top">
+            <div id = 'nc' class="nav-container">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Portfolio Job de Vogel</a>
+                    </div>
+                </div>
+
+                <div class="center-side">
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick="window.location.href='animation.html';">
+                            Portfolio
+                        </button>
+                    </div>
+                    
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en', '_blank', rel='noopener noreferrer')">
+                            LinkedIn
+                        </button>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('https://github.com/JobdeVogel', '_blank', rel='noopener noreferrer')">
+                            Github
+                        </button>
+                        
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('data/pdf/2021_21_04 Curriculum Vitae.pdf', '_blank', rel='noopener noreferrer')">
+                            CV
+                        </button>
+                    </div>
+
+                    <div class="nav-link-wrapper" id="about-button">
+                        <button class="button" onclick="window.location.href='about.html';">
+                            About
+                        </button>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <div class="nav-link-wrapper" id="contact-button">
+                        <a onclick="window.location.href='contact.html';">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="header">
+            <div id="pageTitleContainer">
+                <p class="pageTitle" style="display: none;">Computational&nbspDesign</p>
+            </div>
+        </div>
+        <div id="contentContainer">
+            <!------------------------------------------------------------------------------>
+            <div id='Computational' class='page'>
+                <div id="project-1" class="project">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>Hex World</h1>
+                                <h2>Stimulate outdoor activities through a virtual world</h2>
+                            </div>
+                            <div class="topContent">
+                                <img src="data/images/sphere_poster.jpg" alt="">
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>Hex World</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Job de Vogel</li>
+                                            <li class="Author">Jun Wen Loo</li>
+                                            <li class="Author">Kwan-Lin Wang</li>
+                                            <li class="Author">Thomas Lindemann</li>
+                                        </ul><br>
+                                    </div>
+
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2021</p><br>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">5 ECT (140 hours)</p><br>
+                                        <p class="descriptionTitle" style="display: none;">Render hours</p>
+                                        <p class="renderHours" style="display: none;">999<br></p>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">Strava, McNeel Rhino, Python, Grasshopper, Arduino</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">
+                                    <summary class="textAdditionalInformation">One of the main challenges of the COVID-19 lockdown for students in the Netherlands, was sitting behind a desk at home all day long. Corona makes our world smaller, but by sporting outside we can experience the world as a greater and more beautiful place. In this project, we created a planet creation visualization within a McNeel Rhino environment, that stimulates sporting in the physical world. <br><br>By using the Strava (sport app) API, it was possible to collect live geographical data and numerical data about our sporting activities and converted the data to a 2D map in Rhino using Python and Grasshopper. Next, this 2D data was mapped to a sphere. By developing a recursive algorithm in Python, I was able to create a 3D terrain that indicates the intensity of activities. Smaller objects on the sphere, like bonfires and trees, indicate special achievements, like breaking a record.</summary>
+                                    <p class="textAdditionalInformation">For this project we used several methods and techniques. Personally, I was responsible for guiding the team, because of my prior knowledge in (visual) programming. My main personal contributions are mentioned in the previous paragraph. Other teammates focused on converting our digital model to a fabrication model using Robots, and outputting the data using Arduino. Our project was graded with a 10/10.<br><br>
+                                        To visualize this project, we used McNeel Rhino as main interface. The data was collected using IronPython (expecially webscraping libraries). Using the PyFirmata Python 3 package I helped my teammates to convert the output to a physical Arduino output. The video on the left is a visualization of the recursive mountainization algorithm.</p>
+                                </details>
+                                <div class="moreInfoButton">
+                                    <button onclick=" window.open('https://sketchfab.com/3d-models/the-hex-world-673ff04e51074a0981a9286827c9c02d', '_blank', rel='noopener noreferrer')">Display in VR</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="project-2" class="project">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>Spatial Computing</h1>
+                                <h2>Optimized building based on dynamic space agents</h2>
+                            </div>
+                            
+                            <div class="topContent">
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>Urban Green City</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Job de Vogel</li>
+                                            <li class="Author">Victor Wernet</li>
+                                            <li class="Author">Ida Bølling Konsted</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2019</p>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">10 ECT (280 hours)</p><br>
+                                        <p class="descriptionTitle" style="display: none;">Render hours</p>
+                                        <p class="renderHours" style="display: none;">999<br></p>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">Houdini, SideFX, Python, C++, McNeel Rhino, Lumion,<br>Photoshop</p>
+                                    </div>
+                                </div>
+
+                                <img src="data/images/spatial_computing_web.jpg" alt="">
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">
+                                    <summary class="textAdditionalInformation">The minor Spatial Computing was my first experience with real optimization based on shortest-path algorithms, dynamic space agents and linear algebra. Our assignment was based on an existing building block in the city center of Rotterdam, the Netherlands. By generating a voxel cloud and analyzing numerical values like sunlight, noise and a program of requirements, we were able to generate a building based on ideal positions for each function.</summary>
+                                    <p class="textAdditionalInformation">For this project, we used Houdini and the programming language SideFX, C++ and Python. Within the group, I was responsible for the dynamic placement of the program functions. After completing this minor, I rebuilt the A-start path finding algorithm to a Grasshopper implementation, to use in future projects. The final renders were made using Rhino and Lumion.</p>
+                                </details>
+                                <div class="moreInfoButton">
+                                    <button onclick=" window.open('https://github.com/JobdeVogel/Spatial-Computing-Urban-Green-City', '_blank', rel='noopener noreferrer')">Code</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- ADD FUTURE PROJECTS HERE UNDER PROJECT 3 AND 4-->    
+                </div>
+                <div id="project-3" class="project" style="display:none;">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>Project Title</h1>
+                                <h2>Subtitle with interesting information</h2>
+                            </div>
+                            <div class="topContent">
+                                <img src="data/images/sphere_poster.jpg" alt="">
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>Name project</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Author1</li>
+                                            <li class="Author">Author2</li>
+                                            <li class="Author">Author3</li>
+                                            <li class="Author">Author4</li>
+                                        </ul><br>
+                                    </div>
+
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2099</p><br>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">10 ECT (280 hours)</p><br>
+                                        <p class="descriptionTitle">Render hours</p>
+                                        <p class="renderHours"3>999</p><br>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">Software1, Software2,<br>Software3, Software4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">Additional Information
+                                    <summary class="textAdditionalInformation">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</summary>
+                                    <p class="textAdditionalInformation">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                                </details>
+                                <div class="moreInfoButton">
+                                    <button>Code</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="project-4" class="project" style="display:none;">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>Project Title</h1>
+                                <h2>Subtitle with interesting information</h2>
+                            </div>
+                            <div class="topContent">
+                                <img src="data/images/sphere_poster.jpg" alt="">
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>Name project</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Author1</li>
+                                            <li class="Author">Author2</li>
+                                            <li class="Author">Author3</li>
+                                            <li class="Author">Author4</li>
+                                        </ul><br>
+                                    </div>
+
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2099</p><br>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">10 ECT (280 hours)</p><br>
+                                        <p class="descriptionTitle">Render hours</p>
+                                        <p class="renderHours"3>999</p><br>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">Software1, Software2,<br>Software3, Software4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">Additional Information
+                                    <summary class="textAdditionalInformation">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</summary>
+                                    <p class="textAdditionalInformation">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                                </details>
+                                <div class="moreInfoButton">
+                                    <button>Code</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------>
+        </div>
+        <footer>
+            &copy; <script>document.write(new Date().getFullYear())</script> Job de Vogel<br>
+            All works licensed under Attribution-NonCommercial-ShareAlike CC BY-NC-SA 4.0
+        </footer>
+    </div>
+</body>
+<script src="./scripts/hideNavbar.js"></script>
+<script src="./scripts/pageButtons.js"></script>
+<script src="./scripts/scrollAnimations.js"></script>
+<script src="./scripts/slideButtons.js"></script>
+</html>

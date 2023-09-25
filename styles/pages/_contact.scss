@@ -1,34 +1,50 @@
 #Contact{
-    // Move top project down
     #project-1{
-        @extend .project-1-layout;
+        // @extend .project-1-layout;
         color: $textColorBase;
+        height: 100vh;
+        padding: 0px;
+        margin: 0px;
+        background-color: $headerColor;
+        
+        .contentMiddle{
+            transform: translateY(-50%);
+            top: 50vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
 
-        .bottomContent{
-            top: 250px;
-            margin: 0;
-            padding:0;
-        }
+            .projectTitle{
+                grid-column-start: 1;
+            }
 
-        a{
-            text-decoration: none;
-            color: #C85700;
-        }
+            .bottomContent{
+                grid-column-start: 2;
+                position: relative;
+                margin: 0;
+                padding:0;
+                height: auto;
 
-        .moreInfoButton{
-            a{
-                position: absolute;
-                transform: translateX(-50%);
-                left: 50%;
-                background-color: $buttonColor;
-                padding: 5px 20px;
-                border-radius: 20px;
-                transition:background-color .5s;
+                .moreInfoButton{
+                    position: absolute;
+                    transform: translateX(-50%) translateY(-50%);
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    text-align: center;
+                    
+                    a{
+                        @extend button;
+                        color: $textColorBase;
+                        margin: 10px;
+                        text-align: center;
 
-                &:hover{
-                    background-color: $buttonHoverColor;
+                        &:hover{
+                            background-color: $markerColor;
+                            color: black;
+                        }
+                    }
                 }
             }
-        }
+        }  
     }
 }

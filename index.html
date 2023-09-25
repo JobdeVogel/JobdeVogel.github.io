@@ -2,33 +2,24 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <meta name="description" content="Portfolio Building Technology by Job de Vogel. Future building engineer and programmer. Master studet Building Technology at TU Delft University of Technology.">
+    <meta name="description" content="Portfolio Building Technology by Job de Vogel. Future building engineer and programmer. Master student Building Technology at TU Delft University of Technology.">
     <meta name="keywords" content="Building Technology, Architecture, TU Delft, Job de Vogel, Programming, Animation">
     <meta name="author" content="Job de Vogel">
     <meta http-equiv="Cache-control" content="public">
     <title>Portfolio Job de Vogel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles_about.css">
-    <link rel="stylesheet" href="styles_animation.css">
-    <link rel="stylesheet" href="styles_computational.css">
-    <link rel="stylesheet" href="styles_programming.css">
-    <link rel="stylesheet" href="styles_archictecture.css">
-    <link rel="stylesheet" href="styles_contact.css">
+    <link rel="stylesheet" href="./styles_main_website/styles.css">
+    <link rel="stylesheet" href="./styles_main_website/styles_about.css">
+    <link rel="stylesheet" href="./styles_main_website/styles_animation.css">
+    <link rel="stylesheet" href="./styles_main_website/styles_computational.css">
+    <link rel="stylesheet" href="./styles_main_website/styles_programming.css">
+    <link rel="stylesheet" href="./styles_main_website/styles_archictecture.css">
+    <link rel="stylesheet" href="./styles_main_website/styles_contact.css">
 </head>
-<body> 
+<body>
     <!--Overall container-->
     <div class="container">
         <div class="intersection"></div>
-
-        <div class="fullscreen-img" onclick="fullscreenImage('')"></div>
-            
-        <div id="page-buttons">
-            <!-- Next and previous buttons -->
-            <a class="prevPage">&#10094;</a>
-            <a class="nextPage">&#10095;</a>
-        </div>
-        
+                   
         <!--TOP NAVIGATION BAR-->
         <div id = 'nb' class="navbar-top">
             <div id = 'nc' class="nav-container">
@@ -40,7 +31,13 @@
 
                 <div class="center-side">
                     <div class="nav-link-wrapper">
-                        <button class="button" onclick=" window.open('https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en', '_blank', rel='noopener noreferrer')">
+                        <button class="button" onclick="window.location.href='animation.html';">
+                            Portfolio
+                        </button>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick="window.open('https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en', '_blank', rel='noopener noreferrer')">
                             LinkedIn
                         </button>
                     </div>
@@ -59,14 +56,14 @@
                     </div>
 
                     <div class="nav-link-wrapper" id="about-button">
-                        <button class="button">
+                        <button class="button" onclick="window.location.href='about.html';">
                             About
                         </button>
                     </div>
                 </div>
 
                 <div class="right-side">
-                    <div class="nav-link-wrapper" id="contact-button">
+                    <div class="nav-link-wrapper" onclick="window.location.href='about.html';" id="contact-button">
                         <a>Contact</a>
                     </div>
                 </div>
@@ -93,352 +90,14 @@
                 <rect id="Rectangle_40" data-name="Rectangle 40" width="0.679" height="2.426" rx="0.34" transform="translate(9.943 19.307) rotate(30)" fill="#383838"/>
                 <rect id="Rectangle_44" data-name="Rectangle 44" width="0.679" height="2.426" rx="0.34" transform="translate(7.972 17.304) rotate(60)" fill="#383838"/>
             </svg>
-              
-            
             <div class="switch-button"></div>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="contact-page-container">
-                        
-            <div class="contact-background"></div>
-
-            <div class = 'Contact'>
-                <div class="contact-close-button">&#10005;</div>
-
-                <div class="contact-container">
-                    <a href="mailto:pm-jdvogel@gmail.com">Get in touch</a>
-
-                    <p>Nice to hear that you would like to get in contact with me!<br><br>
-                    <b>Email: </b> pm-jdvogel@gmail.com<br>
-                    Or contact me through <b><a href='https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en'>LinkedIn</a></b><br><br>
-                    I usually respond within 2 days.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ABOUT -->
-        <div class="about-page-container">
-            
-            
-            <div class="about-background"></div>
-
-            <div class = 'About'>
-                <div class="about-close-button">&#10005;</div>
-
-                <div class="about-container">
-                    <div class="about-top">
-                        <div class='about-text'>
-                            <h1>Hey, nice to meet you!</h1>
-                            
-                            <p>My name is Job, I am 24 year young, living in Delft, the Netherlands. Since 2016 I have been studying to become a <b style='font-size: 1.2em'>Building Engineer</b>. Within the building environment, I belief there still is a lot of potential to implement complex state-of-the-art techniques, like big data, Artificial Intelligence, evaluation and optimization to solve social problems and increase sustainability.<br><br>
-                                
-                                In the future, I hope to become an engineer that makes a <b style='font-size: 1.2em'>difference</b>. By using the skills and talents that have been given to me, I am striving to become someone that makes this world a happier place for everyone.<br><br>
-                                In my free time outside of studying, I enjoy making music (playing the saxophone and piano), skating, spending time with friends, discussing higher life questions, and sometimes work on <b style='font-size: 1.2em'>ridiculously stupid projects</b> that take way too much time, but always give people a smile on their faces.<br><br>
-                                As <b style='font-size: 1.2em'>Christian</b>, I am a follower of Jesus Christ. I belief we have a father in heaven who cares about us and loves us. He gave us a mission to take care of this world, and although we may fail doing that again and again, we can always come back to him.<br><br>
-                                In holidays, I love to spend time doing <b style='font-size: 1.2em'>voluntary work</b> on campings and in the neighborhood, spending time with children sporting and playing, challenging them to think deeper about life and their convictions, and telling them about my own. In autumn 2021, I have been team member of the Student Alpha Team in Delft.<br><br>
-                                
-                            </p>
-                            
-                            <h1>FAQ</h1>
-
-                            <p>
-                                When will you finish your studies?<br>
-                                <i>Approximately july 2023</i><br><br>
-                                Are you looking for work?<br>
-                                <i>No, currently I spend all my time on studying and personal projects, but feel free to contact me!</i><br><br>
-                                What name do your friends use for you?<br>
-                                <i>Stuis or Stroesoe</i>
-                            </p>
-                        </div>
-                        
-                        <div class="personal-img">
-                            <img id="me" src="data/images/about_photo_web.jpg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ANIMATIONS -->
-        <div class="anim-page-container">
-            <div class="anim-background"></div>
-
-            <div class = 'Animation'>
-                <div class="anim-close-button">&#10005;</div>
-
-
-                <div class="anim-container">
-                    <div class="anim-top">
-                        <div class="Beyond3D-img">
-                            <img id="Beyond3D" onclick="fullscreenImage('data/images/b3d_web.jpg')" style="cursor:pointer" src="data/images/b3d_web.jpg">
-                        </div>
-                        
-                        <div class='anim-text'>
-                            <h1>Post Apocalypse</h1>
-                            
-                            <p>Since early 2021, I started developing animations and realistic rendering scenes for both educational and personal purposes. For the Master course Beyond3D I created an imaginary post-apocalyptic world, inspired by the .movie Wall-E from Pixar Animation Studios. Nature has been overtaken by garbage, and some of the garbage elements have turned into a small robot, which is trying to cut down all the nature that is left.<br><br>
-                                This design has been made using Autodesk Maya, Arnold render engine, Substance Painter, Materialize Bounding Box Software and Adobe Photoshop. Using Maya instance procedures, it was possible to generate large amount of apparent random garbage, with incredible amounts of polygons. The final render took about 5.5 render hours to complete on a modern PC.<br><br>
-                                <i>Name: </i>'Post-Apocalypse'<br>
-                                <i>Author: </i>Job de Vogel<br>
-                                <i>Educational weight: </i>6 ECT (168 hours)<br>
-                                <i>Render hours: </i>5.5
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- <div class="anim-bottom">                       
-                        <div class="anim-video">
-                            <video muted preload="none" loop poster="data/images/movie_intro_thumbnail_web.jpg" controls>
-                                <source src="data/videos/intro_animatie.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        
-                        <h1>Movie Intro Animation</h1>
-                        
-                        <div class='anim-text-container'>
-                            <div class="paragraph-1">
-                                <p class="p-text">Coming soon</p>
-                            </div>
-
-                            <div class="paragraph-2">
-                                <p class="p-text">Although this is just a short animation of 50 seconds, rendering took 680 render hours on a renderfarm. Afterwards, the movie was edited in Adobe After Effects and Premiere Pro. All the geometry and textures visible were created by myself in Autodesk Maya.</p>
-                            </div>
-
-                            <div class="paragraph-3">
-                                <p class="p-text">
-                                    <i>Name: </i>'Lustrumfilm Intro Animation'<br>
-                                    <i>Author: </i>Job de Vogel<br>
-                                    <i>Educational weight: </i>no ECT (240 hours)<br>
-                                    <i>Render hours: </i>680
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-
-        <!-- COMPUTATIONAL DESIGN -->
-        <div class="comp-page-container">
-            <div class="comp-background"></div>
-
-            <div class = 'Computational'>
-                <div class="comp-close-button">&#10005;</div>
-
-                <div class="comp-container">
-                    <div class="comp-top">
-                        <div class='comp-text-1'>
-                            <h1>Hex World</h1>
-                            
-                            <p>One of the main challenges of the COVID-19 lockdown for students in the Netherlands, was sitting behind a desk at home all day long. Corona makes our world smaller, but by sporting outside we can experience the world as a greater and more beautiful place. In this project, we created a planet creation visualization within a McNeel Rhino environment, that stimulates sporting in the physical world.<br><br>
-                                By using the Strava (sport app) API, it was possible to collect live geographical data and numerical data about our sporting activities and converted the data to a 2D map in Rhino using Python and Grasshopper. Next, this 2D data was mapped to a sphere. By developing a recursive algorithm in Python, I was able to create a 3D terrain that indicates the intensity of activities. Smaller objects on the sphere, like bonfires and trees, indicate special achievements, like breaking a record.<br><br>
-                                In theory, this project could be converted to a real app that people use on their phone to track there sporting activities. Unfortunately, this was outside the scope of the project.
-                            </p>
-                        </div>
-
-                        <div class="hex-sphere-img" style="cursor:pointer" onclick="fullscreenImage('data/images/sphere_rendered_web.jpg')">
-                            <img src="data/images/sphere_rendered_web.jpg">
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="comp-center">
-                        <div class="hex-path-img">
-                            <video muted preload="none" loop controls>
-                                <source src="data/videos/Hexpath Visualization web.mp4" poster="data/images/hex_visualization_web.jpg" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-
-                        <div class='comp-text-2'>                           
-                            <p>For this project we used several methods and techniques. Personally, I was responsible for guiding the team, because of my prior knowledge in (visual) programming. My main personal contributions are mentioned in the previous paragraph. Other teammates focused on converting our digital model to a fabrication model using Robots, and outputting the data using Arduino. Our project was graded with a 10/10.<br><br>
-                                To visualize this project, we used McNeel Rhino as main interface. The data was collected using IronPython (expecially webscraping libraries). Using the PyFirmata Python 3 package I helped my teammates to convert the output to a physical Arduino output. The video on the left is a visualization of the recursive mountainization algorithm.<br><br>
-                                <i>Name: </i>'Hex World'<br>
-                                <i>Author: </i>Job de Vogel<br>
-                                <i>Co-authors: </i>Jun Wen Loo, Kwan-Lin Wang and Thomas Lindemann<br>
-                                <i>Educational weight: </i>5 ECT (140 hours)<br>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="comp-bottom">
-                        <div class='comp-text-3'>
-                            <h1>Spatial Computing</h1>
-                            
-                            <p>The minor Spatial Computing was my first experience with real optimization based on shortest-path algorithms, dynamic space agents and linear algebra. Our assignment was based on an existing building block in the city center of Rotterdam, the Netherlands. By generating a voxel cloud and analyzing numerical values like sunlight, noise and a program of requirements, we were able to generate a building based on ideal positions for each function.<br><br>
-                                For this project, we used Houdini and the programming language SideFX, C++ and Python. Within the group, I was responsible for the dynamic placement of the program functions. After completing this minor, I rebuilt the A-start path finding algorithm to a Grasshopper implementation, to use in future projects. The final renders were made using Rhino and Lumion.<br><br>
-                                <i>Name: </i>'Urban Green City'<br>
-                                <i>Author: </i>Job de Vogel<br>
-                                <i>Co-authors: </i>Victor Wernet, Ida Bølling Kongsted<br>
-                                <i>Educational weight: </i>10 ECT (280 hours)<br>
-                            </p>
-                        </div>
-
-                        <div class="spatial-img" style="cursor:pointer" onclick="fullscreenImage('data/images/spatial_computing_web.jpg')">
-                            <img src="data/images/spatial_computing_web.jpg">
-                        </div>
-                    </div>
-                    
-                    <p class="more-info"> For more projects related to Computational Design, please contact me through the contact page.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- PROGRAMMING -->
-        <div class="prog-page-container">
-            <div class="prog-background"></div>
-
-            <div class = 'Programming'>
-                <div class="prog-close-button">&#10005;</div>
-
-                <div class="prog-container">
-                    
-                    <div class="prog-top">
-                        <div class='prog-text-1'>
-                            <h1>GH ROBODK API</h1>
-                            
-                            <p>After finishing the Computational Design course for my Master Building Technology, I was asked to develop an API to create Robot programs through Rhino and Grasshopper, as extracurricular activity.<br><br>
-                                By using the RoboDK API, Python and Grasshopper, a brick design in Rhino can be converted to CSV. Next this CSV data is interpreted by the RoboDK software and automatically builds a program that can be executed on a real robot arm.<br><br>
-                                Since I built this project for a course that would be given later in 2022 to other students, one of the main challenges was making this project clear, structured and as readable as possible. The complete project is available on my GitHub page.<br><br>
-                            
-                            <i>Name: </i>'RoboDK Grasshopper API'<br>
-                            <i>Author: </i>Job de Vogel<br>
-                            <i>Guiding Tutors: </i>Dr. ir. Serdar Asut and ir. Friso Gouwetor<br>
-                            <i>Educational weight: </i>extracurricular (84 hours)<br>
-                            </p>
-                        </div>
-
-                        <div class="img" style="cursor:pointer" onclick="fullscreenImage('data/images/robodk_web.jpg')">
-                            <img src="data/images/robodk_web.jpg">
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="prog-center">
-                        <div class="img" style="cursor:pointer" onclick="fullscreenImage('data/images/astar_web.jpg')">
-                            <img src="data/images/astar_web.jpg">
-                        </div>
-
-                        <div class='prog-text-2'>
-                            <h1>A* Algorithm</h1>
-
-                            <p>A* is a well-known path finding algorithm, known for its highly efficient method to find the shortest distance in a graph. After finishing my minor Spatial Computing, in which we were introduced to A*, I wanted to experiment with this algorithm using primarily Python and Grasshopper.<br><br>
-                                Within several weeks of part-time work, I was able to develop a Grasshopper script that could utilize the A* algorithm to find shortest Euclidian paths in a building. One of the main challenges was the fact that Python 3 was not available yet for Grasshopper at that time, so I only had access to Python 2 libraries. This project was my first experience in parallel computing. During this project I really got to know the limits of computational design within Grasshopper, which gave me reason to consider alternative software for these types of projects.<br><br>
-                                <i>Name: </i>'A* Grasshopper Implementation'<br>
-                                <i>Author: </i>Job de Vogel<br>
-                                <i>Educational weight: </i>no ECT<br>
-                            </p>
-                        </div>
-                    </div>
-                    <p class="more-info">For more projects related to programming, please take a look at my GitHub page.</p>
-                    
-                </div>
-            </div>
-        </div>
-
-        <!-- ARCHITECTURE -->
-        <div class="arch-page-container">
-            <div class="arch-background"></div>
-
-            <div class = 'Architecture'>
-                <div class="arch-close-button">&#10005;</div>
-
-                <div class="arch-container">
-                    
-                    <div class="arch-top">
-                        <div class='arch-text-1'>
-                            <h1>CIRCULARITY</h1>
-                            
-                            <p>As final Bachelor of Architecture project, I was asked to develop an integrated design for a sporting school in Rotterdam. Although there was little space for personal choice in location or building type, I was allowed to decide to fully focus this project on circularity.<br><br>
-                                Circularity is an abstract term that needs a very specific definition before implemented. By first analyzing the concept and then trying to implement it in my design, I was able to reach for the limitation of circularity.<br><br>
-                                For this project I used McNeel Rhino as main design tool. The construction of this project was modelled parametrically in Grasshopper. Details of the building construction were made using Rhino, Illustrator and Photoshop. The renders visible on the posters are created using Google Earth, Lumion and Photoshop.<br><br>
-                                Although I have decided to focus my Master on Building Technology, and therefore not so much on architectural design, I think this project is a good representation of some of the design skill I have gained over the years.<br><br>
-
-                            <i>Name: </i>'Circular 010'<br>
-                            <i>Author: </i>Job de Vogel<br>
-                            <i>Educational weight: </i>10 ECT (280 hours)<br>
-                            <i>Completion date: </i>july 2020<br><br>
-                            </p>
-
-                            <div class='paper-reference'>
-                                <p class='paper-reference'>Read more about circularity:<br><a href="data/literature/literature.pdf">Circulariteit: drie criteria voor duurzaam ontwerpen</a></p>
-                            </div>
-                        </div>
-
-                        <div class="on6-carousel">
-                            <!-- Slideshow container -->
-                            <div class="slideshow-container-on6">
-
-                                <!-- Full-width images with number and caption text -->
-                                <div class="mySlides-on6 fade">
-                                    <img src="data/images/on6_1_web.jpg" style="width:100%;">
-                                </div>
-                            
-                                <div class="mySlides-on6 fade">
-                                    <img src="data/images/on6_2_web.jpg" style="width:100%">
-                                </div>
-                            
-                                <div class="mySlides-on6 fade">
-                                    <img src="data/images/on6_3_web.jpg" style="width:100%6"">
-                                </div>
-                            
-                                <!-- Next and previous buttons -->
-                                <a class="prev-on6" onclick="plusSlidesON6(-1)">&#10094;</a>
-                                <a class="next-on6" onclick="plusSlidesON6(1)">&#10095;</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="arch-bottom">
-                        <div class="on4-carousel">
-                            <!-- Slideshow container -->
-                            <div class="slideshow-container-on4">
-
-                                <!-- Full-width images with number and caption text -->
-                                <div class="mySlides-on4 fade">
-                                    <img src="data/images/on4_1_web.jpg" style="width:100%">
-                                </div>
-                            
-                                <div class="mySlides-on4 fade">
-                                    <img src="data/images/on4_2_web.jpg" style="width:100%">
-                                </div>
-                            
-                                <div class="mySlides-on4 fade">
-                                    <img src="data/images/on4_3_webl.jpg" style="width:100%">
-                                </div>
-                            
-                                <!-- Next and previous buttons -->
-                                <a class="prev-on4" onclick="plusSlidesON4(-1)">&#10094;</a>
-                                <a class="next-on4" onclick="plusSlidesON4(1)">&#10095;</a>
-                            </div>
-                        </div>
-                        
-                        <div class='arch-text-2'>
-                            <h1>RENOVATION</h1>
-                            
-                            <p>Combining different types of people in one building project can be difficult, especially in renovation projects. In my second year of my Bachelor of Architecture, I re-designed a building block in Amsterdam.<br><br>
-                                After finishing this project, I decided to spend one year on working for the student board of 'Stichting Herontwikkeling tot Studentenhuisvesting'. Within this year, I really leaned the ins and outs of designing and especially managing buildings with diverse groups of people living in it.<br><br>
-                                This project is my best example of working in Autodesk Revit. I completely built this project in 3D first in Revit and afterwards used Photoshop to give it an artistic interpretation.<br><br>
-                                
-                                <i>Name: </i>'Osdopr Omarmd'<br>
-                                <i>Author: </i>Job de Vogel<br>
-                                <i>Educational weight: </i>10 ECT (280 hours)<br>
-                                <i>Completion date: </i>july 2018<br>
-                            </p>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
         </div>
 
         <!--- MAIN -->
         <div class="main">
             <div class="main-container">
                 <div class="image-container" id="image-button">
-                    <div class="main-colored" style="background-image:url(data/images/personal_image_web.jpg)"></div>      
+                    <div class="main-colored" onclick="window.location.href='about.html';" style="background-image:url(data/images/personal_image_web.jpg)"></div>      
                     <div class="main-name">Job de Vogel</div>
                 </div>
                 
@@ -457,36 +116,43 @@
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                    <a>
+                    <a href='animation.html'> 
                         <img id="anim-button" src="data/images/b3d_web.jpg" style="width:100%" loading='lazy'>
                     </a>
                     <div class="text">Animation</div>
                 </div>
                 
                 <div class="mySlides fade">
-                    <a>
+                    <a href='computational.html'>
                         <img id="comp-button" src="data/images/sphere_rendered_web.jpg" style="width:100%; filter: brightness(80%);" loading='lazy'>
                     </a>
                     <div class="text">Computational Design</div>
                 </div>
             
                 <div class="mySlides fade">
-                    <a>
+                    <a href='programming.html'>
                         <img id="prog-button" src="data/images/programming_web.jpg" style="width:100%" loading='lazy'>
                     </a>
                     <div class="text">Programming</div>
                 </div>
 
                 <div class="mySlides fade">
-                    <a>
+                    <a href='architecture.html'>
                         <img id="arch-button" src="data/images/on6_1_web.jpg" style="width:100%" loading='lazy'>
                     </a>
                     <div class="text" style="color:black">Architecture</div>
                 </div>
 
                 <div class="mySlides fade">
+                    <a href='buildingtechnology.html'>
+                        <img id="bt-button" src="data/images/sun_shading_wide_web.jpg" style="width:100%" loading='lazy'>
+                    </a>
+                    <div class="text" style="color:black">Building Technology</div>
+                </div>
+
+                <div class="mySlides fade">
                     <a href="data/literature/literature.pdf">
-                        <img src="data/images/soundwall_web.jpg" style="width:100%; display:none" loading='lazy'>
+                        <img src="data/images/soundwall_web.jpg" style="width:100%" loading='lazy'>
                     </a>
                     <div class="text">Literature</div>
                 </div>
@@ -693,11 +359,11 @@
                                     <h1>Machine Learning</h1>
                                     <p>Able to:</p>
                                     <ul>
-                                        <li>Explain the difference between Artificial Intelligence and Machine Learning;</li>
+                                        <li>Implement supervised and unsupervised algorithms like Linear Regression, K-means, SVM and Random Forest;</li>
                                         <li>Have a discussion about the implementation of the different subfields of Machine Learning within the built environment;</li>
                                         <li>Understand basic Linear Algebra used for Machine Learning.</li>
                                     </ul>
-                                    <p><strong>Time spent: </strong>~20 hours</p>
+                                    <p><strong>Time spent: </strong>~80 hours</p>
                                 </div>
 
                                 <div class=invisible>
@@ -893,9 +559,9 @@
                                     <h1>GitHub</h1>
                                     <p>Able to:</p>
                                     <ul>
-                                        <li>Init a new project;</li>
-                                        <li>Commit and push using the Windows command prompt;</li>
-                                        <li>Work with GitHub in Visual Studio Code.</li>
+                                        <li>Use github in my daily programming work;</li>
+                                        <li>Commit, push, pull using the Windows command prompt or VS Code;</li>
+                                        <li>Manage repositories and brnaches on my own Github account.</li>
                                     </ul>
                                     <p><strong>Time spent: </strong>unknown</p>
                                 </div>

@@ -1,4 +1,5 @@
-//Create all variables here
+// GLOBAL VARIABLES THAT DO NOT CHANGE
+// WITH SCREEN SIZE
 $pageWidth: calc(0.5 * (100vw - (100vw - 100%)));
 $headerHeight: 370px;
 $headerColor: rgb(14, 14, 14);
@@ -9,6 +10,7 @@ $textColorAlternative: rgb(43, 43, 43);
 $textColorAlternativeLight: rgb(122, 122, 122);
 $markerColor: #C85700;
 
+// Buttons
 $buttonColor: #404040;
 $buttonTextColor: seashell;
 $buttonHoverColor: #5f5f5f;
@@ -17,7 +19,7 @@ $navbarTextHover: seashell;
 
 $pageButtonColor: seashell;
 
-// 1920x1080
+// Fontsize
 $fontSizePageTitle: 18em;
 $fontSizeProjectTitle: 5em;
 $fontSizeProjectDescription: 1.1em;
@@ -25,4 +27,129 @@ $fontSizeAdditionalTitle: 1.5em;
 $fontSizeAdditionalInformation: 1.4em;
 $fontSizeFooter: .8em;
 
-// @media ... change font-size to...
+// GLOBAL VARIABLES FOR STANDARD 1920X1080 RESOLUTION
+:root{
+    --fontSizePageTitle: 18em;
+    --fontSizeProjectTitle: 5em;
+    --fontSizeSubtitle: 2em;
+    --fontSizeProjectDescription: 1.1em;
+    --fontSizeAdditionalTitle: 1.5em;
+    --fontSizeAdditionalInformation: 1.4em;
+    --fontSizeFooter: .8em;
+    --fontSizeButton: 1em;
+    
+    // Overall page layout
+    --pageSideDistribution: .75fr 2fr .75fr;
+    --pageButtonSize: 2em;
+
+    // Layout top part of project
+    // Used in _project.scss and _layout.scss
+    --gridDistribution: .75fr .25fr;
+
+    // Standard for normal projects, used in _layout.scss
+    --descriptionPosition: absolute;
+    --descriptionMargin: 0px;
+    --descriptionGrid: 1fr 0fr;
+    --secondColColumn: 1;
+    --gridGap: 0px;
+    
+    // Special cases for alternative project layout
+    // like project 2, used in alternative _project.scss and
+    // pages with videos
+    --gridDistributionAlternative: .25fr .75fr;
+    --rowDistributionAlternative: 1fr 0fr;
+    --descriptionRow: 1;
+    --imageColumn: 2;
+    --descriptionStart: 2;
+}
+
+// MOBILE IN PORTRAIT MODUS
+@media screen and (orientation: portrait){
+    :root{
+        // Overall page layout
+        --pageSideDistribution: .08fr 1fr .08fr;
+        --pageButtonSize: 4em;
+
+        // Layout top part of project
+        // Used in _project.scss and _layout.scss
+        --gridDistribution: 1fr 0fr;
+
+        // Standard for normal projects, used in _layout.scss
+        --descriptionPosition: relative;
+        --descriptionMargin: 50px;
+        --descriptionGrid: 1fr 1fr;
+        --secondColColumn: 2;
+        --gridGap: 0px;
+
+        // Special cases for alternative project layout
+        // like project 2, used in alternative _project.scss and
+        // pages with videos
+        --gridDistributionAlternative: 1fr 0fr;
+        --descriptionRow: 2;
+        --imageColumn: 1;
+        --descriptionStart: 1;
+        
+        // Font sizes
+        --fontSizeProjectTitle: 6em;
+        --fontSizeSubtitle: 3em;
+        --fontSizeProjectDescription: 2.3em;
+        --fontSizeAdditionalTitle: 2.4em;
+        --fontSizeAdditionalInformation: 2.3em;
+        --fontSizeButton: 1.5em;
+        --fontSizeFooter: 1.5em;
+    }
+}
+
+// SCREEN SIZE BETWEEN 1600 AND 1920 px
+@media screen and (orientation: landscape) and (max-width: 1920px){
+    :root{
+        // Overall page layout
+        --pageSideDistribution: .75fr 2fr .75fr;
+
+        // Layout top part of project
+        // Used in _project.scss and _layout.scss
+        --gridDistribution: .75fr .25fr;
+
+        // Standard for normal projects, used in _layout.scss
+        --descriptionPosition: absolute;
+        --descriptionMargin: 0px;
+
+        // Special cases for alternative project layout
+        // like project 2, used in alternative _project.scss and
+        // pages with videos
+        --gridDistributionAlternative: .25fr .75fr;
+        --descriptionStart: 2;
+
+        // Font sizes
+        --fontSizePageTitle: 18em;
+        --fontSizeProjectTitle: 5em;
+        --fontSizeSubtitle: 2em;
+        --fontSizeProjectDescription: 1.1em;
+        --fontSizeAdditionalTitle: 1.5em;
+        --fontSizeAdditionalInformation: 1.4em;
+        --fontSizeFooter: .8em;
+        --fontSizeButton: .85em;
+    }
+}
+
+// SCREENSIZE BETWEEN 1366 AND 1600 px
+@media screen and (orientation: landscape) and (max-width: 1600px){
+    :root{
+        // Font sizes
+        --fontSizeProjectTitle: 4.8em;
+        --fontSizeSubtitle: 1.8em;
+        --fontSizeProjectDescription: .9em;
+        --fontSizeAdditionalInformation: 1.2em;
+    }
+}
+
+// SCRRNSIZE BELOW 1366 px PORTRAIT
+@media screen and (orientation: landscape) and (max-width: 1366px){
+    :root{
+        // Font sizes
+        --fontSizeProjectTitle: 4.1em;
+        --fontSizeSubtitle: 1.6em;
+        --fontSizeProjectDescription: .8em;
+        --fontSizeAdditionalInformation: 1em;
+    }
+}

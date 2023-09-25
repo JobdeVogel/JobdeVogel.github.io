@@ -3,10 +3,6 @@
     #project-1{
         @extend .project-1-layout;
 
-        .projectDescription{
-            top: 100px !important;
-        }
-
         // Remove the extension button
         details{
             summary{

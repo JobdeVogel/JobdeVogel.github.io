@@ -5,6 +5,7 @@
     grid-template-columns: 1fr 1fr;
     background-color: $headerColor;
     height: $headerHeight;
+    overflow-x: hidden;
     
     #pageTitleContainer{
         position: relative;

@@ -15,7 +15,7 @@ function ShowPage(pageIndex){
     titleArray[pageIndex].style.display = 'block';
 
     // See bottom of script
-    Exceptions(pageIndex);
+    Exceptions_page(pageIndex);
     window.scrollTo(0, 0);
 }
 
@@ -40,17 +40,12 @@ function ShowPreviousPage(){
 
 // Exceptions
 // If the page is the contactpage, make the footer absolute and put on the bottom of viewport
-function Exceptions(pageIndex){
+function Exceptions_page(pageIndex){
     if (pageIndex == titleArray.length - 1){
         document.querySelector('footer').style.position = 'absolute';
-        document.querySelector('footer').style.right = '5px';
-        document.querySelector('footer').style.bottom = '1px';
     } else {
         document.querySelector('footer').style.position = 'relative';
-        document.querySelector('footer').style.right = '0px';
-        document.querySelector('footer').style.bottom = '0px';
     }
 }
 
-
-ShowPage(2);
+ShowPage(0);

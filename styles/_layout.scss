@@ -11,39 +11,82 @@
 
         .projectContainer{
             display: grid;
-            grid-template-columns: .75fr 2fr .75fr;
+            grid-template-columns: var(--pageSideDistribution);
 
             .contentMiddle{
                 position: relative;
                 height: 100%;
+                width: 100%;
                 grid-column-start: 2;
 
                 .projectTitle{
                     position: relative;
+                    
+                    h1, h2{
+                        margin: 0;
+                    }
                 }
 
                 .topContent{
                     position: relative;
                     display: grid;
-                    grid-template-columns: .75fr .25fr;
+                    grid-template-columns: var(--gridDistribution);
                     margin-top: 20px;
 
                     img{
                         grid-column-start: 1;
                         @include fullDivImage;
+                        height: 100%;
+                        width: 100%;
                     }
                     
                     .projectDescription{
                         position: relative;
-                        grid-column-start: 2;
-                        padding-left: 10px;
+                        grid-column-start: var(--descriptionStart);
                         width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        margin-left: 10px;
+                        display: grid;
+                        grid-template-columns: var(--descriptionGrid);
+                        gap: var(--gridGap);
+                        margin-top: var(--descriptionMargin);
+                        margin-bottom: var(--descriptionMargin);
+
+                        .col1{
+                            grid-column-start: 1;
+                        }
+
+                        .col2{
+                            grid-column-start: var(--secondColColumn);
+                        }
+
+                        .col1, .col2{
+                            p{
+                                margin: 0;
+                            }
+                            
+                            ul{
+                                margin: 0;
+                                padding: 0;
+                                
+                                li{
+                                    list-style-type: none;
+                                }
+                            }
+                        }                      
                     }
                 }
 
                 .bottomContent{
                     position: relative;
                     margin-top: 30px;
+                    margin-bottom: 30px;
+
+                    .additionalTitle{
+                        margin: 0;
+                        margin-bottom: 10px;
+                    }
 
                     .moreInfoButton{
                     position: relative;

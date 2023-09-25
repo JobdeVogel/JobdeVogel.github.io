@@ -1,0 +1,154 @@
+:root {
+    --page_width: calc(0.5 * (100vw - (100vw - 100%)));
+    --headerHeight: 370px;
+    --headerColor: rgb(14, 14, 14);
+    --backgroundColorBase:rgb(31, 31, 31);
+    --backgroundColorAlternative: rgb(181, 181, 181);
+    --textColorBase: rgb(181, 181, 181);
+    --textColorAlternative: rgb(43, 43, 43);
+    --buttonColor: rgb(47, 47, 47);
+}
+
+body {
+    margin: 0px;
+    color: black;
+}
+
+#container{
+    font-family: "Roboto";
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--backgroundColorBase);
+    overflow-x: hidden;
+}
+
+#header{
+    color: var(--textColorBase);
+    position: relative;
+    font-family: "Roboto";
+    background-color: var(--headerColor);
+    height: var(--headerHeight);
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#pageTitle{
+    position: relative;
+    grid-column-start: 2;
+}
+
+#pageTitle > p{
+    position: absolute;
+    margin: 0;
+    font-size: 18rem;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    top: 50%;
+    font-weight: bold;
+    opacity: 10%;
+}
+
+#contentContainer{
+    /* transform: translateY(calc(-0.25 * var(--headerHeight))); */
+    padding: 0;
+    margin: 0;
+    color: var(--textColorBase)
+}
+
+#project-1, #project-2, #project-3, #project-4{
+    position: relative;
+    /* background-color: violet; */
+    padding-bottom: 100px;
+}
+
+/*Project 1 is an exception because it overlaps header*/
+#project-1{
+    transform: translateY(calc(-0.25 * var(--headerHeight)));
+    margin-bottom: calc(-0.25 * var(--headerHeight));
+}
+
+.topTitle{
+    position: absolute;
+    transform: translateY(-100%);
+    color: var(--textColorBase);
+    /* background-color: yellow; */
+}
+
+.topTitle > h1, h2{
+    margin: 0;
+}
+
+.topTitle > h1{
+    text-transform: uppercase;
+    font-size: 5em;
+}
+
+.topTitle > h2{
+    font-weight: lighter;
+}
+
+.projectContainer{
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: .75fr 2fr .75fr;
+}
+
+.contentMiddle{
+    position: relative;
+    height: 100%;
+    grid-column-start: 2;
+    /* background-color: yellowgreen; */
+}
+
+.topContent{
+    position: relative;
+    display: grid;
+    grid-template-columns: .75fr .25fr;
+    /* background-color: orange; */
+}
+
+img{
+    position: relative;
+    width:100%;
+}
+
+.projectDescription{
+    grid-column-start: 2;
+    position: relative;
+    padding-left: 10px;
+    margin-top: calc(0.25 * var(--headerHeight));
+}
+
+.projectDescription > p{
+    margin: 5px;
+}
+
+.descriptionTitle{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.bottomContent{
+    margin-top: 20px;
+}
+
+.bottomContent > p{
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.additionalInformation{
+    position: relative;
+    /* background-color: green; */
+}
+
+@media only screen and (orientation:portrait){
+    .projectContainer{
+        grid-template-columns: .05fr 1fr .05fr;
+    }
+}

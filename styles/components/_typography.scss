@@ -1,70 +1,51 @@
 #pageTitleContainer{
     p {
         font-weight: bold;
-        font-size: $fontSizePageTitle !important;
+        font-size: var(--fontSizePageTitle) !important;
         text-transform: uppercase;
         opacity: 10%;
     }
 }
 
 .projectTitle{
-    @include unselectableText;
-
-    h1, h2{
-        margin: 0;
-    }
-    
     h1{
         text-transform: uppercase;
-        font-size: $fontSizeProjectTitle;
+        font-size: var(--fontSizeProjectTitle);
     }
 
     h2{
         font-weight: 300;
-        color: $textColorAlternativeLight;
+        font-size: var(--fontSizeSubtitle);
+        color: var(--textColorAlternativeLight);
     }
 }
 
 .projectDescription{
     font-weight: 300;
-    font-size: $fontSizeProjectDescription;
-    line-height: 1.1em;
+    font-size: var(--fontSizeProjectDescription);
     color: $textColorAlternativeLight;
-
-    p{
-        margin: 5px;
-    }
 
     .descriptionTitle{
         color: $textColorBase;
         text-transform: uppercase;
         font-weight: bold;
     }
-
-    ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        padding-left: 5px;
-    }
 }
 
 .additionalTitle{
-    margin: 0;
-    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: $fontSizeAdditionalTitle;
+    font-size: var(--fontSizeAdditionalTitle);
 }
 
 .additionalInformation{
     font-weight: 300;
-    font-size: $fontSizeAdditionalInformation;
+    font-size: var(--fontSizeAdditionalInformation);
     color: $textColorAlternativeLight;
 }
 
 footer{
-    font-size: $fontSizeFooter;
+    font-size: var(--fontSizeFooter);
     font-weight: 300;
-    color: $textColorBase;
+    color: var(--textColorBase);
 }

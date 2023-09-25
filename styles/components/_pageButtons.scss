@@ -6,6 +6,7 @@
     z-index: 500;
         
     #prevPage, #nextPage{
+        @include unselectableText;
         visibility: visible;
         position: absolute;
         cursor: pointer;
@@ -15,7 +16,7 @@
         border-radius: 0 10px 10px 0;    
         color: $pageButtonColor;
         font-weight: bold;
-        font-size: 2em;
+        font-size: var(--pageButtonSize);
         transition: 0.5s ease;
         top: 50%;
 

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload" as="style">
     <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body>  
     <div id="container">
         <div id="page-buttons">
             <div id="prevPage" onclick="ShowPreviousPage()">&#10094;</div>
@@ -105,7 +105,6 @@
                                 <p class="additionalTitle">Additional Information</p>
                                 <details class="additionalInformation">
                                     <summary class="textAdditionalInformation">Since early 2021, I started developing animations and realistic rendering scenes for both educational and personal purposes. For the Master course Beyond3D I created an imaginary post-apocalyptic world, inspired by the .movie Wall-E from Pixar Animation Studios. Nature has been overtaken by garbage, and some of the garbage elements have turned into a small robot, which is trying to cut down all the nature that is left.<br><br>This design has been made using Autodesk Maya, Arnold render engine, Substance Painter, Materialize Bounding Box Software and Adobe Photoshop. Using Maya instance procedures, it was possible to generate large amount of apparent random garbage, with incredible amounts of polygons. The final render took about 5.5 render hours to complete on a modern PC.</summary>
-                                    <p class="textAdditionalInformation">This design has been made using Autodesk Maya, Arnold render engine, Substance Painter, Materialize Bounding Box Software and Adobe Photoshop. Using Maya instance procedures, it was possible to generate large amount of apparent random garbage, with incredible amounts of polygons. The final render took about 5.5 render hours to complete on a modern PC.</p>
                                 </details>
                                 <div class="moreInfoButton">
                                     <button onclick=" window.open('http://toi.bk.tudelft.nl/?p=ar0771', '_blank', rel='noopener noreferrer')">Course Information</button>
@@ -552,7 +551,7 @@
                                     <summary class="textAdditionalInformation">M.O.E.S.O.E. is an Android app that functions as a helpful decision tree. By giving some answers to simple questions, the app advises you what to do in a certain situation. This project was made after I noticed that friends had some problems making relatively simple choices.<br><br>This project was developed using the Kivy package for Python 3. Since I build this project in a very short period of time, the code was build quite unstructured. It was a nice experience in building a static app for Android and I know feel comfortable making a more serious app in the future.</summary>
                                 </details>
                                 <div class="moreInfoButton">
-                                    <button>Code</button>
+                                    <button onclick=" window.open('https://github.com/JobdeVogel', '_blank', rel='noopener noreferrer')">Code</button>
                                 </div>
                             </div>
                             
@@ -1188,12 +1187,9 @@
                                 <h2>Contact me through email or LinkedIn</h2>
                             </div>
                             <div class="bottomContent">
-                                <p class="additionalTitle">Get in touch</p>
-                                <p>Nice to hear that you would like to get in contact with me!<br><br><b>Email:</b> jobdevogel@jobdevogel.com<br>Or contact me through <b><a href='https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en'>LinkedIn</a>.</b><br><br>
-                                    I usually respond within 2 days: Monday - Friday.
-                                </p>
                                 <div class="moreInfoButton">
                                     <a href="mailto:pm-jdvogel@gmail.com">Contact Mail</a>
+                                    <a id='contact-Linkedin' href='https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en'>LinkedIn</a>
                                 </div>
                             </div>
                         </div>
@@ -1339,11 +1335,8 @@
         </footer>
     </div>
 </body>
+<script src="./scripts/hideNavbar.js"></script>
 <script src="./scripts/pageButtons.js"></script>
 <script src="./scripts/scrollAnimations.js"></script>
 <script src="./scripts/slideButtons.js"></script>
-<script>
-    console.log(window.screen.width);
-    console.log(window.screen.height);
-</script>
 </html>

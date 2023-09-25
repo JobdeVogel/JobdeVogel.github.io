@@ -31,6 +31,7 @@
         visibility: visible;
         position: absolute;
         left: 0;
+        white-space: pre-wrap;
         content: $text;
     }
 }

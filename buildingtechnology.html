@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="description" content="Portfolio Building Technology by Job de Vogel. Future building engineer and programmer. Master studet Building Technology at TU Delft University of Technology.">
+    <meta name="keywords" content="Building Technology, Architecture, TU Delft, Job de Vogel, Programming, Animation">
+    <meta name="author" content="Job de Vogel">
+    <meta http-equiv="Cache-control" content="public">
+    <title>Portfolio Job de Vogel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet; preload" as="style">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>  
+    <div id="container">
+        <div id="page-buttons">
+            <div id="prevPage" onclick="window.location.href='architecture.html';">&#10094;</div>
+            <div id="nextPage" onclick="window.location.href='about.html';">&#10095;</div>
+        </div>
+
+        <div id = 'nb' class="navbar-top">
+            <div id = 'nc' class="nav-container">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Portfolio Job de Vogel</a>
+                    </div>
+                </div>
+
+                <div class="center-side">
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick="window.location.href='animation.html';">
+                            Portfolio
+                        </button>
+                    </div>
+                    
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('https://nl.linkedin.com/in/job-de-vogel-1b99a616b/en', '_blank', rel='noopener noreferrer')">
+                            LinkedIn
+                        </button>
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('https://github.com/JobdeVogel', '_blank', rel='noopener noreferrer')">
+                            Github
+                        </button>
+                        
+                    </div>
+
+                    <div class="nav-link-wrapper">
+                        <button class="button" onclick=" window.open('data/pdf/2021_21_04 Curriculum Vitae.pdf', '_blank', rel='noopener noreferrer')">
+                            CV
+                        </button>
+                    </div>
+
+                    <div class="nav-link-wrapper" id="about-button">
+                        <button class="button" onclick="window.location.href='contact.html';">
+                            About
+                        </button>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <div class="nav-link-wrapper" id="contact-button">
+                        <a onclick="window.location.href='contact.html';">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="header">
+            <div id="pageTitleContainer">
+                <p class="pageTitle">Building&nbspTechnology</p>
+            </div>
+        </div>
+        <div id="contentContainer">
+            <!------------------------------------------------------------------------------>
+            <div id='BuildingTechnology' class='page' style="display: none;">
+                <div id="project-1" class="project">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>Leaf Sun Shading</h1>
+                                <h2>Design for a sun shading double curved facades</h2>
+                            </div>
+                            <div class="topContent">
+                                <div class="carousel" id="buckylab">    
+                                    <div class="slide">
+                                        <img src="data/images/sun_shading_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/sun_shading_model_web.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/sun_shading_side_web.jpg">
+                                    </div>
+                                    
+                                    <div>
+                                        <a class="prev" onclick="changeSlide('buckylab', -1)">&#10094;</a>
+                                        <a class="next" onclick="changeSlide('buckylab', 1)">&#10095;</a>
+                                    </div>
+                                </div>
+
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>LEAF Sun Shading</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Job de Vogel</li>
+                                            <li class="Author">Jirri van den Bos</li>
+                                            <li class="Author">Henk Rusting</li>
+                                            <li class="Author">Hamida Kurniawati</li>
+                                            <li class="Author">Yu Tung</li>
+                                        </ul><br>
+                                    </div>
+
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2021-2022</p><br>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">7 ECT (196 hours)</p><br>
+                                        <p class="descriptionTitle" style="display: none;">Render hours</p>
+                                        <p class="renderHours" style="display: none;">999<br></p>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">McNeel Rhino, Grasshopper, Python, Illustrator, Photoshop</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">
+                                    <summary class="textAdditionalInformation">Most sun shadings are designed for flat straight facades and roofs. In this project, we were challenged to design and develop a sun shading system that would be able to adaptively block the sun on double curved surfaces. For this project we decided to implement our concept in the Zurich Elephant House. The developed design consists of triangular origami shaped irregular triangle fabrics, that cover the irregular ETFE windows system in this project.</summary>
+                                    <p class="textAdditionalInformation">To prove the concept, we built a prototype on scale 1:2 and 1:8. Within two weeks we were able to develop this project. The box model was first drawn using Rhino and Fusion 360. Smaller elements of the box were 3D printed and others made using wooden panels.<br><br>To find the optimal shape movement, a Python script was made based on the mathematical concept of tetrahedron corner movements. This Python script was implemented in Grasshopper to make a sun light analyses and animate the 3D model.</p>
+                                </details>
+                                <div class="moreInfoButton">
+                                    <button onclick=" window.open('https://buckylab.blogspot.com/', '_blank', rel='noopener noreferrer')">Course Information</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADD FUTURE PROJECTS HERE: -->
+                <div id="project-2" class="project" style="display: none;">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>MEGA</h1>
+                                <h2>Optimized building based on dynamic space agents</h2>
+                            </div>
+                            
+                            <div class="topContent">
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>Name project</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Author1</li>
+                                            <li class="Author">Author2</li>
+                                            <li class="Author">Author3</li>
+                                            <li class="Author">Author4</li>
+                                        </ul><br>
+                                    </div>
+
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2099</p><br>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">10 ECT (280 hours)</p><br>
+                                        <p class="descriptionTitle">Render hours</p>
+                                        <p class="renderHours"3>999</p><br>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">Software1, Software2,<br>Software3, Software4</p>
+                                    </div>
+                                </div>
+
+                                <img src="data/images/spatial_computing_web.jpg" alt="">
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">
+                                    <summary class="textAdditionalInformation">The minor Spatial Computing was my first experience with real optimization based on shortest-path algorithms, dynamic space agents and linear algebra. Our assignment was based on an existing building block in the city center of Rotterdam, the Netherlands. By generating a voxel cloud and analyzing numerical values like sunlight, noise and a program of requirements, we were able to generate a building based on ideal positions for each function.</summary>
+                                    <p class="textAdditionalInformation">For this project, we used Houdini and the programming language SideFX, C++ and Python. Within the group, I was responsible for the dynamic placement of the program functions. After completing this minor, I rebuilt the A-start path finding algorithm to a Grasshopper implementation, to use in future projects. The final renders were made using Rhino and Lumion.</p>
+                                </details>
+                                <div class="moreInfoButton">
+                                    <button>Code</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="project-3" class="project">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>MEGA</h1>
+                                <h2>Skyscraper Design at Tweede Maasvlakte</h2>
+                            </div>
+                            <div class="topContent">
+                                <!-- <img src="data/images/MEGA.jpg" alt=""> -->
+                                <div class="carousel" id="mega">    
+                                    <div class="slide">
+                                        <img src="data/images/MEGA.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/plaza.jpg">
+                                    </div>
+                                
+                                    <div class="slide">
+                                        <img src="data/images/prize.jpg">
+                                    </div>
+                                    
+                                    <div>
+                                        <a class="prev" onclick="changeSlide('mega', -1)">&#10094;</a>
+                                        <a class="next" onclick="changeSlide('mega', 1)">&#10095;</a>
+                                    </div>
+                                </div>
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>MEGA</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Job de Vogel</li>
+                                            <li class="Author">Jippe van Daalen</li>
+                                            <li class="Author">Elin Lohe</li>
+                                            <li class="Author">Aneesha Madabhushi</li>
+                                            <li class="Author">Pranay Khanchandani</li>
+                                            <li class="Author">Anne Kikkert</li>
+                                            <li class="Author">Menno Weijer</li>
+                                            <li class="Author">Stefan Teeuwen</li><br>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2022</p><br>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">10 ECT (280 hours)</p><br>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">Rhino, Grasshopper,<br>Speckle, Python,<br>Enscape</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">
+                                    <summary class="textAdditionalInformation">MEGA is a course designed to work together in a team, and develop a skyscraper in a complex environment. Each team member is assigned a specific role which corresponds to his/her interests in the field of Architecture and Building Technology. My personal role was computational designer. I was assigned with the task to develop several algorithms and simulation models to further analyse and enhance the design of other group members. Furthermore, me and my computational teammate were responsible for the computational workflow in the team. At the end of the project, we were awarded with the prize for most innovative computational workflow, by White Lioness, IGG Bouweconomie and Packhunt.io, mostly for our implementation of Github and Hops in our Rhino - Grasshopper - Speckle workflow.</summary>
+                                    <p class="textAdditionalInformation">For this project I had several specific responsibilities: computational workflow, function placement optimization, climate analyses, crowd simulation for fire situations, computational workflow, rendering (both image and video) and VR.</p>
+                                </details>
+                                <!-- <div class="moreInfoButton">
+                                    <button>Code</button>
+                                </div> -->
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="project-4" class="project" style="display: none;">
+                    <div class="projectContainer">
+                        <div class="contentMiddle">
+                            <div class="projectTitle">
+                                <h1>Project Title</h1>
+                                <h2>Subtitle with interesting information</h2>
+                            </div>
+                            <div class="topContent">
+                                <img src="data/images/sphere_poster.jpg" alt="">
+                                <div class="projectDescription">
+                                    <div class="col1">
+                                        <p class="descriptionTitle">Name</p>
+                                        <p>Name project</p><br>
+                                        <p class="descriptionTitle">Author</p>
+                                        <ul>
+                                            <li class="Author">Author1</li>
+                                            <li class="Author">Author2</li>
+                                            <li class="Author">Author3</li>
+                                            <li class="Author">Author4</li>
+                                        </ul><br>
+                                    </div>
+
+                                    <div class="col2">
+                                        <p class="descriptionTitle">Year</p>
+                                        <p class="Year">2099</p><br>
+                                        <p class="descriptionTitle">Educational weight</p>
+                                        <p class="ECT">10 ECT (280 hours)</p><br>
+                                        <p class="descriptionTitle">Render hours</p>
+                                        <p class="renderHours"3>999</p><br>
+                                        <p class="descriptionTitle">Software</p>
+                                        <p class="software">Software1, Software2,<br>Software3, Software4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottomContent">
+                                <p class="additionalTitle">Additional Information</p>
+                                <details class="additionalInformation">Additional Information
+                                    <summary class="textAdditionalInformation">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</summary>
+                                    <p class="textAdditionalInformation">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                                </details>
+                                <div class="moreInfoButton">
+                                    <button>Code</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------>    
+        </div>
+        <footer>
+            &copy; <script>document.write(new Date().getFullYear())</script> Job de Vogel<br>
+            All works licensed under Attribution-NonCommercial-ShareAlike CC BY-NC-SA 4.0
+        </footer>
+    </div>
+</body>
+<script src="./scripts/hideNavbar.js"></script>
+<script src="./scripts/pageButtons.js"></script>
+<script src="./scripts/scrollAnimations.js"></script>
+<script src="./scripts/slideButtons.js"></script>
+</html>

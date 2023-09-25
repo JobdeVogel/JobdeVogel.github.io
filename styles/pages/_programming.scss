@@ -19,11 +19,8 @@
         padding-bottom: 0;
 
         .contentMiddle{
-            border-style: solid;
             padding: 5px;
             padding-bottom: 20px;
-            border-width: 1px;
-            border-color: rgba(255, 245, 238, 0.116)
         }
     }
 
@@ -40,51 +37,47 @@
                 }
             }
         }
-
-        // .projectDescription{
-        //     .name{
-        //         @include replaceText('Compliments Generator');
-        //     }
-    
-        //     .software{
-        //         @include replaceText('Python, Arduino');
-        //     }
-        // }
-    
-        // .textAdditionalInformation{
-        //     @include replaceText('Hi');
-        // }
     }
 }
 
+// Here is all the project information that should be changed
+// when clicked on next button.
 .personal-project-2{
     .projectDescription{
         .name{
             @include replaceText('Compliments Generator');
         }
 
+        .year{
+            @include replaceText('2020-2021');
+        }
+
         .software{
-            @include replaceText('Python, Arduino');
+            @include replaceText('Python 3, Arduino');
         }
     }
 
     .textAdditionalInformation{
-        @include replaceText('Hi');
+        @include replaceText('Living together with 7 housemates is amazing, but can also give you headaches sometimes. Since I live exactly next to our front door, I always have the privilege being the first one to hear my housemates coming home in the most bombastic way that you can think off. After telling they are home, of course, they also expect me to say something back.\A \A To solve this terribly serious problem, I decided to build a compliment generator that gives my housemate a compliment when he or she comes home. The project was build using an old laptop from 2011, Arduino, many lines of Python code, but most of all: a lot of fun!');
     }
 }
 
 .personal-project-3{
     .projectDescription{
         .name{
-            @include replaceText('Compliments Generator');
+            @include replaceText('Autosolver Diesgame');
+        }
+
+        .year{
+            @include replaceText('2021');
         }
 
         .software{
-            @include replaceText('Python, Arduino');
+            @include replaceText('Python 3');
         }
     }
 
     .textAdditionalInformation{
-        @include replaceText('Hi');
+        @include replaceText('During the dies celebration of student association C.S.R. Delft, students were challenges to find out more secret information by finishing a maze game. After trying for a while, it became apparent that this game would never be solvable by a human being, in a reasonable time. Since hacking the game did not seem like a reasonable solution, it was necessary to find another smarter solution.\A\ATo solve this problem I developed a Python solver that simulates clicking behaviour of a player. By finding out the time pattern of the game, it was possible to optimize the gameplay. After three days of running the script, the game was finished. Unfortunately… the secret hint was not very useful...');
     }
 }

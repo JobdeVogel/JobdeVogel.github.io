@@ -3,7 +3,7 @@
 
     .projectDescription{
         max-height: 100%;
-        position: absolute !important;
+        position: var(--descriptionPosition);
         bottom: 0 !important;
     }
 }

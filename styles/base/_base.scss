@@ -4,15 +4,14 @@ html{
 }
 
 body {
-    // position: relative;
+    position: relative;
     margin: 0px;
     color: $textColorBase;
-    height: 100%;
     background-color: $backgroundColorBase;
     overflow-x: hidden;
 
     #container{
-        font-family: "Roboto";
+        font-family: "Roboto", sans-serif;
         position: relative;
     }
 }

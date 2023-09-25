@@ -1,10 +1,96 @@
-button {
+@charset "UTF-8";
+:root {
+  --fontSizePageTitle: 18em;
+  --fontSizeProjectTitle: 5em;
+  --fontSizeSubtitle: 2em;
+  --fontSizeProjectDescription: 1.1em;
+  --fontSizeAdditionalTitle: 1.5em;
+  --fontSizeAdditionalInformation: 1.4em;
+  --fontSizeFooter: .8em;
+  --fontSizeButton: 1em;
+  --pageSideDistribution: .75fr 2fr .75fr;
+  --pageButtonSize: 2em;
+  --gridDistribution: .75fr .25fr;
+  --descriptionPosition: absolute;
+  --descriptionMargin: 0px;
+  --descriptionGrid: 1fr 0fr;
+  --secondColColumn: 1;
+  --gridGap: 0px;
+  --gridDistributionAlternative: .25fr .75fr;
+  --rowDistributionAlternative: 1fr 0fr;
+  --descriptionRow: 1;
+  --imageColumn: 2;
+  --descriptionStart: 2;
+}
+
+@media screen and (orientation: portrait) {
+  :root {
+    --pageSideDistribution: .08fr 1fr .08fr;
+    --pageButtonSize: 4em;
+    --gridDistribution: 1fr 0fr;
+    --descriptionPosition: relative;
+    --descriptionMargin: 50px;
+    --descriptionGrid: 1fr 1fr;
+    --secondColColumn: 2;
+    --gridGap: 0px;
+    --gridDistributionAlternative: 1fr 0fr;
+    --descriptionRow: 2;
+    --imageColumn: 1;
+    --descriptionStart: 1;
+    --fontSizeProjectTitle: 6em;
+    --fontSizeSubtitle: 3em;
+    --fontSizeProjectDescription: 2.3em;
+    --fontSizeAdditionalTitle: 2.4em;
+    --fontSizeAdditionalInformation: 2.3em;
+    --fontSizeButton: 1.5em;
+    --fontSizeFooter: 1.5em;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1920px) {
+  :root {
+    --pageSideDistribution: .75fr 2fr .75fr;
+    --gridDistribution: .75fr .25fr;
+    --descriptionPosition: absolute;
+    --descriptionMargin: 0px;
+    --gridDistributionAlternative: .25fr .75fr;
+    --descriptionStart: 2;
+    --fontSizePageTitle: 18em;
+    --fontSizeProjectTitle: 5em;
+    --fontSizeSubtitle: 2em;
+    --fontSizeProjectDescription: 1.1em;
+    --fontSizeAdditionalTitle: 1.5em;
+    --fontSizeAdditionalInformation: 1.4em;
+    --fontSizeFooter: .8em;
+    --fontSizeButton: .85em;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1600px) {
+  :root {
+    --fontSizeProjectTitle: 4.8em;
+    --fontSizeSubtitle: 1.8em;
+    --fontSizeProjectDescription: .9em;
+    --fontSizeAdditionalInformation: 1.2em;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1366px) {
+  :root {
+    --fontSizeProjectTitle: 4.1em;
+    --fontSizeSubtitle: 1.6em;
+    --fontSizeProjectDescription: .8em;
+    --fontSizeAdditionalInformation: 1em;
+  }
+}
+
+button, #Contact #project-1 .contentMiddle .bottomContent .moreInfoButton a {
   display: inline-block;
   text-decoration: none;
   padding: 5px 20px;
   font-family: "Roboto";
   font-weight: 100;
-  font-size: .9em;
+  font-size: var(--fontSizeButton);
   border: none;
   border-radius: 20px;
   text-align: center;
@@ -16,13 +102,13 @@ button {
   background-color: #404040;
 }
 
-button:hover {
+button:hover, #Contact #project-1 .contentMiddle .bottomContent .moreInfoButton a:hover {
   cursor: pointer;
   background-color: #5f5f5f;
 }
 
 details {
-  padding-bottom: 60px;
+  padding-bottom: 100px;
 }
 
 details summary {
@@ -54,44 +140,42 @@ details[open] summary:after {
   content: "\276E";
 }
 
-.navbar-top {
+#nb {
   position: fixed;
-  z-index: 200;
+  z-index: 1;
   left: 0;
   right: 0;
   bottom: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
   pointer-events: none;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.navbar-top .nav-container {
+#nb .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 10px;
+  margin-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.navbar-top .nav-container .left-side {
+#nb .nav-container .left-side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   pointer-events: auto;
   margin-top: 3px;
-  font-weight: 1000;
+  font-weight: 100;
   font-size: 1em;
   letter-spacing: .8px;
 }
 
-.navbar-top .nav-container .center-side {
+#nb .nav-container .center-side {
   pointer-events: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,24 +183,24 @@ details[open] summary:after {
   font-size: 1em;
 }
 
-.navbar-top .nav-container .right-side {
+#nb .nav-container .right-side {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   pointer-events: auto;
   margin-top: 3px;
-  font-weight: 1000;
+  font-weight: 100;
   font-size: 1em;
   letter-spacing: .8px;
   margin-left: 10%;
 }
 
-.navbar-top .nav-container .nav-link-wrapper {
+#nb .nav-container .nav-link-wrapper {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.navbar-top .nav-container .nav-link-wrapper a {
+#nb .nav-container .nav-link-wrapper a {
   position: bottom;
   text-decoration: none;
   font-weight: 500;
@@ -125,13 +209,13 @@ details[open] summary:after {
   color: #b5b5b5;
 }
 
-.navbar-top .nav-container .nav-link-wrapper a:hover {
+#nb .nav-container .nav-link-wrapper a:hover {
   cursor: pointer;
   color: seashell;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
   background-color: #1f1f1f;
 }
 
@@ -162,6 +246,14 @@ details[open] summary:after {
 }
 
 #page-buttons #prevPage, #page-buttons #nextPage {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
   visibility: visible;
   position: absolute;
   cursor: pointer;
@@ -171,7 +263,7 @@ details[open] summary:after {
   border-radius: 0 10px 10px 0;
   color: seashell;
   font-weight: bold;
-  font-size: 2em;
+  font-size: var(--pageButtonSize);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   top: 50%;
@@ -198,45 +290,26 @@ details[open] summary:after {
 
 #pageTitleContainer p {
   font-weight: bold;
-  font-size: 18em !important;
+  font-size: var(--fontSizePageTitle) !important;
   text-transform: uppercase;
   opacity: 10%;
 }
 
-.projectTitle {
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
-}
-
-.projectTitle h1, .projectTitle h2 {
-  margin: 0;
-}
-
 .projectTitle h1 {
   text-transform: uppercase;
-  font-size: 5em;
+  font-size: var(--fontSizeProjectTitle);
 }
 
 .projectTitle h2 {
   font-weight: 300;
-  color: #7a7a7a;
+  font-size: var(--fontSizeSubtitle);
+  color: var(--textColorAlternativeLight);
 }
 
 .projectDescription {
   font-weight: 300;
-  font-size: 1.1em;
-  line-height: 1.1em;
+  font-size: var(--fontSizeProjectDescription);
   color: #7a7a7a;
-}
-
-.projectDescription p {
-  margin: 5px;
 }
 
 .projectDescription .descriptionTitle {
@@ -245,31 +318,22 @@ details[open] summary:after {
   font-weight: bold;
 }
 
-.projectDescription ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-left: 5px;
-}
-
 .additionalTitle {
-  margin: 0;
-  margin-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: var(--fontSizeAdditionalTitle);
 }
 
 .additionalInformation {
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: var(--fontSizeAdditionalInformation);
   color: #7a7a7a;
 }
 
 footer {
-  font-size: 0.8em;
+  font-size: var(--fontSizeFooter);
   font-weight: 300;
-  color: #b5b5b5;
+  color: var(--textColorBase);
 }
 
 html {
@@ -277,15 +341,15 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0px;
   color: #b5b5b5;
-  height: 100%;
   background-color: #1f1f1f;
   overflow-x: hidden;
 }
 
 body #container {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   position: relative;
 }
 
@@ -304,13 +368,14 @@ body #container {
 #contentContainer .project .projectContainer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: .75fr 2fr .75fr;
-      grid-template-columns: .75fr 2fr .75fr;
+  -ms-grid-columns: var(--pageSideDistribution);
+      grid-template-columns: var(--pageSideDistribution);
 }
 
 #contentContainer .project .projectContainer .contentMiddle {
   position: relative;
   height: 100%;
+  width: 100%;
   -ms-grid-column: 2;
       grid-column-start: 2;
 }
@@ -319,12 +384,16 @@ body #container {
   position: relative;
 }
 
+#contentContainer .project .projectContainer .contentMiddle .projectTitle h1, #contentContainer .project .projectContainer .contentMiddle .projectTitle h2 {
+  margin: 0;
+}
+
 #contentContainer .project .projectContainer .contentMiddle .topContent {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: .75fr .25fr;
-      grid-template-columns: .75fr .25fr;
+  -ms-grid-columns: var(--gridDistribution);
+      grid-template-columns: var(--gridDistribution);
   margin-top: 20px;
 }
 
@@ -335,26 +404,66 @@ body #container {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
 
 #contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription {
   position: relative;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  padding-left: 10px;
+  -ms-grid-column: var(--descriptionStart);
+      grid-column-start: var(--descriptionStart);
   width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: var(--descriptionGrid);
+      grid-template-columns: var(--descriptionGrid);
+  gap: var(--gridGap);
+  margin-top: var(--descriptionMargin);
+  margin-bottom: var(--descriptionMargin);
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col2 {
+  -ms-grid-column: var(--secondColColumn);
+      grid-column-start: var(--secondColColumn);
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col1 p, #contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col2 p {
+  margin: 0;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col1 ul, #contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col2 ul {
+  margin: 0;
+  padding: 0;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col1 ul li, #contentContainer .project .projectContainer .contentMiddle .topContent .projectDescription .col2 ul li {
+  list-style-type: none;
 }
 
 #contentContainer .project .projectContainer .contentMiddle .bottomContent {
   position: relative;
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#contentContainer .project .projectContainer .contentMiddle .bottomContent .additionalTitle {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 #contentContainer .project .projectContainer .contentMiddle .bottomContent .moreInfoButton {
   position: relative;
 }
 
-#contentContainer .project .projectContainer .contentMiddle .bottomContent .moreInfoButton button {
+#contentContainer .project .projectContainer .contentMiddle .bottomContent .moreInfoButton button, #contentContainer .project .projectContainer #Contact #project-1 .contentMiddle .bottomContent .moreInfoButton a, #Contact #project-1 #contentContainer .project .projectContainer .contentMiddle .bottomContent .moreInfoButton a {
   position: absolute;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -370,6 +479,7 @@ body #container {
       grid-template-columns: 1fr 1fr;
   background-color: #0e0e0e;
   height: 370px;
+  overflow-x: hidden;
 }
 
 #header #pageTitleContainer {
@@ -404,56 +514,80 @@ footer {
   background-color: #1f1f1f;
 }
 
-.project-1-layout, #Animation #project-1, #Computational #project-1, #Programming #project-1, #Architecture #project-1, #BuildingTechnology #project-1, #About #project-1, #Contact #project-1 {
+.project-1-layout, #Animation #project-1, #Computational #project-1, #Programming #project-1, #Architecture #project-1, #BuildingTechnology #project-1, #About #project-1 {
   padding-top: 145px !important;
 }
 
-.project-1-layout .projectDescription, #Animation #project-1 .projectDescription, #Computational #project-1 .projectDescription, #Programming #project-1 .projectDescription, #Architecture #project-1 .projectDescription, #BuildingTechnology #project-1 .projectDescription, #About #project-1 .projectDescription, #Contact #project-1 .projectDescription {
+.project-1-layout .projectDescription, #Animation #project-1 .projectDescription, #Computational #project-1 .projectDescription, #Programming #project-1 .projectDescription, #Architecture #project-1 .projectDescription, #BuildingTechnology #project-1 .projectDescription, #About #project-1 .projectDescription {
   max-height: 100%;
-  position: absolute !important;
-  bottom: 0 !important;
+  position: var(--descriptionPosition);
+  bottom: 0;
 }
 
-.project-2-layout, #Computational #project-2, #Programming #project-2, #Architecture #project-2 {
+.project-2-layout, #Animation #project-2, #Computational #project-2, #Programming #project-2, #Architecture #project-2 {
   padding-top: 100px;
 }
 
-.project-2-layout .projectTitle, #Computational #project-2 .projectTitle, #Programming #project-2 .projectTitle, #Architecture #project-2 .projectTitle {
+.project-2-layout .projectTitle, #Animation #project-2 .projectTitle, #Computational #project-2 .projectTitle, #Programming #project-2 .projectTitle, #Architecture #project-2 .projectTitle {
   text-align: right;
 }
 
-.project-2-layout .topContent, #Computational #project-2 .topContent, #Programming #project-2 .topContent, #Architecture #project-2 .topContent {
-  -ms-grid-columns: .25fr .75fr !important;
-      grid-template-columns: .25fr .75fr !important;
+.project-2-layout .topContent, #Animation #project-2 .topContent, #Computational #project-2 .topContent, #Programming #project-2 .topContent, #Architecture #project-2 .topContent {
+  -ms-grid-columns: var(--gridDistributionAlternative) !important;
+      grid-template-columns: var(--gridDistributionAlternative) !important;
+  -ms-grid-rows: var(--rowDistributionAlternative);
+      grid-template-rows: var(--rowDistributionAlternative);
 }
 
-.project-2-layout .topContent img, #Computational #project-2 .topContent img, #Programming #project-2 .topContent img, #Architecture #project-2 .topContent img {
-  -ms-grid-column: 2 !important;
-      grid-column-start: 2 !important;
+.project-2-layout .topContent img, #Animation #project-2 .topContent img, #Computational #project-2 .topContent img, #Programming #project-2 .topContent img, #Architecture #project-2 .topContent img {
+  -ms-grid-column: var(--imageColumn) !important;
+      grid-column-start: var(--imageColumn) !important;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
 }
 
-.project-2-layout .topContent .projectDescription, #Computational #project-2 .topContent .projectDescription, #Programming #project-2 .topContent .projectDescription, #Architecture #project-2 .topContent .projectDescription {
+.project-2-layout .topContent .projectDescription, #Animation #project-2 .topContent .projectDescription, #Computational #project-2 .topContent .projectDescription, #Programming #project-2 .topContent .projectDescription, #Architecture #project-2 .topContent .projectDescription {
   -ms-grid-column: 1 !important;
       grid-column-start: 1 !important;
+  -ms-grid-row: var(--descriptionRow);
+      grid-row-start: var(--descriptionRow);
   padding-left: 0;
 }
 
-.project-2-layout .bottomContent details summary:hover:after, #Computational #project-2 .bottomContent details summary:hover:after, #Programming #project-2 .bottomContent details summary:hover:after, #Architecture #project-2 .bottomContent details summary:hover:after {
+.project-2-layout .bottomContent details summary:hover:after, #Animation #project-2 .bottomContent details summary:hover:after, #Computational #project-2 .bottomContent details summary:hover:after, #Programming #project-2 .bottomContent details summary:hover:after, #Architecture #project-2 .bottomContent details summary:hover:after {
   color: #C85700;
 }
 
-.project-3-layout, #Programming #project-3 {
+.project-3-layout, #Programming #project-3, #BuildingTechnology #project-3 {
   padding-top: 145px !important;
 }
 
-.project-3-layout .projectDescription, #Programming #project-3 .projectDescription {
+.project-3-layout .projectDescription, #Programming #project-3 .projectDescription, #BuildingTechnology #project-3 .projectDescription {
   max-height: 100%;
-  position: absolute !important;
+  position: var(--descriptionPosition);
   bottom: 0 !important;
 }
 
-#Animation details summary:after {
+#Animation #project-1 details summary:after {
   display: none;
+}
+
+#Animation #project-2 {
+  padding-top: 0px;
+}
+
+#Animation #project-2 video {
+  -ms-grid-column: var(--imageColumn) !important;
+      grid-column-start: var(--imageColumn) !important;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  padding-left: 10px;
+  width: 100%;
+}
+
+#Animation #project-2 .projectDescription {
+  -ms-grid-column: 1 !important;
+      grid-column-start: 1 !important;
 }
 
 #Computational #project-2 {
@@ -487,11 +621,8 @@ footer {
 }
 
 #Programming #project-2 .contentMiddle {
-  border-style: solid;
   padding: 5px;
   padding-bottom: 20px;
-  border-width: 1px;
-  border-color: rgba(255, 245, 238, 0.116);
 }
 
 #Programming #project-3 {
@@ -511,7 +642,21 @@ footer {
   visibility: visible;
   position: absolute;
   left: 0;
+  white-space: pre-wrap;
   content: "Compliments Generator";
+}
+
+.personal-project-2 .projectDescription .year {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-2 .projectDescription .year::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  white-space: pre-wrap;
+  content: "2020-2021";
 }
 
 .personal-project-2 .projectDescription .software {
@@ -523,7 +668,8 @@ footer {
   visibility: visible;
   position: absolute;
   left: 0;
-  content: "Python, Arduino";
+  white-space: pre-wrap;
+  content: "Python 3, Arduino";
 }
 
 .personal-project-2 .textAdditionalInformation {
@@ -535,7 +681,8 @@ footer {
   visibility: visible;
   position: absolute;
   left: 0;
-  content: "Hi";
+  white-space: pre-wrap;
+  content: "Living together with 7 housemates is amazing, but can also give you headaches sometimes. Since I live exactly next to our front door, I always have the privilege being the first one to hear my housemates coming home in the most bombastic way that you can think off. After telling they are home, of course, they also expect me to say something back.\a \aTo solve this terribly serious problem, I decided to build a compliment generator that gives my housemate a compliment when he or she comes home. The project was build using an old laptop from 2011, Arduino, many lines of Python code, but most of all: a lot of fun!";
 }
 
 .personal-project-3 .projectDescription .name {
@@ -547,7 +694,21 @@ footer {
   visibility: visible;
   position: absolute;
   left: 0;
-  content: "Compliments Generator";
+  white-space: pre-wrap;
+  content: "Autosolver Diesgame";
+}
+
+.personal-project-3 .projectDescription .year {
+  visibility: hidden;
+  position: relative;
+}
+
+.personal-project-3 .projectDescription .year::before {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  white-space: pre-wrap;
+  content: "2021";
 }
 
 .personal-project-3 .projectDescription .software {
@@ -559,7 +720,8 @@ footer {
   visibility: visible;
   position: absolute;
   left: 0;
-  content: "Python, Arduino";
+  white-space: pre-wrap;
+  content: "Python 3";
 }
 
 .personal-project-3 .textAdditionalInformation {
@@ -571,11 +733,8 @@ footer {
   visibility: visible;
   position: absolute;
   left: 0;
-  content: "Hi";
-}
-
-#Architecture #project-1 .projectDescription {
-  top: 100px !important;
+  white-space: pre-wrap;
+  content: "During the dies celebration of student association C.S.R. Delft, students were challenges to find out more secret information by finishing a maze game. After trying for a while, it became apparent that this game would never be solvable by a human being, in a reasonable time. Since hacking the game did not seem like a reasonable solution, it was necessary to find another smarter solution.\a \aTo solve this problem I developed a Python solver that simulates clicking behaviour of a player. By finding out the time pattern of the game, it was possible to optimize the gameplay. After three days of running the script, the game was finished. Unfortunately… the secret hint was not very useful...";
 }
 
 #Architecture #project-2 {
@@ -595,8 +754,8 @@ footer {
   display: none;
 }
 
-#About #project-1 .projectDescription {
-  top: 100px !important;
+#BuildingTechnology #project-3 {
+  padding-top: 0px !important;
 }
 
 #About #project-1 details summary:after {
@@ -605,33 +764,55 @@ footer {
 
 #Contact #project-1 {
   color: #b5b5b5;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  background-color: #0e0e0e;
 }
 
-#Contact #project-1 .bottomContent {
-  top: 250px;
+#Contact #project-1 .contentMiddle {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#Contact #project-1 .contentMiddle .projectTitle {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+#Contact #project-1 .contentMiddle .bottomContent {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  position: relative;
   margin: 0;
   padding: 0;
+  height: auto;
 }
 
-#Contact #project-1 a {
-  text-decoration: none;
-  color: #C85700;
-}
-
-#Contact #project-1 .moreInfoButton a {
+#Contact #project-1 .contentMiddle .bottomContent .moreInfoButton {
   position: absolute;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  top: 50%;
   left: 50%;
-  background-color: #404040;
-  padding: 5px 20px;
-  border-radius: 20px;
-  -webkit-transition: background-color .5s;
-  transition: background-color .5s;
+  width: 100%;
+  text-align: center;
 }
 
-#Contact #project-1 .moreInfoButton a:hover {
-  background-color: #5f5f5f;
+#Contact #project-1 .contentMiddle .bottomContent .moreInfoButton a {
+  color: #b5b5b5;
+  margin: 10px;
+  text-align: center;
+}
+
+#Contact #project-1 .contentMiddle .bottomContent .moreInfoButton a:hover {
+  background-color: #C85700;
+  color: black;
 }
 
 .carousel {

@@ -3,4 +3,9 @@
     #project-1{
         @extend .project-1-layout;
     }
+
+    #project-3{
+        @extend .project-3-layout;
+        padding-top: 0px !important;
+    }
 }

@@ -15,3 +15,13 @@ ADD A CAROUSEL
 ADD IMAGE TO CAROUSEL:
     HTML:
         - Add a slide div with new sourcefile to the carousel div
+
+ADD INFORMATION OF ANOTHER PROJECT FOR CAROUSEL IMAGE
+    CSS:
+        - Find the corresponding scss page file
+        - Add a .personal-project-n style class to the scss
+        - Use the replace text mixin to replace the text of a div
+    JAVASCRIPT:
+        - Open the slideButtons.js file
+        - Add an if statement in the Exceptions function with the carousel name
+        - If n (the carousel slide), add the corresponding css class to the project
